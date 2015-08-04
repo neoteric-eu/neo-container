@@ -1,0 +1,7 @@
+[
+	{
+		"name": "Dashboard",
+		"path": "apps/dashboard",
+		"order": 0
+	}
+]
