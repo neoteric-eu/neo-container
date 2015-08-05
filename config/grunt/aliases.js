@@ -89,15 +89,11 @@ module.exports = {
 		description: 'Internally used form "npm install" installation task',
 		tasks: [
 			'logo',
-			'clean:bower',
-			'force:bower',
+			'bower',
 			'symlink',
 			'shell:webdriver-update',
 			'githooks',
 			'config:development',
-			'shell:git-disable-tracking-templates',
-			'shell:git-submodule-init',
-			'shell:git-submodule-update',
 			'less'
 		]
 	}

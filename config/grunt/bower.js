@@ -15,8 +15,19 @@ module.exports = function (grunt) {
 		});
 
 	var defaultConf = {
-		options: {
-			runBower: true
+		apps: {
+			options: {
+				destPrefix: 'src/assets/vendor/js'
+			},
+			files: {}
+		},
+		seed: {
+			options: {
+				destPrefix: 'src'
+			},
+			files: {
+				'seed': 'neo-seed'
+			}
 		},
 		js: {
 			options: {
@@ -49,10 +60,15 @@ module.exports = function (grunt) {
 	bowerFiles.forEach(function (bowerExtension) {
 		if (_.has(bowerExtension, 'copy')) {
 			// Extend js files
+			_.assign(defaultConf.apps.files, bowerExtension.copy.apps);
 			_.assign(defaultConf.js.files, bowerExtension.copy.js);
 			_.assign(defaultConf.less.files, bowerExtension.copy.less);
 			_.assign(defaultConf.fonts.files, bowerExtension.copy.fonts);
 		}
+	});
+
+	_.forOwn(defaultConf, function(value, key){
+		if(_.isEmpty(value.files)) delete defaultConf[key];
 	});
 
 	return defaultConf;

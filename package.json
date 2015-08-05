@@ -9,7 +9,7 @@
 		"grunt": "~0.4.5",
 		"grunt-angular-gettext": "~2.0.1",
 		"grunt-angular-templates": "^0.5.7",
-		"grunt-bowercopy": "~1.2.1",
+		"grunt-bowercopy": "1.2.3",
 		"grunt-bump": "^0.3.0",
 		"grunt-changelog": "^0.3.0",
 		"grunt-cli": "^0.1.13",
