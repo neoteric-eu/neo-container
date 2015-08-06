@@ -3,8 +3,7 @@
 	"version": "0.0.0",
 	"private": true,
 	"dependencies": {
-		"neo-seed": "git@gitlab.neoteric.eu:developers/neo-seed.git#master",
-		"neo-docs": "git@gitlab.neoteric.eu:developers/neob2b-docs-frontend.git#container"
+		"neo-seed": "git@gitlab.neoteric.eu:developers/neo-seed.git#master"
 	},
 	"resolutions": {
 		"angular": "1.4.3",
