@@ -2,8 +2,7 @@
 window.name = 'NG_DEFER_BOOTSTRAP!';
 
 requirejs([
-	'seed/require.conf',
-	'apps/docs/require.conf'
+	'seed/require.conf'
 ], function () {
 	'use strict';
 
