@@ -1,0 +1,14 @@
+### Directories ###
+seed/
+assets/
+apps/**
+!apps/dashboard
+
+### Files ###
+**/*.mo
+**/translation.js
+.htaccess
+require.js
+!apps/_includes.js
+!apps/module.js
+!apps/namespace.js

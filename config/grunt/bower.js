@@ -15,12 +15,6 @@ module.exports = function (grunt) {
 		});
 
 	var defaultConf = {
-		apps: {
-			options: {
-				destPrefix: 'src/assets/vendor/js'
-			},
-			files: {}
-		},
 		seed: {
 			options: {
 				destPrefix: 'src'
@@ -60,7 +54,6 @@ module.exports = function (grunt) {
 	bowerFiles.forEach(function (bowerExtension) {
 		if (_.has(bowerExtension, 'copy')) {
 			// Extend js files
-			_.assign(defaultConf.apps.files, bowerExtension.copy.apps);
 			_.assign(defaultConf.js.files, bowerExtension.copy.js);
 			_.assign(defaultConf.less.files, bowerExtension.copy.less);
 			_.assign(defaultConf.fonts.files, bowerExtension.copy.fonts);

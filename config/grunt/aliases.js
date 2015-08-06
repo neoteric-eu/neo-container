@@ -90,6 +90,7 @@ module.exports = {
 		tasks: [
 			'logo',
 			'bower',
+			'force:gitclone',
 			'symlink',
 			'shell:webdriver-update',
 			'githooks',
