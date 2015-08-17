@@ -1,5 +1,5 @@
 // Defer AngularJS bootstrap
-window.name = 'NG_DEFER_BOOTSTRAP!';
+//window.name = 'NG_DEFER_BOOTSTRAP!';
 
 requirejs([
 	'seed/require.conf'
@@ -17,9 +17,8 @@ requirejs([
 		'apps/module'
 	], function (require, ng, domReady) {
 		domReady(function () {
-			setTimeout(function () {
-				ng.resumeBootstrap();
-			}, 0);
+			var el = document.querySelector('body');
+			ng.bootstrap(ng.element(el).addClass('ng-app'), ['app']);
 		});
 	});
 });

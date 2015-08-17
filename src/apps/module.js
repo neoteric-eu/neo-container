@@ -9,7 +9,7 @@ define(['angular', 'angular-gettext'], function (ng) {
 		'seed',
 		'app.templates',
 		'app.conf',
-		'app.docs'
+		'app.dashboard'
 	]);
 
 	container.run(function ($log, $rootScope, $state, appConf) {
