@@ -3,8 +3,6 @@ module.exports = {
 		description: 'Runs locally server with application',
 		tasks: [
 			'config:development',
-			'clean:server',
-			//'templates',
 			'connect:server'
 		]
 	},
@@ -42,18 +40,17 @@ module.exports = {
 	'dist': {
 		description: 'Creates production version of code in /dist catalog',
 		tasks: [
-			'clean:dist',
 			'config:production',
 			'less',
 			'useminPrepare',
-			'templates',
+			'templates:apps',
+			'templates:seed',
 			'concat',
 			'cssmin',
 			'copy',
 			'requirejs',
 			'rev',
 			'usemin',
-			'clean:server',
 			'jsdoc'
 		]
 	},
@@ -62,7 +59,6 @@ module.exports = {
 		description: 'Deploy built app on nexus and bump version of code on master branch',
 		tasks: [
 			'changelog',
-			'bump:minor',
 			'compress',
 			'nexus'
 		]
@@ -71,7 +67,6 @@ module.exports = {
 	'docs': {
 		description: 'Generates JSDoc documentation',
 		tasks: [
-			'clean:doc',
 			'jsdoc'
 		]
 	},
@@ -88,13 +83,16 @@ module.exports = {
 	install: {
 		description: 'Internally used form "npm install" installation task',
 		tasks: [
-			'logo',
+			'clean',
 			'bower',
-			'force:gitclone',
+			'force:gitclone-bower',
 			'symlink',
 			'shell:webdriver-update',
 			'githooks',
 			'config:development',
+			'gettext-compile',
+			'templates:seed_init',
+			'templates:apps_init',
 			'less'
 		]
 	}

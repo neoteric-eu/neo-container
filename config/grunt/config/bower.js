@@ -15,14 +15,6 @@ module.exports = function (grunt) {
 		});
 
 	var defaultConf = {
-		seed: {
-			options: {
-				destPrefix: 'src'
-			},
-			files: {
-				'seed': 'neo-seed'
-			}
-		},
 		js: {
 			options: {
 				destPrefix: 'src/assets/vendor/js'
@@ -60,8 +52,8 @@ module.exports = function (grunt) {
 		}
 	});
 
-	_.forOwn(defaultConf, function(value, key){
-		if(_.isEmpty(value.files)) delete defaultConf[key];
+	_.forOwn(defaultConf, function (value, key) {
+		if (_.isEmpty(value.files)) delete defaultConf[key];
 	});
 
 	return defaultConf;

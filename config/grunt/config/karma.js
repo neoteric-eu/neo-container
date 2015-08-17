@@ -4,6 +4,7 @@ module.exports = {
 		plugins: [
 			'karma-jasmine',
 			'karma-requirejs',
+			'karma-coverage',
 			'karma-phantomjs-launcher',
 			'karma-junit-reporter'
 		],
@@ -19,7 +20,8 @@ module.exports = {
 			'karma-jasmine',
 			'karma-requirejs',
 			'karma-coverage',
-			'karma-phantomjs-launcher'
+			'karma-phantomjs-launcher',
+			'karma-junit-reporter'
 		],
 
 		preprocessors: {

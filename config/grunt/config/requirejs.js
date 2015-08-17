@@ -1,16 +1,28 @@
-module.exports = function () {
+module.exports = function (grunt) {
 	'use strict';
+
+	var requirejsConfigs = [];
+
+	grunt.file
+		.expand({filter: 'isFile'}, ['src/apps/*/require.conf.js', 'src/seed/require.conf.js'])
+		.forEach(function (path) {
+			try {
+				requirejsConfigs.push(path);
+			} catch (e) {
+				// Handle exception
+			}
+		});
 
 	return {
 		default: {
 			options: {
 				baseUrl: 'src/',
-				optimize: 'none',
+				optimize: 'uglify2',
 				generateSourceMaps: true,
 				preserveLicenseComments: false,
 				useStrict: true,
-				out: '<%= yeoman.dist %>/apps/container.js',
-				mainConfigFile: '<%= yeoman.app %>/seed/require.conf.js',
+				out: '<%= yeoman.dist %>/container.js',
+				mainConfigFile: requirejsConfigs,
 				findNestedDependencies: true,
 				removeCombined: true,
 				optimizeAllPluginResources: true,

@@ -16,9 +16,9 @@ module.exports = function (grunt) {
 			options[key].options.repository = repoStrings[0];
 
 			if (key === 'neo-seed') {
-				options[key].options.directory = 'src/' + _.trim(key, 'neo-');
+				options[key].options.directory = 'src/' + _.trim(key, ['neo-', 'b2b-']);
 			} else {
-				options[key].options.directory = 'src/apps/' + _.trim(key, 'neo-');
+				options[key].options.directory = 'src/apps/' + _.trim(key, ['neo-', 'b2b-']);
 			}
 
 			if (_.isString(repoStrings[1])) {

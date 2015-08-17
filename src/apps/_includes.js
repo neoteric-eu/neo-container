@@ -1,4 +1,7 @@
 define([
+	// Templates
+	'apps/templates/module',
+
 	// Seed
 	'seed/_includes',
 	'seed/module',

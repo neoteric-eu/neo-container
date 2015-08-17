@@ -1,4 +1,9 @@
-module.exports = function () {
+module.exports = function (grunt) {
+	'use strict';
+
+	var bowerConf = grunt.file.readJSON('src/bower.json');
+	var version = bowerConf.version === '1.0.0' ? '' : bowerConf.version;
+
 	return {
 		default: {
 			options: {
@@ -7,7 +12,7 @@ module.exports = function () {
 					'--no-merges',
 					'--date=short'
 				],
-				after: '<%= pkg.version %>',
+				after: version,
 				dest: 'dist/release-notes.txt',
 				fileHeader: '## Changelog ##',
 				template: '{{> features}}',

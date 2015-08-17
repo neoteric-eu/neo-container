@@ -1,0 +1,5 @@
+{
+	"name": "grunt-gitclone-bower",
+	"main": "tasks",
+	"version": "1.0.0"
+}

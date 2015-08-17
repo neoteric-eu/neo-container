@@ -1,4 +1,4 @@
-requirejs(['/base/src/apps/require.conf.js'], function () {
+requirejs(['/base/src/seed/require.conf.js'], function () {
 	'use strict';
 
 	var tests = [];
@@ -13,11 +13,11 @@ requirejs(['/base/src/apps/require.conf.js'], function () {
 
 	requirejs.config({
 		// Karma serves files from '/base'
-		baseUrl: '/base/src/app',
+		baseUrl: '/base/src',
 
 		// Additional libraries
 		paths: {
-			'angular-mocks': '../vendor/libs/angular-mocks/angular-mocks'
+			'angular-mocks': 'assets/vendor/js/angular-mocks/angular-mocks'
 		},
 
 		shim: {

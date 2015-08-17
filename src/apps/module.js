@@ -1,12 +1,15 @@
-define([
-	'angular',
-	'angular-loading-bar'
-], function (ng) {
+/**
+ * @namespace app
+ */
+
+define(['angular', 'angular-gettext'], function (ng) {
 	'use strict';
 
 	var container = ng.module('app', [
 		'seed',
-		'app.conf'
+		'app.templates',
+		'app.conf',
+		'app.docs'
 	]);
 
 	container.run(function ($log, $rootScope, $state, appConf) {

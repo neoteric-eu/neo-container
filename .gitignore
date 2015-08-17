@@ -1,22 +1,29 @@
 ### Directories ###
-/dist
-/docs
-/node_modules
-/bower_components
-/test/results
-/src/assets/
+dist/
+docs/
+node_modules/
+bower_components/
+test/results/
+src/seed/
+src/assets/
+src/apps/**
 
 ### Extensions ###
-*.todo
-*.ask
-*.tmp
-*.mo
-*.pot
+**/*.todo
+**/*.ask
+**/*.tmp
+**/*.mo
+**/*.pot
 
 ### Files ###
-src/apps/module.conf.js
 npm-debug.log
+src/.htaccess
 src/require.js
+
+!src/apps/_includes.js
+!src/apps/module.js
+
+src/*/templates/module.js
 
 ### SublimeText ###
 # cache files for sublime text

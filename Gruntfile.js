@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 	// Load grunt config automatically
 	require('load-grunt-config')(grunt, {
 		// Path to task.js files, defaults to grunt dir
-		configPath: path.join(process.cwd(), 'config/grunt'),
+		configPath: path.join(process.cwd(), 'config/grunt/config'),
 
 		data: {
 			pkg: pkg
@@ -19,12 +19,6 @@ module.exports = function (grunt) {
 		loadGruntTasks: {
 			config: pkg
 		}
-	});
-
-	grunt.registerTask('logo', 'Display company logo', function () {
-		grunt.log.write(
-			grunt.file.read('config/logo/logo.txt')
-		);
 	});
 
 	grunt.task.renameTask('bowercopy', 'bower');

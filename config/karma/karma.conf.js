@@ -14,14 +14,12 @@ module.exports = function (config) {
 		// list of files / patterns to load in the browser
 		files: [
 			// Load libs
-			{pattern: 'src/vendor/**/*.js', included: false},
-
+			{pattern: 'src/assets/**/*.js', included: false},
 			// Load app files
-			{pattern: 'src/apps/**/!(*.spec).js', included: false},
+			{pattern: 'src/seed/**/!(*.spec).js', included: false},
 
 			//Load test files
-			{pattern: 'src/apps/**/unit/*.spec.js', included: false},
-			{pattern: 'test/unit/**/*.spec.js', included: false},
+			{pattern: 'src/seed/**/unit/*.spec.js', included: false},
 
 			// http://karma-runner.github.io/0.10/plus/requirejs.html
 			'config/karma/require.conf.js'
@@ -29,9 +27,6 @@ module.exports = function (config) {
 
 		// list of files / patterns to exclude
 		//exclude: [],
-		exclude: [
-			'src/apps/container.js'
-		],
 
 		// web server port
 		//port: 9000,
@@ -55,7 +50,7 @@ module.exports = function (config) {
 
 		// Allow Webstorm IDE to visualize code coverage
 		preprocessors: {
-			'src/apps/**/!(*.spec).js': ['coverage']
+			'src/seed/**/!(*.spec).js': ['coverage']
 		},
 
 		// without coverage

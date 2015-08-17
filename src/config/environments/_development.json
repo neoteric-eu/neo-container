@@ -15,5 +15,5 @@
 			"password": "abc123"
 		}
 	],
-	"apiUrl": "http://ntrc-delta.neoteric.eu:9035/api/v1/"
+	"apiUrl": "http://ntrc-delta.neoteric.eu:9000/api/v1/"
 }
