@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"private": true,
 	"dependencies": {
-		"neo-seed": "git@gitlab.neoteric.eu:frontend/neo-seed.git#master"
+		"neo-seed": "1.0.0"
 	},
 	"resolutions": {
 		"angular": "1.4.3",
