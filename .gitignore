@@ -7,6 +7,7 @@ test/results/
 src/seed/
 src/assets/
 src/apps/**
+!src/apps/dashboard
 
 ### Extensions ###
 **/*.todo
