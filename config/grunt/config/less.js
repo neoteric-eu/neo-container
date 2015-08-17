@@ -35,6 +35,9 @@ module.exports = function (grunt) {
 
 	return {
 		default: {
+			options: {
+				paths: ["src/"]
+			},
 			files: files
 		}
 	};

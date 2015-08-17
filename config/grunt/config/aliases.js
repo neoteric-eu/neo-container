@@ -2,6 +2,8 @@ module.exports = {
 	'serve': {
 		description: 'Runs locally server with application',
 		tasks: [
+			'templates:seed_init',
+			'templates:apps_init',
 			'config:development',
 			'connect:server'
 		]
@@ -85,7 +87,7 @@ module.exports = {
 		tasks: [
 			'clean',
 			'bower',
-			'force:gitclone-bower',
+			'force:gitclone',
 			'symlink',
 			'shell:webdriver-update',
 			'githooks',
