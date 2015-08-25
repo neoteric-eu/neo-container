@@ -32,7 +32,6 @@ exports.config = {
 	//
 	// Spec patterns are relative to the location of this config.
 	specs: [
-		'../../test/results/e2e/**/*.spec.js',
 		'../../src/apps/**/test/**/*.spec.js'
 	],
 
