@@ -19,7 +19,7 @@ module.exports = function (config) {
 			{pattern: 'src/seed/**/!(*.spec).js', included: false},
 
 			//Load test files
-			{pattern: 'src/seed/**/unit/*.spec.js', included: false},
+			{pattern: 'src/seed/**/*.spec.js', included: false},
 
 			// http://karma-runner.github.io/0.10/plus/requirejs.html
 			'config/karma/require.conf.js'

@@ -3,8 +3,8 @@ module.exports = function () {
 
 	return {
 		options: {
-			src: ['<%= yeoman.app %>/assets/**/*.css'],
-			dest: '<%= yeoman.tmp %>/assets/css/style.css'
+			src: ['<%= paths.src %>/assets/**/*.css'],
+			dest: '<%= paths.src %>/assets/css/style.css'
 		}
 	};
 };

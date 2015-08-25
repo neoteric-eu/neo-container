@@ -7,27 +7,23 @@ module.exports = {
 		options: {
 			jshintrc: '.jshintrc',
 			ignores: [
-				'<%= yeoman.app %>/require.js',
-				'<%= yeoman.app %>/apps/demo/**/*.js',
-				'<%= yeoman.app %>/apps/**/_locale/*.js',
-				'<%= yeoman.app %>/apps/**/*.spec.js',
-				'<%= yeoman.app %>/seed/**/_locale/*.js',
-				'<%= yeoman.app %>/seed/**/*.spec.js',
-				'<%= yeoman.app %>/seed/_assets/**',
-				'<%= yeoman.app %>/apps/*/_assets/**'
+				'<%= paths.src %>/require.js',
+				'<%= paths.apps %>/*/__misc/',
+				'<%= paths.apps %>/*/test/',
+				'<%= paths.seed %>/__misc/',
+				'<%= paths.seed %>/test/'
 			]
 		},
 		src: [
 			'Gruntfile.js',
-			'<%= yeoman.app %>/apps',
-			'<%= yeoman.app %>/seed'
+			'<%= paths.apps %>',
+			'<%= paths.seed %>'
 		]
 	},
 	test: {
 		src: [
-			'test/**/*.spec.js',
-			'<%= yeoman.app %>/apps/**/*.spec.js',
-			'<%= yeoman.app %>/seed/**/*.spec.js'
+			'<%= paths.apps %>/**/*.spec.js',
+			'<%= paths.seed %>/**/*.spec.js'
 		]
 	}
 };

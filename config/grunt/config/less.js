@@ -3,7 +3,7 @@ module.exports = function (grunt) {
 
 	var files = [{
 		expand: true,
-		cwd: 'src/assets/vendor/less',
+		cwd: '<%= paths.assets %>/vendor/less',
 		src: [
 			'**/*.less',
 			//Exclusions from vendor
@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 			'!animate/**',
 			'!font-awesome/**'
 		],
-		dest: 'src/assets/vendor/css',
+		dest: '<%= paths.assets %>/vendor/css',
 		ext: '.css'
 	}];
 

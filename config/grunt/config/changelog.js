@@ -13,7 +13,7 @@ module.exports = function (grunt) {
 					'--date=short'
 				],
 				after: version,
-				dest: 'dist/release-notes.txt',
+				dest: '<%=paths.dist%>/release-notes.txt',
 				fileHeader: '## Changelog ##',
 				template: '{{> features}}',
 				featureRegex: /^(.*)$/gim,

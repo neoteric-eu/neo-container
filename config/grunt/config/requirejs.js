@@ -21,13 +21,13 @@ module.exports = function (grunt) {
 				generateSourceMaps: true,
 				preserveLicenseComments: false,
 				useStrict: true,
-				out: '<%= yeoman.dist %>/container.js',
+				out: '<%= paths.dist %>/container.js',
 				mainConfigFile: requirejsConfigs,
 				findNestedDependencies: true,
 				removeCombined: true,
 				optimizeAllPluginResources: true,
 				replaceRequireScript: [{
-					files: ['<%= yeoman.dist %>/index.html'],
+					files: ['<%= paths.dist %>/index.html'],
 					module: 'container'
 				}],
 				uglify2: {

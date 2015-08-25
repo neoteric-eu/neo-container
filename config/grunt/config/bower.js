@@ -5,37 +5,37 @@ module.exports = function (grunt) {
 	var bowerFiles = [];
 
 	grunt.file
-		.expand({filter: 'isDirectory'}, ['src/**'])
-		.forEach(function (path) {
+		.expand({filter: 'isFile'}, ['src/**/bower.json'])
+		.forEach(function (bowerPath) {
 			try {
-				bowerFiles.push(grunt.file.readJSON(path + '/bower.json'));
+				bowerFiles.push(grunt.file.readJSON(bowerPath));
 			} catch (e) {
-				// Handle exception
+				grunt.log.error(e);
 			}
 		});
 
 	var defaultConf = {
 		js: {
 			options: {
-				destPrefix: 'src/assets/vendor/js'
+				destPrefix: '<%=paths.assets%>/vendor/js'
 			},
 			files: {}
 		},
 		less: {
 			options: {
-				destPrefix: 'src/assets/vendor/less'
+				destPrefix: '<%=paths.assets%>/vendor/less'
 			},
 			files: {}
 		},
 		fonts: {
 			options: {
-				destPrefix: 'src/assets/vendor/fonts'
+				destPrefix: '<%=paths.assets%>/vendor/fonts'
 			},
 			files: {}
 		},
 		require: {
 			options: {
-				destPrefix: 'src'
+				destPrefix: '<%=paths.src%>'
 			},
 			files: {
 				'require.js': 'requirejs/require.js'

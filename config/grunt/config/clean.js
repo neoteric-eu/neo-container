@@ -1,20 +1,19 @@
-// Empties folders to start fresh
 module.exports = {
 	default: {
 		files: [{
 			expand: true,
 			src: [
-				'dist',
-				'.tmp',
-				'release',
-				'test',
-				'docs',
-				'src/require.js',
-				'src/apps/module.conf.js',
-				'src/apps/!(*.js)',
-				'src/seed',
-				'bower_components',
-				'src/assets'
+				'<%= paths.dist %>',
+				'<%= paths.tmp %>',
+				'<%= paths.release %>',
+				'<%= paths.test %>',
+				'<%= paths.docs %>',
+				'<%= paths.src %>/require.js',
+				'<%= paths.apps %>/module.conf.js',
+				'<%= paths.apps %>/!(*.js)',
+				'<%= paths.seed %>',
+				'<%= paths.assets %>',
+				'bower_components'
 			]
 		}]
 	}

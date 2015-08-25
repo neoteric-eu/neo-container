@@ -1,26 +1,26 @@
 module.exports = function (grunt) {
 	'use strict';
 
-	var appsFiles = {}, seedFiles = {};
+	var defaultConf = {
+		seed: {
+			files: [{
+				dest: '<%= paths.seed %>/__misc/_locale/template.pot',
+				src: '<%= paths.seed %>/**/*@(.html|.js)'
+			}]
+		}
+	};
 
 	grunt.file
 		.expand({filter: 'isDirectory'}, ['src/apps/*'])
 		.forEach(function (path) {
-			appsFiles[path + '/_locale/template.pot'] = path + '/**/*@(.html|.js)';
+			var appName = path.split('/').pop();
+			defaultConf[appName] = {
+				files: [{
+					src: path + '/**/*@(.html|.js)',
+					dest: path + '/__misc/_locale/template.pot'
+				}]
+			}
 		});
 
-	grunt.file
-		.expand({filter: 'isDirectory'}, ['src/seed/*'])
-		.forEach(function (path) {
-			appsFiles[path + '/_locale/template.pot'] = path + '/**/*@(.html|.js)';
-		});
-
-	return {
-		apps: {
-			files: appsFiles
-		},
-		seed: {
-			files: seedFiles
-		}
-	};
+	return defaultConf;
 };

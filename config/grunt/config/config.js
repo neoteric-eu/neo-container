@@ -4,7 +4,7 @@ module.exports = function (grunt) {
 	return {
 		options: {
 			name: 'app.conf',
-			dest: '<%= yeoman.app %>/apps/module.conf.js',
+			dest: '<%= paths.src %>/apps/module.conf.js',
 			wrap: 'define([\'angular\'], function() { \n\n \'use strict\'\;\n return {%= __ngModule %} \n\n});'
 		},
 		development: {

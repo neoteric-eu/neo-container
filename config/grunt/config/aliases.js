@@ -1,102 +1,102 @@
-module.exports = {
-	'serve': {
-		description: 'Runs locally server with application',
-		tasks: [
-			'templates:seed_init',
-			'templates:apps_init',
-			'config:development',
-			'connect:server'
-		]
-	},
+module.exports = function () {
+	return {
+		'serve': {
+			description: 'Runs locally server with application',
+			tasks: [
+				'config:development',
+				'connect:server'
+			]
+		},
 
-	'coverage': {
-		description: 'Checks unit-test code coverage',
-		tasks: [
-			'karma:coverage'
-		]
-	},
+		'coverage': {
+			description: 'Checks unit-test code coverage',
+			tasks: [
+				'karma:coverage'
+			]
+		},
 
-	'test': {
-		description: 'Executes complete app testing',
-		tasks: ['clean:test',
-			'jshint:test',
-			'test:e2e',
-			'test:unit'
-		]
-	},
-	'test:unit': {
-		description: 'Runs unit app testing',
-		tasks: [
-			'karma:unit'
-		]
-	},
-	'test:e2e': {
-		description: 'Runs e2e app testing',
-		tasks: [
-			'connect:test',
-			'shell:webdriver-update',
-			'protractor:singlerun'
-		]
-	},
+		'test': {
+			description: 'Executes complete app testing',
+			tasks: [
+				'jshint:test',
+				'test:e2e',
+				'test:unit'
+			]
+		},
 
-	'dist': {
-		description: 'Creates production version of code in /dist catalog',
-		tasks: [
-			'config:production',
-			'less',
-			'useminPrepare',
-			'templates:apps',
-			'templates:seed',
-			'concat',
-			'cssmin',
-			'copy',
-			'requirejs',
-			'rev',
-			'usemin',
-			'jsdoc'
-		]
-	},
+		'test:unit': {
+			description: 'Runs unit app testing',
+			tasks: [
+				'karma:unit'
+			]
+		},
 
-	release: {
-		description: 'Deploy built app on nexus and bump version of code on master branch',
-		tasks: [
-			'changelog',
-			'compress',
-			'nexus'
-		]
-	},
+		'test:e2e': {
+			description: 'Runs e2e app testing',
+			tasks: [
+				'connect:test',
+				'shell:webdriver-update',
+				'protractor:singlerun'
+			]
+		},
 
-	'docs': {
-		description: 'Generates JSDoc documentation',
-		tasks: [
-			'jsdoc'
-		]
-	},
+		'dist': {
+			description: 'Creates production version of code in /dist catalog',
+			tasks: [
+				'config:production',
+				'less',
+				'useminPrepare',
+				'templates',
+				'concat',
+				'cssmin',
+				'copy',
+				'requirejs',
+				'rev',
+				'usemin',
+				'jsdoc'
+			]
+		},
 
-	'default': {
-		description: 'Create production version on app after testing',
-		tasks: [
-			'jshint:app',
-			'test',
-			'dist'
-		]
-	},
+		release: {
+			description: 'Deploy built app on nexus and bump version of code on master branch',
+			tasks: [
+				'changelog',
+				'compress',
+				'nexus'
+			]
+		},
 
-	install: {
-		description: 'Internally used form "npm install" installation task',
-		tasks: [
-			'clean',
-			'bower',
-			'force:gitclone',
-			'symlink',
-			'shell:webdriver-update',
-			'githooks',
-			'config:development',
-			'gettext-compile',
-			'templates:seed_init',
-			'templates:apps_init',
-			'less'
-		]
+		'docs': {
+			description: 'Generates JSDoc documentation',
+			tasks: [
+				'jsdoc'
+			]
+		},
+
+		'default': {
+			description: 'Create production version on app after testing',
+			tasks: [
+				'jshint:app',
+				'test',
+				'dist'
+			]
+		},
+
+		install: {
+			description: 'Internally used form "npm install" installation task',
+			tasks: [
+				'clean',
+				'bower',
+				'force:gitclone-bower',
+				'shell:webdriver-update',
+				'githooks',
+				'symlink',
+				'config:development',
+				'gettext-compile',
+				'templates:seed_init',
+				'less'
+			]
+		}
 	}
 };
 

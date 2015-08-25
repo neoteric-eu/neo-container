@@ -7,12 +7,12 @@ module.exports = function (grunt) {
 	return {
 		default: {
 			options: {
-				archive: 'release/release-' + version + '.zip',
+				archive: '<%= paths.release %>/release-' + version + '.zip',
 				mode: 'zip'
 			},
 			files: [{
 				expand: true,
-				src: ['dist/**/*']
+				src: ['<%= paths.dist %>/**']
 			}]
 		}
 	};

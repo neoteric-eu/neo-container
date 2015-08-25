@@ -2,9 +2,9 @@ module.exports = {
 	minify: {
 		files: [{
 			expand: true,
-			cwd: '<%= yeoman.tmp %>/assets/css/',
+			cwd: '<%= paths.tmp %>/assets/css/',
 			src: '**/*.css',
-			dest: '<%= yeoman.dist %>/assets/css/',
+			dest: '<%= paths.dist %>/assets/css/',
 			ext: '.min.css',
 			extDot: 'last'
 		}]

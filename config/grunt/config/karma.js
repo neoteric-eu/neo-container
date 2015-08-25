@@ -11,7 +11,7 @@ module.exports = {
 		reporters: ['dots', 'junit'],
 
 		junitReporter: {
-			outputFile: 'test/results/unit/results.xml'
+			outputFile: '<%= paths.test %>/results/unit/results.xml'
 		}
 	},
 	coverage: {
@@ -25,16 +25,14 @@ module.exports = {
 		],
 
 		preprocessors: {
-			'src/apps/components/**/*.js': 'coverage',
-			'src/apps/auth/**/*.js': 'coverage',
-			'src/apps/helpers/**/*.js': 'coverage'
+			'<%= paths.apps %>/**/*.js': 'coverage'
 		},
 
 		reporters: ['coverage'],
 
 		coverageReporter: {
 			type: 'cobertura',
-			dir: 'test/results/coverage/',
+			dir: '<%= paths.test %>/results/coverage/',
 			subdir: '.'
 		},
 		singleRun: true,

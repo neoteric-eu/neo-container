@@ -4,8 +4,8 @@ module.exports = {
 		files: [{
 			expand: true,
 			dot: true,
-			cwd: '<%= yeoman.app %>',
-			dest: '<%= yeoman.dist %>',
+			cwd: '<%= paths.src %>',
+			dest: '<%= paths.dist %>',
 			src: [
 				'require.js',
 				'.htaccess',

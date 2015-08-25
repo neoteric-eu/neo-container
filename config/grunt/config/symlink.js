@@ -4,9 +4,9 @@ module.exports = function (grunt) {
 	var defaultFiles = [{
 		expand: true,
 		overwrite: false,
-		cwd: 'src/seed/_assets',
+		cwd: '<%= paths.seed %>/__misc/_assets',
 		src: ['*'],
-		dest: 'src/assets/seed'
+		dest: '<%= paths.assets %>/seed'
 	}];
 
 	grunt.file
@@ -16,9 +16,9 @@ module.exports = function (grunt) {
 				defaultFiles.push({
 					expand: true,
 					overwrite: false,
-					cwd: path + '/_assets',
+					cwd: path + '/__misc/_assets',
 					src: ['*'],
-					dest: 'src/assets/' + path.split('/').pop()
+					dest: '<%= paths.assets %>/' + path.split('/').pop()
 				});
 			} catch (e) {
 				// Handle exception
