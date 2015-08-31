@@ -1,41 +1,46 @@
 module.exports = {
 	unit: {
 		configFile: 'config/karma/karma.conf.js',
-		plugins: [
-			'karma-jasmine',
-			'karma-requirejs',
-			'karma-coverage',
-			'karma-phantomjs-launcher',
-			'karma-junit-reporter'
-		],
-		reporters: ['dots', 'junit'],
+
+		reporters: ['mocha', 'junit'],
 
 		junitReporter: {
 			outputFile: '<%= paths.test %>/results/unit/results.xml'
+		},
+
+		preprocessors: {
+			// source files, that you wanna generate coverage for
+			// do not include tests or libraries
+			// (these files will be instrumented by Istanbul)
+			'src/seed/**/!(*.spec).js': ['coverage'],
+			// generate js files from html templates
+			'src/seed/**/*.html': ['ng-html2js', 'requirejs-wrapper']
+		},
+
+		ngHtml2JsPreprocessor: {
+			moduleName: 'seed.templates',
+			stripPrefix: 'src/'
+		},
+
+		requireJsWrapper: {
+			dependencies: ['angular']
 		}
 	},
 	coverage: {
 		configFile: 'config/karma/karma.conf.js',
-		plugins: [
-			'karma-jasmine',
-			'karma-requirejs',
-			'karma-coverage',
-			'karma-phantomjs-launcher',
-			'karma-junit-reporter'
-		],
 
 		preprocessors: {
-			'<%= paths.apps %>/**/*.js': 'coverage'
+			'<%= paths.seed %>/**/!(*.spec).js': 'coverage'
 		},
 
 		reporters: ['coverage'],
 
 		coverageReporter: {
-			type: 'cobertura',
 			dir: '<%= paths.test %>/results/coverage/',
-			subdir: '.'
-		},
-		singleRun: true,
-		autoWatch: false
+			reporters: [
+				{type: 'cobertura', subdir: 'cobertura'},
+				{type: 'html', subdir: 'html'}
+			]
+		}
 	}
 };

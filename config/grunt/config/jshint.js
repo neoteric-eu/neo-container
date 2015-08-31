@@ -21,6 +21,10 @@ module.exports = {
 		]
 	},
 	test: {
+		options: {
+			jshintrc: '.jshintrc',
+			newcap: false
+		},
 		src: [
 			'<%= paths.apps %>/**/*.spec.js',
 			'<%= paths.seed %>/**/*.spec.js'

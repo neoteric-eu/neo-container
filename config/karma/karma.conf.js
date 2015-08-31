@@ -9,19 +9,14 @@ module.exports = function (config) {
 		basePath: '../../',
 
 		// testing framework to use (jasmine/mocha/qunit/...)
-		frameworks: ['jasmine', 'requirejs'],
+		frameworks: ['jasmine', 'jasmine-matchers', 'requirejs'],
 
 		// list of files / patterns to load in the browser
 		files: [
-			// Load libs
 			{pattern: 'src/assets/**/*.js', included: false},
-			// Load app files
-			{pattern: 'src/seed/**/!(*.spec).js', included: false},
-
-			//Load test files
-			{pattern: 'src/seed/**/*.spec.js', included: false},
-
-			// http://karma-runner.github.io/0.10/plus/requirejs.html
+			{pattern: 'src/seed/**/*.js', included: false},
+			{pattern: 'src/seed/**/*.html', included: false},
+			{pattern: 'src/seed/**/*.html.js', included: false},
 			'config/karma/require.conf.js'
 		],
 
@@ -33,7 +28,7 @@ module.exports = function (config) {
 
 		// level of logging
 		// possible values: LOG_DISABLE || LOG_ERROR || LOG_WARN || LOG_INFO || LOG_DEBUG
-		logLevel: config.LOG_INFO,
+		logLevel: config.LOG_ERROR,
 
 		// enable / disable watching file and executing tests whenever any file changes
 		autoWatch: false,
@@ -47,14 +42,6 @@ module.exports = function (config) {
 		// - PhantomJS
 		// - IE (only Windows)
 		browsers: ['PhantomJS'],
-
-		// Allow Webstorm IDE to visualize code coverage
-		preprocessors: {
-			'src/seed/**/!(*.spec).js': ['coverage']
-		},
-
-		// without coverage
-		reporters: ['dots', 'progress', 'junit', 'coverage'],
 
 		// Continuous Integration mode
 		// if true, it capture browsers, run tests and exit

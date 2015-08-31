@@ -6,15 +6,14 @@ requirejs(['/base/src/seed/require.conf.js'], function () {
 		if (window.__karma__.files.hasOwnProperty(file)) {
 			// Grab all files path with "Spec" end naming
 			if (/\.spec\.js$/.test(file)) {
-				tests.push(file);
+				tests.push(file.replace(/^\/base\/src\/|\.js$/g, ''));
 			}
 		}
 	}
 
 	requirejs.config({
 		// Karma serves files from '/base'
-		baseUrl: '/base/src',
-
+		baseUrl: '/base/src/',
 		// Additional libraries
 		paths: {
 			'angular-mocks': 'assets/vendor/js/angular-mocks/angular-mocks'
