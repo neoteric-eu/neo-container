@@ -7,7 +7,6 @@ define(['angular', 'angular-gettext'], function (ng) {
 
 	var container = ng.module('app', [
 		'seed',
-		'app.templates',
 		'app.conf',
 		'app.dashboard'
 	]);

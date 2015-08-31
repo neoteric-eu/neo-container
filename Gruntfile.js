@@ -13,8 +13,20 @@ module.exports = function (grunt) {
 		configPath: path.join(process.cwd(), 'config/grunt/config'),
 
 		data: {
-			pkg: pkg
+			paths: {
+				src: 'src',
+				dist: 'dist',
+				tmp: '.tmp',
+				test: 'test',
+				docs: 'docs',
+				release: 'release',
+				assets: 'src/assets',
+				apps: 'src/apps',
+				seed: 'src/seed',
+				config: 'src/config'
+			}
 		},
+
 		// Pass config to load-grunt-tasks.
 		loadGruntTasks: {
 			config: pkg

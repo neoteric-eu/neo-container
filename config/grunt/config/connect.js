@@ -28,6 +28,16 @@ module.exports = function () {
 		};
 
 	return {
+		livereload: {
+			options: {
+				hostname: 'localhost',
+				port: 9000,
+				base: '<%= paths.src %>',
+				livereload: 35729,
+				open: false,
+				middleware: middleware
+			}
+		},
 		server: {
 			options: {
 				hostname: 'localhost',

@@ -7,7 +7,14 @@ module.exports = function () {
 				'connect:server'
 			]
 		},
-
+		'servedev': {
+			description: 'Runs locally server with application',
+			tasks: [
+				'config:development',
+				'connect:livereload',
+				'watch'
+			]
+		},
 		'coverage': {
 			description: 'Checks unit-test code coverage',
 			tasks: [
