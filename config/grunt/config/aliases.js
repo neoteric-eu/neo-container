@@ -52,7 +52,7 @@ module.exports = function () {
 			description: 'Creates production version of code in /dist catalog',
 			tasks: [
 				'config:production',
-				'gettext:compile',
+				'gettext-compile',
 				'less',
 				'useminPrepare',
 				'templates-cache',
