@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 		seed: {
 			files: [{
 				dest: '<%= paths.seed %>/__misc/_locale/template.pot',
-				src: '<%= paths.seed %>/**/*@(.html|.js)'
+				src: '<%= paths.seed %>/**/*@(.html)'
 			}]
 		}
 	};

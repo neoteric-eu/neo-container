@@ -37,30 +37,11 @@ module.exports = function (grunt) {
 					return 'define([\'angular\'], function(angular) { ' +
 						'/*jshint quotmark: false*/ "use strict"; ' +
 						'return angular' +
-						'.module("seed.templates",[])' +
+						'.module("seed.templateCache",[])' +
 						'.run(function ($templateCache, $log) {' +
-						'$log = $log.getInstance(\'seed.templates.module\');' +
+						'$log = $log.getInstance(\'seed.templateCache.module\');' +
 						script +
 						' $log.debug(\'Initiated module\');});});';
-				}
-			}
-		},
-
-		seed_init: {
-			files: [{
-				src: ['index.html'],
-				cwd: '<%= paths.src %>',
-				dest: '<%= paths.seed %>/__misc/_templates/module.js'
-			}],
-			options: {
-				bootstrap: function () {
-					return 'define([\'angular\'], function(angular) { ' +
-						'/*jshint quotmark: false*/ "use strict"; ' +
-						'return angular' +
-						'.module("seed.templates",[])' +
-						'.run(function ($log) { ' +
-						'$log = $log.getInstance(\'seed.templates.module\');' +
-						'$log.debug(\'Initiated module\'); });});';
 				}
 			}
 		}
@@ -71,6 +52,7 @@ module.exports = function (grunt) {
 		.forEach(function (path) {
 
 			var appName = _.last(path.split('/'));
+			var prefix = path.replace('src/', '');
 
 			defaultConf[appName] = {
 				files: [{
@@ -79,42 +61,21 @@ module.exports = function (grunt) {
 					dest: path + '/__misc/_templates/module.js'
 				}],
 				options: {
+					prefix: prefix,
 					bootstrap: function (module, script) {
 						'use strict';
 
-						script = script.replace('\'use strict\';', '');
 						return 'define([\'angular\'], function(angular) { ' +
 							'/*jshint quotmark: false*/ "use strict"; ' +
 							'return angular' +
-							'.module("app.' + appName + '.templates",[])' +
+							'.module("app.' + appName + '.templateCache",[])' +
 							'.run(function ($templateCache, $log) {' +
-							'$log = $log.getInstance(\'apps.' + appName + '.templates.module\');' +
+							'$log = $log.getInstance(\'apps.' + appName + '.templateCache.module\');' +
 							script +
 							' $log.debug(\'Initiated module\');});});';
 					}
 				}
 			};
-
-			defaultConf[appName + '_init'] = {
-				files: [{
-					src: ['index.html'],
-					cwd: '<%= paths.src %>/',
-					dest: path + '/__misc/_templates/module.js'
-				}],
-				options: {
-					bootstrap: function (module) {
-						'use strict';
-
-						return 'define([\'angular\'], function(angular) { ' +
-							'/*jshint quotmark: false*/ "use strict"; ' +
-							'return angular' +
-							'.module("app.' + appName + '.templates",[])' +
-							'.run(function ($templateCache, $log) {' +
-							'$log = $log.getInstance(\'apps.' + appName + '.templates.module\');' +
-							' $log.debug(\'Initiated module\');});});';
-					}
-				}
-			}
 		});
 
 	return defaultConf;

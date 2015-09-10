@@ -2,14 +2,13 @@ module.exports = function (grunt) {
 	'use strict';
 
 	var bowerConf = grunt.file.readJSON('src/bower.json');
-	var version = bowerConf.version;
 
 	return {
 		release: {
 			options: {
-				groupId: "com.neoteric.b2b",
-				artifactId: "tasks",
-				version: version,
+				groupId: "com.neoteric." + bowerConf.project,
+				artifactId: bowerConf.name,
+				version: bowerConf.version,
 				packaging: 'zip',
 				auth: {
 					username: 'deployment',
@@ -17,7 +16,7 @@ module.exports = function (grunt) {
 				},
 				pomDir: 'build/pom',
 				url: 'http://naga.neoteric.eu:8081/nexus/content/repositories/releases',
-				artifact: 'release/release-' + version + '.zip',
+				artifact: '<%= paths.release %>/' + bowerConf.name + '-' + bowerConf.version + '.zip',
 				noproxy: 'localhost',
 				cwd: ''
 			}

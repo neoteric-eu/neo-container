@@ -1,6 +1,7 @@
 {
-	"name": "neo-b2b-docs",
-	"version": "1.0.0",
+	"name": "neo-container",
+	"project": "neo",
+	"version": "0.0.0",
 	"private": true,
 	"dependencies": {
 		"neo-seed": "1.0.0"

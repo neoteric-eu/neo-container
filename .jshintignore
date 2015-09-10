@@ -1,9 +1,8 @@
 src/apps/demo/
 src/assets/
-src/seed/templates/module.js
 dist/
+relase/
 node_modules/
 bower_components/
-_locale/*
 
 

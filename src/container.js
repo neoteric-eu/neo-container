@@ -1,6 +1,3 @@
-// Defer AngularJS bootstrap
-//window.name = 'NG_DEFER_BOOTSTRAP!';
-
 requirejs([
 	'seed/require.conf'
 ], function () {

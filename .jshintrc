@@ -15,6 +15,7 @@
 	"immed": true,
 	/* "latedef": "nofunc" -- should work */
 	"latedef": false,
+	"validthis": true,
 	"newcap": false,
 	"noarg": true,
 	"quotmark": "single",

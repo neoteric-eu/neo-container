@@ -28,12 +28,13 @@ module.exports = {
 	},
 	coverage: {
 		configFile: 'config/karma/karma.conf.js',
-
+		background: true,
 		preprocessors: {
 			'<%= paths.seed %>/**/!(*.spec).js': 'coverage'
 		},
 
 		reporters: ['coverage'],
+		background: true,
 
 		coverageReporter: {
 			dir: '<%= paths.test %>/results/coverage/',

@@ -1,5 +1,6 @@
 ### Directories ###
 dist/
+release/
 docs/
 node_modules/
 bower_components/
@@ -8,6 +9,7 @@ src/seed/
 src/assets/
 src/apps/**
 !src/apps/dashboard/**
+.tmp/
 
 ### Extensions ###
 **/*.todo
@@ -24,7 +26,7 @@ src/require.js
 !src/apps/_includes.js
 !src/apps/module.js
 
-src/*/templates/module.js
+src/apps/*/__misc/_templates/
 
 ### SublimeText ###
 # cache files for sublime text

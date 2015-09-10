@@ -4,6 +4,7 @@ module.exports = function () {
 			description: 'Runs locally server with application',
 			tasks: [
 				'config:development',
+				'templates-cache-clean',
 				'connect:server'
 			]
 		},
@@ -51,23 +52,22 @@ module.exports = function () {
 			description: 'Creates production version of code in /dist catalog',
 			tasks: [
 				'config:production',
+				'gettext:compile',
 				'less',
 				'useminPrepare',
-				'templates',
+				'templates-cache',
 				'concat',
 				'cssmin',
 				'copy',
 				'requirejs',
 				'rev',
-				'usemin',
-				'jsdoc'
+				'usemin'
 			]
 		},
 
 		release: {
 			description: 'Deploy built app on nexus and bump version of code on master branch',
 			tasks: [
-				'changelog',
 				'compress',
 				'nexus'
 			]
@@ -100,7 +100,7 @@ module.exports = function () {
 				'symlink',
 				'config:development',
 				'gettext-compile',
-				'templates:seed_init',
+				'templates-cache-clean',
 				'less'
 			]
 		}

@@ -43,6 +43,24 @@ module.exports = function (config) {
 		// - IE (only Windows)
 		browsers: ['PhantomJS'],
 
+		preprocessors: {
+			// source files, that you wanna generate coverage for
+			// do not include tests or libraries
+			// (these files will be instrumented by Istanbul)
+			'src/seed/**/!(*.spec).js': ['coverage'],
+			// generate js files from html templates
+			'src/seed/**/*.html': ['ng-html2js', 'requirejs-wrapper']
+		},
+
+		ngHtml2JsPreprocessor: {
+			moduleName: 'seed.templates',
+			stripPrefix: 'src/'
+		},
+
+		requireJsWrapper: {
+			dependencies: ['angular']
+		},
+
 		// Continuous Integration mode
 		// if true, it capture browsers, run tests and exit
 		singleRun: true,

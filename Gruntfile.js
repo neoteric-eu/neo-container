@@ -35,7 +35,12 @@ module.exports = function (grunt) {
 
 	grunt.task.renameTask('bowercopy', 'bower');
 	grunt.task.renameTask('nexusDeployer', 'nexus');
-	grunt.task.renameTask('ngtemplates', 'templates');
+
+	grunt.task.renameTask('ngtemplates', 'templates-cache');
+	// make duplicate config of tasks
+	grunt.loadNpmTasks('grunt-angular-templates');
+	grunt.task.renameTask('ngtemplates', 'templates-cache-clean');
+
 	grunt.task.renameTask('nggettext_compile', 'gettext-compile');
 	grunt.task.renameTask('nggettext_extract', 'gettext-extract');
 	grunt.task.renameTask('ngconstant', 'config');
