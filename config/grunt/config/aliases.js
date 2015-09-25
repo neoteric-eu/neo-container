@@ -51,6 +51,7 @@ module.exports = function () {
 		'dist': {
 			description: 'Creates production version of code in /dist catalog',
 			tasks: [
+				'clean:dist',
 				'config:production',
 				'gettext-compile',
 				'less',
@@ -92,15 +93,15 @@ module.exports = function () {
 		install: {
 			description: 'Internally used form "npm install" installation task',
 			tasks: [
-				'clean',
+				'clean:install',
 				'bower',
 				'force:gitclone-bower',
 				'shell:webdriver-update',
 				'githooks',
-				'symlink',
 				'config:development',
 				'gettext-compile',
 				'templates-cache-clean',
+				'symlink',
 				'less'
 			]
 		}

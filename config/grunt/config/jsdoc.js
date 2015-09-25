@@ -2,7 +2,7 @@ module.exports = {
 	dist: {
 		src: [
 			'<%= paths.apps %>/**/*.js',
-			!'<%= paths.apps %>/*/__misc/**'
+			'!<%= paths.apps %>/*/__misc/**'
 		],
 		options: {
 			destination: 'docs',

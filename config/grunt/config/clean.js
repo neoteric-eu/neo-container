@@ -1,5 +1,5 @@
 module.exports = {
-	default: {
+	install: {
 		files: [{
 			expand: true,
 			src: [
@@ -11,9 +11,22 @@ module.exports = {
 				'<%= paths.src %>/require.js',
 				'<%= paths.apps %>/module.conf.js',
 				'<%= paths.apps %>/!(*.js)',
+				'!<%= paths.apps %>/dashboard',
 				'<%= paths.seed %>',
 				'<%= paths.assets %>',
 				'bower_components'
+			]
+		}]
+	},
+	dist: {
+		files: [{
+			expand: true,
+			src: [
+				'<%= paths.dist %>',
+				'<%= paths.tmp %>',
+				'<%= paths.release %>',
+				'<%= paths.test %>',
+				'<%= paths.docs %>'
 			]
 		}]
 	}
