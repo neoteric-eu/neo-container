@@ -1,0 +1,5 @@
+{
+	"name": "grunt-secure-symlink",
+	"main": "tasks",
+	"version": "1.0.0"
+}

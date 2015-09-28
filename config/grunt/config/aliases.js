@@ -94,14 +94,14 @@ module.exports = function () {
 			description: 'Internally used form "npm install" installation task',
 			tasks: [
 				'clean:install',
-				'bower',
 				'force:gitclone-bower',
+				'bower',
 				'shell:webdriver-update',
 				'githooks',
 				'config:development',
+				'secure-symlink',
 				'gettext-compile',
 				'templates-cache-clean',
-				'symlink',
 				'less'
 			]
 		}
