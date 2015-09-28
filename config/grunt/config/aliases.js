@@ -93,6 +93,7 @@ module.exports = function () {
 		install: {
 			description: 'Internally used form "npm install" installation task',
 			tasks: [
+				'git-changed-files',
 				'clean:install',
 				'force:gitclone-bower',
 				'bower',

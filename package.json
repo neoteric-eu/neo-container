@@ -4,7 +4,8 @@
 	"private": true,
 	"dependencies": {
 		"grunt-gitclone-bower": "config/grunt/tasks/grunt-gitclone-bower",
-		"grunt-secure-symlink": "config/grunt/tasks/grunt-secure-symlink"
+		"grunt-secure-symlink": "config/grunt/tasks/grunt-secure-symlink",
+		"grunt-git-changed-files": "config/grunt/tasks/grunt-git-changed-files"
 	},
 	"devDependencies": {
 		"bower": "~1.4.1",
@@ -40,6 +41,7 @@
 		"grunt-nexus-deployer": "0.0.5",
 		"grunt-ng-constant": "^1.1.0",
 		"grunt-open": "^0.2.3",
+		"grunt-prompt": "^1.3.0",
 		"grunt-protractor-runner": "^1.2.1",
 		"grunt-replace": "^0.7.8",
 		"grunt-rev": "~0.1.0",

@@ -1,0 +1,5 @@
+{
+	"name": "grunt-git-changed-files",
+	"main": "tasks",
+	"version": "1.0.0"
+}
