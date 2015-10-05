@@ -95,8 +95,8 @@ module.exports = function () {
 			tasks: [
 				'git-changed-files',
 				'clean:install',
-				'force:gitclone-bower',
 				'bower',
+				'force:gitclone-bower',
 				'shell:webdriver-update',
 				'githooks',
 				'config:development',

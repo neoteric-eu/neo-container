@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 		var dirs = [];
 
 		grunt.file
-			.expand({filter: 'isDirectory'}, ['src/apps/*', 'src/seed', '.'])
+			.expand({filter: 'isDirectory'}, ['src/apps/*', 'src/seed'])
 			.forEach(function (path) {
 				if (grunt.file.isDir(path + '/.git')) {
 					dirs.push(path);
@@ -43,7 +43,11 @@ module.exports = function (grunt) {
 		});
 
 		q.all(promiseArray).done(function (changedFiles) {
-			if (changedFiles.length) {
+			var isChanged = _.dropWhile(changedFiles, function (arr) {
+				return _.isEmpty(_.compact(arr));
+			});
+
+			if (isChanged.length) {
 				grunt.log.writeln('Changed files: '['yellow'].bold);
 				_.each(changedFiles, function (files) {
 					_.each(files, function (file) {
@@ -52,6 +56,8 @@ module.exports = function (grunt) {
 				});
 
 				grunt.task.run('prompt:reset-changes');
+				done();
+			} else {
 				done();
 			}
 		});

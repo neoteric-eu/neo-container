@@ -21,10 +21,12 @@ module.exports = function (grunt) {
 			});
 
 			if (dirsExist) {
-				grunt.task.run('symlink');
-				done();
+				setTimeout(function () {
+					grunt.task.run('symlink');
+					done();
+				}, 10000);
 			} else {
-				setTimeout(waitForFiles, 2000);
+				setTimeout(waitForFiles, 10000);
 			}
 		}
 
