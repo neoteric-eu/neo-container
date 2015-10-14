@@ -33,7 +33,6 @@ module.exports = function (grunt) {
 		}
 	});
 
-	grunt.task.renameTask('bowercopy', 'bower');
 	grunt.task.renameTask('nexusDeployer', 'nexus');
 
 	grunt.task.renameTask('ngtemplates', 'templates-cache');

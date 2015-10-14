@@ -13,7 +13,14 @@ module.exports = {
 				'<%= paths.apps %>/!(*.js)',
 				'!<%= paths.apps %>/dashboard',
 				'<%= paths.seed %>',
-				'<%= paths.assets %>',
+				'<%= paths.assets %>'
+			]
+		}]
+	},
+	bower: {
+		files: [{
+			expand: true,
+			src: [
 				'bower_components'
 			]
 		}]

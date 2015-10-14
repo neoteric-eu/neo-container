@@ -1,0 +1,5 @@
+{
+	"name": "grunt-bower",
+	"main": "tasks",
+	"version": "1.0.0"
+}

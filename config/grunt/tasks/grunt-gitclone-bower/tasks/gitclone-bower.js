@@ -6,6 +6,7 @@ module.exports = function (grunt) {
 
 		var _ = require('lodash');
 		var q = require('q');
+		var prefixes = ['neo-', 'b2b-'];
 
 
 		var RegistryClient = require('bower-registry-client');
@@ -32,13 +33,19 @@ module.exports = function (grunt) {
 		function resolveCloneProperties(prefix, dependencyName, dependencyPath) {
 			options[dependencyName] = {options: {}};
 
+			var catalogName = '';
+			_.each(prefixes, function (_pre) {
+				if(dependencyName.indexOf(_pre) !== -1) {
+					catalogName = dependencyName.replace(_pre, '');
+				}
+			});
+
 			// If path is repo url clone it
 			if (_.startsWith(dependencyPath, 'git')) {
 				var repoStrings = dependencyPath.split('#');
 
 				options[dependencyName].options.repository = repoStrings[0];
-				options[dependencyName].options.directory = prefix +
-					_.trim(dependencyName, ['neo-', 'b2b-']);
+				options[dependencyName].options.directory = prefix + catalogName;
 
 				if (_.isString(repoStrings[1])) {
 					options[dependencyName].options.branch = repoStrings[1];
@@ -58,8 +65,7 @@ module.exports = function (grunt) {
 					}
 
 					options[dependencyName].options.repository = entry.url;
-					options[dependencyName].options.directory = prefix +
-						_.trim(dependencyName, ['neo-', 'b2b-']);
+					options[dependencyName].options.directory = prefix + catalogName;
 					dfd.resolve();
 				});
 			}

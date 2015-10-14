@@ -4,6 +4,7 @@
 	"private": true,
 	"dependencies": {
 		"grunt-gitclone-bower": "config/grunt/tasks/grunt-gitclone-bower",
+		"grunt-bower": "config/grunt/tasks/grunt-bower",
 		"grunt-secure-symlink": "config/grunt/tasks/grunt-secure-symlink",
 		"grunt-git-changed-files": "config/grunt/tasks/grunt-git-changed-files"
 	},
