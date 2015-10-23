@@ -6,16 +6,14 @@ requirejs([
 	requirejs([
 		'require',
 		'angular',
-		'domReady',
 		'lodash-extensions',
 		'bootstrap',
 		'appConfig',
 		'apps/_includes',
 		'apps/module'
-	], function (require, ng, domReady) {
-		domReady(function () {
-			var el = document.querySelector('body');
-			ng.bootstrap(ng.element(el).addClass('ng-app'), ['app']);
+	], function (require, ng) {
+		ng.element(document).ready(function () {
+			ng.bootstrap(ng.element('body').addClass('ng-app'), ['app']);
 		});
 	});
 });
