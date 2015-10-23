@@ -17,18 +17,32 @@ module.exports = function (grunt) {
 		default: {
 			options: {
 				baseUrl: 'src/',
-				optimize: 'uglify2',
+				optimize: 'none',
 				generateSourceMaps: true,
 				preserveLicenseComments: false,
 				useStrict: true,
-				out: '<%= paths.dist %>/container.js',
+				dir: '<%= paths.dist %>',
 				mainConfigFile: requirejsConfigs,
 				findNestedDependencies: true,
 				removeCombined: true,
 				optimizeAllPluginResources: true,
+				modules: [{
+					name: 'appConfig',
+					excludeShallow: [
+						'angular'
+					],
+					out: 'app.conf'
+				}, {
+					name: 'container',
+					excludeShallow: [
+						'appConfig'
+					],
+					out: 'container'
+				}],
 				replaceRequireScript: [{
 					files: ['<%= paths.dist %>/index.html'],
-					module: 'container'
+					module: 'container',
+					out: 'container'
 				}],
 				uglify2: {
 					mangle: false
