@@ -69,6 +69,7 @@ module.exports = function () {
 		release: {
 			description: 'Deploy built app on nexus and bump version of code on master branch',
 			tasks: [
+				'changelog',
 				'compress',
 				'nexus'
 			]
