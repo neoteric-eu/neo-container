@@ -1,7 +1,7 @@
 [
-	{
-		"name": "Dashboard",
-		"path": "apps/dashboard",
-		"order": 0
-	}
+  {
+    "name": "Dashboard",
+    "path": "apps/dashboard",
+    "order": 0
+  }
 ]

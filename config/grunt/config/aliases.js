@@ -96,7 +96,6 @@ module.exports = function () {
 				'git-changed-files',
 				'clean:install',
 				'force:gitclone-bower',
-				'shell:webdriver-update',
 				'bower',
 				'githooks',
 				'config:development',
