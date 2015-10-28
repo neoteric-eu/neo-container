@@ -8,7 +8,7 @@ module.exports = function (grunt) {
 			options: {
 				requirejs: true,
 				modulePath: 'seed/module',
-				module: 'seed.gettext',
+				module: 'seed',
 				defaultLanguage: lang.defaultLanguage.locale
 			},
 			files: [{
@@ -27,7 +27,7 @@ module.exports = function (grunt) {
 				options: {
 					requirejs: true,
 					modulePath: 'apps/' + appName + '/module',
-					module: 'app.'+appName+'.gettext',
+					module: 'app.'+appName,
 					defaultLanguage: lang.defaultLanguage.locale
 				},
 				files: [{
