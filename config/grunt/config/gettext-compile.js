@@ -1,11 +1,15 @@
 module.exports = function (grunt) {
 	'use strict';
 
+	var lang = grunt.file.readJSON('src/config/settings/language.json');
+
 	var defaultConf = {
 		seed: {
 			options: {
 				requirejs: true,
-				modulePath: 'seed/module'
+				modulePath: 'seed/module',
+				module: 'seed.gettext',
+				defaultLanguage: lang.defaultLanguage.locale
 			},
 			files: [{
 				dest: '<%= paths.seed %>/__misc/_locale/translation.js',
@@ -22,7 +26,9 @@ module.exports = function (grunt) {
 			defaultConf[appName] = {
 				options: {
 					requirejs: true,
-					modulePath: 'apps/' + appName + '/module'
+					modulePath: 'apps/' + appName + '/module',
+					module: 'app.'+appName+'.gettext',
+					defaultLanguage: lang.defaultLanguage.locale
 				},
 				files: [{
 					src: path + '/__misc/_locale/*.po',
