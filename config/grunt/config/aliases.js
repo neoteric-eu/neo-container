@@ -69,6 +69,7 @@ module.exports = function () {
 		release: {
 			description: 'Deploy built app on nexus and bump version of code on master branch',
 			tasks: [
+				'changelog',
 				'compress',
 				'nexus'
 			]
@@ -96,7 +97,6 @@ module.exports = function () {
 				'git-changed-files',
 				'clean:install',
 				'force:gitclone-bower',
-				'shell:webdriver-update',
 				'bower',
 				'githooks',
 				'config:development',

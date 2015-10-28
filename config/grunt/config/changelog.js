@@ -2,7 +2,7 @@ module.exports = function (grunt) {
 	'use strict';
 
 	var bowerConf = grunt.file.readJSON('src/bower.json');
-	var version = bowerConf.version === '1.0.0' ? '' : bowerConf.version;
+	var version = bowerConf.version === 'v1.0.0' ? '' : 'v'+bowerConf.version;
 
 	return {
 		default: {

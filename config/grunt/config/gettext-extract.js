@@ -5,7 +5,9 @@ module.exports = function (grunt) {
 		seed: {
 			files: [{
 				dest: '<%= paths.seed %>/__misc/_locale/template.pot',
-				src: '<%= paths.seed %>/**/*@(.html|js)'
+				src: [
+					'<%= paths.seed %>/**/*@(.html|.js)'
+				]
 			}]
 		}
 	};
@@ -16,7 +18,7 @@ module.exports = function (grunt) {
 			var appName = path.split('/').pop();
 			defaultConf[appName] = {
 				files: [{
-					src: path + '/**/*@(.html|.js)',
+					src: [path + '/**/*@(.html|.js)', '!' + path + '/__misc/**'],
 					dest: path + '/__misc/_locale/template.pot'
 				}]
 			}

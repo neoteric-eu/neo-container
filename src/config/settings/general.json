@@ -1,5 +1,5 @@
 {
-	"name": "neoContainer",
-	"logo": "assets/seed/img/container-logo.png",
-	"defaultStateToRedirectAfterLogin": "app.dashboard"
+  "name": "neoContainer",
+  "logo": "assets/seed/img/container-logo.png",
+  "defaultStateToRedirectAfterLogin": "app.dashboard"
 }
