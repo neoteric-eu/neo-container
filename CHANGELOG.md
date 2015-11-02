@@ -1,5 +1,5 @@
 ## 1.1.1 
-
+- *showEuLogotypes* in config/settings/general.json enables displaying EU logotypes
 - cookiesProviderConfig object added to config/environments/*.json. 
   Properties: https://docs.angularjs.org/api/ngCookies/provider/$cookiesProvider#defaults
   i.e. 
