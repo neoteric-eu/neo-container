@@ -8,7 +8,7 @@
 		}
 	],
 	"cookiesProviderConfig": {
-		"domain": "ccc"
+		"domain": "localhost"
 	},
  "apiUrl": "http://ntrc-delta.neoteric.eu:9000/api/v1/"
 }
