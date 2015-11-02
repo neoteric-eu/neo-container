@@ -3,7 +3,7 @@
 	"project": "neo",
 	"private": true,
 	"dependencies": {
-		"neo-seed": "1.0.4"
+		"neo-seed": "~1"
 	},
 	"resolutions": {
 		"angular": "1.4.3",

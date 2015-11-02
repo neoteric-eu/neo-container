@@ -1,3 +1,14 @@
+## 1.1.1 
+
+- cookiesProviderConfig object added to config/environments/*.json. 
+  Properties: https://docs.angularjs.org/api/ngCookies/provider/$cookiesProvider#defaults
+  i.e. 
+  `
+  	"cookiesProviderConfig": {
+  		"domain": "ccc"
+  	},
+  `
+
 ## 1.1.0
 - Migrated dependencies from container to seed
 - Enabled changelog in relase
