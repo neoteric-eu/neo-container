@@ -1,5 +1,6 @@
 {
   "name": "neoContainer",
   "logo": "assets/seed/img/container-logo.png",
-  "defaultStateToRedirectAfterLogin": "app.dashboard"
+	"defaultStateToRedirectAfterLogin": "app.dashboard",
+	"showEuLogotypes": false
 }
