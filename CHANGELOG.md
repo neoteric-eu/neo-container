@@ -1,3 +1,16 @@
+<a name="1.2.0"></a>
+# [1.2.0](//compare/v1.1.1...v1.2.0) (2015-11-05)
+
+
+### Features
+
+* **workflow:** #3244 - add chagelog generation grunt task dae3475, closes #3244
+
+<a name="1.1.0"></a>
+## [1.1.0](//compare/v1.1.1...v1.1.1) (2015-11-05)
+
+
+
 ## 1.1.1 
 - *showEuLogotypes* in config/settings/general.json enables displaying EU logotypes
 - cookiesProviderConfig object added to config/environments/*.json. 
@@ -5,7 +18,7 @@
   i.e. 
   `
   	"cookiesProviderConfig": {
-  		"domain": "ccc"
+  		"domain": "neoteric.eu"
   	},
   `
 

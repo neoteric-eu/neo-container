@@ -1,5 +1,6 @@
 {
 	"name": "neo-container",
+	"version": "1.2.1",
 	"project": "neo",
 	"private": true,
 	"dependencies": {
