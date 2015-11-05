@@ -11,6 +11,11 @@ define(['angular', 'angular-gettext'], function (ng) {
     'app.dashboard'
   ]);
 
+	container.config(function($cookiesProvider, appConf) {
+			_.extend($cookiesProvider, appConf.environmentSettings.cookiesProviderConfig);
+		}
+	);
+
   container.run(function ($log, $rootScope, $state, appConf) {
     $log = $log.getInstance('app.module');
 

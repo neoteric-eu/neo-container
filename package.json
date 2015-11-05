@@ -6,7 +6,8 @@
 		"grunt-gitclone-bower": "config/grunt/tasks/grunt-gitclone-bower",
 		"grunt-bower": "config/grunt/tasks/grunt-bower",
 		"grunt-secure-symlink": "config/grunt/tasks/grunt-secure-symlink",
-		"grunt-git-changed-files": "config/grunt/tasks/grunt-git-changed-files"
+		"grunt-git-changed-files": "config/grunt/tasks/grunt-git-changed-files",
+		"grunt-conventional-changelog": "config/grunt/tasks/grunt-conventional-changelog"
 	},
 	"devDependencies": {
 		"bower": "~1.4.1",
@@ -18,7 +19,6 @@
 		"grunt-angular-templates": "^0.5.7",
 		"grunt-bowercopy": "1.2.3",
 		"grunt-bump": "^0.3.0",
-		"grunt-changelog": "^0.3.0",
 		"grunt-cli": "^0.1.13",
 		"grunt-contrib-clean": "~0.5.0",
 		"grunt-contrib-compress": "^0.13.0",

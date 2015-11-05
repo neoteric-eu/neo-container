@@ -7,5 +7,8 @@
 			"password": "abc123"
 		}
 	],
-	"apiUrl": "http://ntrc-delta.neoteric.eu:9000/api/v1/"
+	"cookiesProviderConfig": {
+		"domain": "localhost"
+	},
+ "apiUrl": "http://ntrc-delta.neoteric.eu:9000/api/v1/"
 }

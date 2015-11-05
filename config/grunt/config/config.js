@@ -14,9 +14,7 @@ module.exports = function (grunt) {
 					environmentSettings: grunt.file.readJSON('src/config/environments/_development.json'),
 					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
 					languageSettings: grunt.file.readJSON('src/config/settings/language.json'),
-					skinSettings: grunt.file.readJSON('src/config/settings/skin.json'),
-					soundSettings: grunt.file.readJSON('src/config/settings/sound.json'),
-					sentrySettings: {}
+					skinSettings: grunt.file.readJSON('src/config/settings/skin.json')
 				}
 			}
 		},
@@ -27,9 +25,7 @@ module.exports = function (grunt) {
 					environmentSettings: grunt.file.readJSON('src/config/environments/_staging.json'),
 					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
 					languageSettings: grunt.file.readJSON('src/config/settings/language.json'),
-					skinSettings: grunt.file.readJSON('src/config/settings/skin.json'),
-					soundSettings: grunt.file.readJSON('src/config/settings/sound.json'),
-					sentrySettings: {}
+					skinSettings: grunt.file.readJSON('src/config/settings/skin.json')
 				}
 			}
 		},
@@ -40,9 +36,7 @@ module.exports = function (grunt) {
 					environmentSettings: grunt.file.readJSON('src/config/environments/_production.json'),
 					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
 					languageSettings: grunt.file.readJSON('src/config/settings/language.json'),
-					skinSettings: grunt.file.readJSON('src/config/settings/skin.json'),
-					soundSettings: grunt.file.readJSON('src/config/settings/sound.json'),
-					sentrySettings: grunt.file.readJSON('src/config/settings/sentry.json')
+					skinSettings: grunt.file.readJSON('src/config/settings/skin.json')
 				}
 			}
 		}

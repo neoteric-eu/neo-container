@@ -18,7 +18,7 @@ module.exports = function (grunt) {
 			var appName = path.split('/').pop();
 			defaultConf[appName] = {
 				files: [{
-					src: [path + '/**/*@(.html|.js)', '!' + path + '/__misc/**'],
+					src: [path + '/**/*@(.html|.js)'],
 					dest: path + '/__misc/_locale/template.pot'
 				}]
 			}
