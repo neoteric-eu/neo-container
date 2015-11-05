@@ -10,6 +10,7 @@ src/assets/
 src/apps/**
 !src/apps/dashboard/**
 .tmp/
+*.wiki/
 
 ### Extensions ###
 **/*.todo
