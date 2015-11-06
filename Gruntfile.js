@@ -34,6 +34,7 @@ module.exports = function (grunt) {
 	});
 
 	grunt.task.renameTask('nexusDeployer', 'nexus');
+	grunt.task.renameTask('conventionalChangelog', 'changelog');
 
 	grunt.task.renameTask('ngtemplates', 'templates-cache');
 	// make duplicate config of tasks
