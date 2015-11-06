@@ -16,13 +16,10 @@ define(['angular', 'angular-gettext'], function (ng) {
 		}
 	);
 
-  container.run(function ($log, $rootScope, $state, appConf) {
+	container.run(function ($log, $rootScope) {
     $log = $log.getInstance('app.module');
 
-    container.name = appConf.appName;
     $rootScope.appReady = true;
-
-    $rootScope.$state = $state;
 
     $log.debug('Set up container configuration');
   });
