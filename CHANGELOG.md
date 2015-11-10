@@ -2,10 +2,13 @@
 ## [1.2.1](//compare/v1.1.1...v1.2.1) (2015-11-10)
 
 
+### Bug Fixes
+
+* **config:** gitclone does not work for project without standard prefixes 1cd2cf4
+
 ### Features
 
 * **workflow:** #3244 - add `conventionalChangelog` grunt task 8bf7993, closes #3244
-
 
 
 <a name="1.2.0"></a>
