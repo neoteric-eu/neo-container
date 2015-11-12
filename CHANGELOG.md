@@ -1,6 +1,5 @@
-<a name="1.2.1"></a>
-## [1.2.1](//compare/v1.1.1...v1.2.1) (2015-11-10)
-
+<a name="1.1.3"></a>
+## [1.1.3](//compare/v1.1.2...v1.1.3) (2015-11-10)
 
 ### Bug Fixes
 
@@ -10,19 +9,15 @@
 
 * **workflow:** #3244 - add `conventionalChangelog` grunt task 8bf7993, closes #3244
 
-
 <a name="1.2.0"></a>
-# [1.2.0](//compare/v1.1.1...v1.2.0) (2015-11-05)
-
+# [1.2.0](//compare/v1.1.1...v1.1.2) (2015-11-05)
 
 ### Features
 
 * **workflow:** #3244 - add chagelog generation grunt task dae3475, closes #3244
 
-<a name="1.1.0"></a>
-## [1.1.0](//compare/v1.1.1...v1.1.1) (2015-11-05)
-
-
+<a name="1.1."></a>
+## [1.1.1](//compare/v1.1.0...v1.1.1) (2015-11-05)
 
 ## 1.1.1 
 - *showEuLogotypes* in config/settings/general.json enables displaying EU logotypes
