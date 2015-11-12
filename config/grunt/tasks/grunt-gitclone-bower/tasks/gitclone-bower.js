@@ -33,10 +33,10 @@ module.exports = function (grunt) {
 		function resolveCloneProperties(prefix, dependencyName, dependencyPath) {
 			options[dependencyName] = {options: {}};
 
-			var catalogName = '';
+			var catalogName = dependencyName;
 			_.each(prefixes, function (_pre) {
 				if(dependencyName.indexOf(_pre) !== -1) {
-					catalogName = dependencyName.replace(_pre, '');
+					catalogName = catalogName.replace(_pre, '');
 				}
 			});
 
