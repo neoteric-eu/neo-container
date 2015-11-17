@@ -10,7 +10,7 @@ requirejs([
 		angular
 			.element(document)
 			.ready(function () {
-				angular.bootstrap(angular.element('body').addClass('ng-app'), ['app']);
+				angular.bootstrap(angular.element('html').addClass('ng-app'), ['app']);
 			});
 	});
 });
