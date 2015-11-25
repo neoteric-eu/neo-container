@@ -13,8 +13,7 @@ module.exports = function (grunt) {
 					appsSettings: grunt.file.readJSON('src/config/settings/apps.json'),
 					environmentSettings: grunt.file.readJSON('src/config/environments/_development.json'),
 					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
-					languageSettings: grunt.file.readJSON('src/config/settings/language.json'),
-					skinSettings: grunt.file.readJSON('src/config/settings/skin.json')
+					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
 				}
 			}
 		},
@@ -24,8 +23,7 @@ module.exports = function (grunt) {
 					appsSettings: grunt.file.readJSON('src/config/settings/apps.json'),
 					environmentSettings: grunt.file.readJSON('src/config/environments/_staging.json'),
 					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
-					languageSettings: grunt.file.readJSON('src/config/settings/language.json'),
-					skinSettings: grunt.file.readJSON('src/config/settings/skin.json')
+					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
 				}
 			}
 		},
@@ -35,8 +33,7 @@ module.exports = function (grunt) {
 					appsSettings: grunt.file.readJSON('src/config/settings/apps.json'),
 					environmentSettings: grunt.file.readJSON('src/config/environments/_production.json'),
 					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
-					languageSettings: grunt.file.readJSON('src/config/settings/language.json'),
-					skinSettings: grunt.file.readJSON('src/config/settings/skin.json')
+					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
 				}
 			}
 		}
