@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 	var defaultConf = {
 		js: {
 			options: {
-				destPrefix: '<%=paths.assets%>/vendor/js',
+				destPrefix: '<%=paths.assets%>/vendor/js'
 			},
 			files: {}
 		},
