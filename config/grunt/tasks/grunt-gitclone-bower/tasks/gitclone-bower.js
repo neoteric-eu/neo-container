@@ -55,7 +55,6 @@ module.exports = function (grunt) {
 				var dfd = q.defer();
 				promiseArray.push(dfd.promise);
 
-				// If path is semver tag resolve it and clone
 				registry.lookup(dependencyName, function (err, entry) {
 
 					if (err) {
@@ -64,7 +63,10 @@ module.exports = function (grunt) {
 						return;
 					}
 
+					var config = grunt.file.readJSON('bower_components/'+dependencyName+'/bower.json');
+
 					options[dependencyName].options.repository = entry.url;
+					options[dependencyName].options.branch = 'v'+config.version;
 					options[dependencyName].options.directory = prefix + catalogName;
 					dfd.resolve();
 				});

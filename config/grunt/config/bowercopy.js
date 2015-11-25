@@ -42,6 +42,9 @@ module.exports = function (grunt) {
 			files: {
 				'require.js': 'requirejs/require.js'
 			}
+		},
+		options: {
+			runBower: false
 		}
 	};
 

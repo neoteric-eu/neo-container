@@ -98,6 +98,7 @@ module.exports = function () {
 			tasks: [
 				'git-changed-files',
 				'clean:install',
+				'shell:bower-apps',
 				'force:gitclone-bower',
 				'bower',
 				'githooks',
