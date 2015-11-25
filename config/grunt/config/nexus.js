@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 	return {
 		release: {
 			options: {
-				groupId: 'com.neoteric.frontend' + bowerConf.project,
+				groupId: 'com.neoteric.frontend.' + bowerConf.project,
 				artifactId: bowerConf.name,
 				version: bowerConf.version,
 				packaging: 'zip',
