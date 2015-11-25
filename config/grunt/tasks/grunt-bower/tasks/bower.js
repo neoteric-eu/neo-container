@@ -4,6 +4,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('bower', function () {
 		grunt.task.run('clean:bower');
 		grunt.task.run('bowercopy');
+		grunt.task.run('githooks');
 	});
 };
 

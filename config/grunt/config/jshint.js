@@ -1,33 +1,54 @@
-// Make sure code styles are up to par and there are no obvious mistakes
-module.exports = {
-	options: {
-		reporter: require('jshint-stylish')
-	},
-	app: {
+/*
+ * Validate files with JSHint, ensuring consistent code style.
+ */
+
+module.exports = function (grunt) {
+	'use strict';
+
+	var defaultConf = {
 		options: {
-			jshintrc: '.jshintrc',
-			ignores: [
-				'<%= paths.src %>/require.js',
-				'<%= paths.apps %>/*/__misc/',
-				'<%= paths.apps %>/*/test/',
-				'<%= paths.seed %>/__misc/',
-				'<%= paths.seed %>/test/'
+			reporter: require('jshint-stylish'),
+			jshintrc: '.jshintrc'
+		},
+		container: {
+			options: {
+				ignores: [
+					'<%= paths.src %>/require.js',
+					'<%= paths.src %>/assets',
+					'<%= paths.apps %>',
+					'<%= paths.seed %>'
+				]
+			},
+			src: [
+				'<%= paths.src %>',
+				'config/',
+				'Gruntfile.js'
 			]
 		},
-		src: [
-			'Gruntfile.js',
-			'<%= paths.apps %>',
-			'<%= paths.seed %>'
-		]
-	},
-	test: {
-		options: {
-			jshintrc: '.jshintrc',
-			newcap: false
-		},
-		src: [
-			'<%= paths.apps %>/**/*.spec.js',
-			'<%= paths.seed %>/**/*.spec.js'
-		]
-	}
+		seed: {
+			options: {
+				ignores: [
+					'<%= paths.seed %>/__misc/'
+				]
+			},
+			src: ['<%= paths.seed %>']
+		}
+	};
+
+	grunt.file
+		.expand({filter: 'isDirectory'}, ['src/apps/*'])
+		.forEach(function (path) {
+			var appName = path.split('/').pop();
+
+			defaultConf[appName] = {
+				options: {
+					ignores: [
+						path + '/__misc/'
+					]
+				},
+				src: [path]
+			};
+		});
+
+	return defaultConf;
 };

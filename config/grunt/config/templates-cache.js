@@ -4,7 +4,6 @@ module.exports = function (grunt) {
 	var defaultConf = {
 		options: {
 			source: function (code) {
-				'use strict';
 				// Remove all whitespaces
 				code = String(code).replace(/\t+|\n+|\r+/g, '');
 				return code;
@@ -31,8 +30,6 @@ module.exports = function (grunt) {
 			}],
 			options: {
 				bootstrap: function (module, script) {
-					'use strict';
-
 					script = script.replace('\'use strict\';', '');
 					return 'define([\'angular\'], function(angular) { ' +
 						'/*jshint quotmark: false*/ "use strict"; ' +
@@ -63,8 +60,6 @@ module.exports = function (grunt) {
 				options: {
 					prefix: prefix,
 					bootstrap: function (module, script) {
-						'use strict';
-
 						return 'define([\'angular\'], function(angular) { ' +
 							'/*jshint quotmark: false*/ "use strict"; ' +
 							'return angular' +

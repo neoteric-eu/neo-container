@@ -4,7 +4,6 @@ module.exports = function (grunt) {
 	var defaultConf = {
 		options: {
 			source: function (code) {
-				'use strict';
 				// Remove all whitespaces
 				code = String(code).replace(/\t+|\n+|\r+/g, '');
 				return code;
@@ -50,7 +49,7 @@ module.exports = function (grunt) {
 			var appName = _.last(path.split('/'));
 			var prefix = path.replace('src/', '');
 
-			defaultConf[appName + '_init'] = {
+			defaultConf[appName] = {
 				files: [{
 					src: ['index.html'],
 					cwd: '<%= paths.src %>/',
@@ -58,9 +57,7 @@ module.exports = function (grunt) {
 				}],
 				options: {
 					prefix: prefix,
-					bootstrap: function (module) {
-						'use strict';
-
+					bootstrap: function () {
 						return 'define([\'angular\'], function(angular) { ' +
 							'/*jshint quotmark: false*/ "use strict"; ' +
 							'return angular' +
@@ -70,7 +67,7 @@ module.exports = function (grunt) {
 							' $log.debug(\'Initiated module\');});});';
 					}
 				}
-			}
+			};
 		});
 
 	return defaultConf;
