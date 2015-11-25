@@ -1,6 +1,8 @@
 var Q = require('q');
 
 function promiseFromStreams(streams) {
+	'use strict';
+
   return Q.all(streams.map(function(stream) {
     return Q.promise(function(resolve, reject) {
       stream.on('error', function(err) {

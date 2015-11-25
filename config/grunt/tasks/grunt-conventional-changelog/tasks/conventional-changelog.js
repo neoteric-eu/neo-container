@@ -1,4 +1,3 @@
-'use strict';
 var chalk = require('chalk');
 var concat = require('concat-stream');
 var conventionalChangelog = require('conventional-changelog');
@@ -8,6 +7,8 @@ var promiseFromStreams = require('./lib/promise-from-streams.js');
 var DESC = 'Generate a changelog from git metadata';
 
 module.exports = function(grunt) {
+	'use strict';
+
   grunt.registerMultiTask('conventionalChangelog', DESC, function() {
     var streams = [];
     var tally = 0;

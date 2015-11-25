@@ -27,7 +27,7 @@ module.exports = function (grunt) {
 					src: ['**/*.less', '!**/_*.less'],
 					dest: path + '/css',
 					ext: '.css'
-				})
+				});
 			} catch (e) {
 				// Handle exception
 			}
@@ -36,7 +36,7 @@ module.exports = function (grunt) {
 	return {
 		default: {
 			options: {
-				paths: ["src/"]
+				paths: ['src/']
 			},
 			files: files
 		}

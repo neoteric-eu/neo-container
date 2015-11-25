@@ -32,5 +32,5 @@ module.exports = function (grunt) {
 		default: {
 			files: defaultFiles
 		}
-	}
+	};
 };

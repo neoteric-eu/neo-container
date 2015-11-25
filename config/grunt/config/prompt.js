@@ -10,7 +10,7 @@ module.exports = function () {
 					message: function () {
 						return 'Detected changes on git repositories. ' +
 							'Installation process will reset all of your repos overriding changes. ' +
-							'Do you want to continue?'
+							'Do you want to continue?';
 					}
 				}],
 				then: function (result, done) {
@@ -24,5 +24,5 @@ module.exports = function () {
 				}
 			}
 		}
-	}
+	};
 };

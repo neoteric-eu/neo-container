@@ -34,7 +34,7 @@ module.exports = function (grunt) {
 					src: path + '/__misc/_locale/*.po',
 					dest: path + '/__misc/_locale/translation.js'
 				}]
-			}
+			};
 		});
 
 	return defaultConf;

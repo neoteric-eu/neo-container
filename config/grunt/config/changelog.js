@@ -61,7 +61,7 @@ module.exports = function (grunt) {
 					path: 'src/apps/' + appName
 				},
 				src: 'CHANGELOG.md'
-			}
+			};
 		});
 
 	return defaultConf;

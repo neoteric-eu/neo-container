@@ -1,4 +1,6 @@
 module.exports = function () {
+	'use strict';
+
 	return {
 		'serve': {
 			description: 'Runs locally server with application',
@@ -106,6 +108,6 @@ module.exports = function () {
 				'less'
 			]
 		}
-	}
+	};
 };
 

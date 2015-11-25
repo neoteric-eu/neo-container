@@ -21,7 +21,7 @@ module.exports = function (grunt) {
 					src: [path + '/**/*@(.html|.js)'],
 					dest: path + '/__misc/_locale/template.pot'
 				}]
-			}
+			};
 		});
 
 	return defaultConf;

@@ -1,7 +1,9 @@
-//noinspection JSValidateTypes
+/*jshint -W020 */
 _ = require('lodash');
 
 module.exports = function (grunt) {
+	'use strict';
+
 	var bowerFiles = [];
 
 	grunt.file
@@ -53,7 +55,9 @@ module.exports = function (grunt) {
 	});
 
 	_.forOwn(defaultConf, function (value, key) {
-		if (_.isEmpty(value.files)) delete defaultConf[key];
+		if (_.isEmpty(value.files)) {
+			delete defaultConf[key];
+		}
 	});
 
 	return defaultConf;
