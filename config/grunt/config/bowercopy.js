@@ -17,7 +17,7 @@ module.exports = function (grunt) {
 	var defaultConf = {
 		js: {
 			options: {
-				destPrefix: '<%=paths.assets%>/vendor/js'
+				destPrefix: '<%=paths.assets%>/vendor/js',
 			},
 			files: {}
 		},
@@ -40,6 +40,9 @@ module.exports = function (grunt) {
 			files: {
 				'require.js': 'requirejs/require.js'
 			}
+		},
+		options: {
+			runBower: false
 		}
 	};
 
