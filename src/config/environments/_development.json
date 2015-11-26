@@ -1,6 +1,5 @@
 {
 	"debugEnabled": true,
-	"modRewriteEnabled": true,
 	"predefinedLogins": [
 		{
 			"login": "admin@neoteric.eu",

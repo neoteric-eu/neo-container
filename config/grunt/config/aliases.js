@@ -68,10 +68,29 @@ module.exports = function () {
 			]
 		},
 
+		'dist:production': {
+			description: 'Creates production version of code in /dist catalog',
+			tasks: [
+				'clean:dist',
+				'config:production',
+				'gettext-compile',
+				'less',
+				'useminPrepare',
+				'templates-cache',
+				'concat',
+				'cssmin',
+				'copy',
+				'requirejs',
+				'rev',
+				'usemin',
+				'compress',
+				'nexus'
+			]
+		},
+
 		release: {
 			description: 'Deploy built app on nexus and bump version of code on master branch',
 			tasks: [
-				'changelog',
 				'compress',
 				'nexus'
 			]
