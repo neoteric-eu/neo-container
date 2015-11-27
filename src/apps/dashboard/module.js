@@ -3,7 +3,7 @@ define(['angular'], function (ng) {
 
 	var module = ng.module('app.dashboard', ['app.dashboard.templateCache']);
 
-	module.config(function ($stateProvider) {
+	module.config(function ($stateProvider, gettext) {
 		$stateProvider
 			.state('app.dashboard', {
 				url: '/dashboard',
@@ -13,7 +13,7 @@ define(['angular'], function (ng) {
 					}
 				},
 				data: {
-					title: 'Dashboard'
+					title: gettext('Dashboard')
 				}
 			});
 	});

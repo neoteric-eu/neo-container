@@ -1,6 +1,8 @@
-// Copies remaining files to places other tasks can use
+/*
+ * Copies static files from src to dist folder
+ */
 module.exports = {
-	default: {
+	dist: {
 		files: [{
 			expand: true,
 			dot: true,
@@ -8,9 +10,7 @@ module.exports = {
 			dest: '<%= paths.dist %>',
 			src: [
 				'require.js',
-				'.htaccess',
 				'index.html',
-				'404.html',
 				'assets/*/fonts/**',
 				'assets/*/img/**',
 				'assets/*/sounds/**'

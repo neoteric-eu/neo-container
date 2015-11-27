@@ -27,9 +27,7 @@ module.exports = function (grunt) {
 
 	return {
 		options: {
-			overwrite: true
-		},
-		default: {
+			overwrite: true,
 			files: defaultFiles
 		}
 	};
