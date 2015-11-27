@@ -8,13 +8,6 @@ module.exports = function () {
 			'connect:server'
 		],
 
-		// Runs locally server with application
-		'servedev': [
-			'config:development',
-			'connect:livereload',
-			'watch'
-		],
-
 		// Checks unit-test code coverage
 		'coverage': [
 			'karma:coverage'
@@ -41,7 +34,7 @@ module.exports = function () {
 
 		// Creates production version of code in /dist catalog
 		'build:production': [
-			'clean:dist',
+			'clean:build',
 			'config:production',
 			'gettext-compile',
 			'less',
@@ -54,14 +47,27 @@ module.exports = function () {
 			'ngAnnotate:production',
 			'uglify:production',
 			'rev',
-			'usemin'
+			'usemin',
+			'clean:postBuild'
+		],
+
+		// Creates development/ci version of code in /dist catalog
+		'build:development': [],
+
+		// Creates staging version of code in /dist catalog
+		'build:staging': [],
+
+		// Deploy built app on nexus and bump version of code on master branch
+		'release:production': [
+			'compress',
+			'nexus:production'
 		],
 
 		// Deploy built app on nexus and bump version of code on master branch
-		release: [
-			'compress',
-			'nexus'
-		],
+		'release:development': [],
+
+		// Deploy built app on nexus and bump version of code on master branch
+		'release:staging': [],
 
 		// Generates JSDoc documentation
 		'docs': [

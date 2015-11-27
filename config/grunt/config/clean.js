@@ -25,15 +25,22 @@ module.exports = {
 			]
 		}]
 	},
-	dist: {
+	build: {
 		files: [{
 			expand: true,
 			src: [
 				'<%= paths.dist %>',
-				'<%= paths.tmp %>',
 				'<%= paths.release %>',
 				'<%= paths.test %>',
 				'<%= paths.docs %>'
+			]
+		}]
+	},
+	postBuild: {
+		files: [{
+			expand: true,
+			src: [
+				'<%= paths.tmp %>'
 			]
 		}]
 	}
