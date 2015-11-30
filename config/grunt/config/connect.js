@@ -28,7 +28,7 @@ module.exports = function () {
 		};
 
 	return {
-		server: {
+		serve: {
 			options: {
 				hostname: 'localhost',
 				port: 9000,
@@ -46,11 +46,11 @@ module.exports = function () {
 				middleware: middleware
 			}
 		},
-		dist: {
+		build: {
 			options: {
 				hostname: 'localhost',
 				port: 9040,
-				base: '<%= paths.dist %>',
+				base: '<%= paths.build %>',
 				open: true,
 				keepalive: true,
 				middleware: middleware

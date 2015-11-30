@@ -3,7 +3,7 @@ module.exports = {
 		files: [{
 			expand: true,
 			src: [
-				'<%= paths.dist %>',
+				'<%= paths.build %>',
 				'<%= paths.tmp %>',
 				'<%= paths.release %>',
 				'<%= paths.test %>',
@@ -25,11 +25,11 @@ module.exports = {
 			]
 		}]
 	},
-	build: {
+	preBuild: {
 		files: [{
 			expand: true,
 			src: [
-				'<%= paths.dist %>',
+				'<%= paths.build %>',
 				'<%= paths.release %>',
 				'<%= paths.test %>',
 				'<%= paths.docs %>'

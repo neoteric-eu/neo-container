@@ -4,7 +4,7 @@ module.exports = function () {
 	return {
 		options: {
 			src: ['<%= paths.src %>/assets/**/*.css'],
-			dest: '<%= paths.src %>/assets/css/style.css'
+			dest: '<%= paths.build %>/assets/css/style.css'
 		}
 	};
 };

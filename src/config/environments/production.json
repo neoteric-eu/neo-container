@@ -1,0 +1,9 @@
+{
+  "debugEnabled": false,
+  "predefinedLogins": [],
+  "apiUrl": "__apiUrl__",
+  "cookiesProviderConfig": {
+    "domain": "__cookieDomain__"
+  }
+}
+

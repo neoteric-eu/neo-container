@@ -1,8 +1,0 @@
-{
-	"debugEnabled": true,
-	"predefinedLogins": [],
-	"apiUrl": "http://ntrc-delta.neoteric.eu:9000/api/v1/",
-	"cookiesProviderConfig": {
-	}
-}
-

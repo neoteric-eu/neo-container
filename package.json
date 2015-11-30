@@ -4,7 +4,6 @@
 	"private": true,
 	"dependencies": {
 		"grunt-gitclone-bower": "config/grunt/tasks/grunt-gitclone-bower",
-		"grunt-secure-symlink": "config/grunt/tasks/grunt-secure-symlink",
 		"grunt-git-changed-files": "config/grunt/tasks/grunt-git-changed-files",
 		"grunt-conventional-changelog": "config/grunt/tasks/grunt-conventional-changelog"
 	},
@@ -37,7 +36,6 @@
 		"grunt-githooks": "^0.3.1",
 		"grunt-jsdoc": "^0.6.2",
 		"grunt-karma": "^0.10.1",
-		"grunt-newer": "~0.5.4",
 		"grunt-nexus-artifact": "^0.3.7",
 		"grunt-nexus-deployer": "0.0.5",
 		"grunt-ng-annotate": "^1.0.1",

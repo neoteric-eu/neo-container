@@ -7,11 +7,21 @@ module.exports = function (grunt) {
 			dest: '<%= paths.src %>/apps/module.conf.js',
 			wrap: 'define([\'angular\'], function() { \n\n \'use strict\'\;\n return {%= __ngModule %} \n\n});'
 		},
+		local: {
+			constants: {
+				appConf: {
+					appsSettings: grunt.file.readJSON('src/config/settings/apps.json'),
+					environmentSettings: grunt.file.readJSON('src/config/environments/local.json'),
+					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
+					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
+				}
+			}
+		},
 		development: {
 			constants: {
 				appConf: {
 					appsSettings: grunt.file.readJSON('src/config/settings/apps.json'),
-					environmentSettings: grunt.file.readJSON('src/config/environments/_development.json'),
+					environmentSettings: grunt.file.readJSON('src/config/environments/development.json'),
 					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
 					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
 				}
@@ -21,7 +31,7 @@ module.exports = function (grunt) {
 			constants: {
 				appConf: {
 					appsSettings: grunt.file.readJSON('src/config/settings/apps.json'),
-					environmentSettings: grunt.file.readJSON('src/config/environments/_staging.json'),
+					environmentSettings: grunt.file.readJSON('src/config/environments/staging.json'),
 					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
 					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
 				}
@@ -31,7 +41,7 @@ module.exports = function (grunt) {
 			constants: {
 				appConf: {
 					appsSettings: grunt.file.readJSON('src/config/settings/apps.json'),
-					environmentSettings: grunt.file.readJSON('src/config/environments/_production.json'),
+					environmentSettings: grunt.file.readJSON('src/config/environments/production.json'),
 					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
 					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
 				}

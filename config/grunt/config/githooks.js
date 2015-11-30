@@ -9,7 +9,7 @@ module.exports = function (grunt) {
 			options: {
 				dest: 'seed/.git/hooks'
 			},
-			'pre-commit': 'jshint:container'
+			'pre-commit': 'jshint:seed'
 		}
 	};
 
@@ -24,7 +24,7 @@ module.exports = function (grunt) {
 					options: {
 						dest: path + '/.git/hooks'
 					},
-					'pre-commit': 'jshint:container'
+					'pre-commit': 'jshint:' + appName
 				};
 			}
 		});

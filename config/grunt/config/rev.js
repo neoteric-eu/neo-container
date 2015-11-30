@@ -1,9 +1,9 @@
 module.exports = {
-	dist: {
+	build: {
 		files: {
 			src: [
-				'<%= paths.dist %>/assets/js/*.js',
-				'<%= paths.dist %>/assets/css/*.css'
+				'<%= paths.build %>/assets/js/*.js',
+				'<%= paths.build %>/assets/css/*.css'
 			]
 		}
 	}

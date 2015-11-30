@@ -3,6 +3,7 @@ module.exports = function (grunt) {
 
 	var path = require('path');
 	var pkg = require('./package.json');
+	var bower = grunt.file.readJSON('src/bower.json');
 
 	// Time how long tasks take. Can help when optimizing build times
 	require('time-grunt')(grunt);
@@ -13,9 +14,17 @@ module.exports = function (grunt) {
 		configPath: path.join(process.cwd(), 'config/grunt/config'),
 
 		data: {
+			meta: {
+				version: bower.version,
+				name: bower.name
+			},
+			banner: '/**\n' +
+			' * <%= meta.name %>\n' +
+			' * @version v<%= meta.version %> - <%= grunt.template.today("yyyy-mm-dd/HH:MM") %>\n' +
+			' */\n',
 			paths: {
 				src: 'src',
-				dist: 'dist',
+				build: 'build',
 				tmp: '.tmp',
 				test: 'test',
 				docs: 'docs',
@@ -44,4 +53,5 @@ module.exports = function (grunt) {
 	grunt.task.renameTask('nggettext_compile', 'gettext-compile');
 	grunt.task.renameTask('nggettext_extract', 'gettext-extract');
 	grunt.task.renameTask('ngconstant', 'config');
+	grunt.task.renameTask('ngAnnotate', 'annotate');
 };

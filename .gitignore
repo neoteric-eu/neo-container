@@ -1,5 +1,5 @@
 ### Directories ###
-dist/
+build/
 release/
 docs/
 node_modules/
@@ -10,7 +10,6 @@ src/assets/
 src/apps/**
 !src/apps/dashboard/**
 .tmp/
-*.wiki/
 
 ### Extensions ###
 **/*.todo
@@ -23,6 +22,7 @@ src/apps/**
 npm-debug.log
 src/.htaccess
 src/require.js
+src/container.js
 
 !src/apps/_includes.js
 !src/apps/module.js

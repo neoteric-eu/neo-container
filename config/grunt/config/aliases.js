@@ -1,94 +1,203 @@
-module.exports = function () {
-	'use strict';
+module.exports = {
+	/*
+	 * ========================================
+	 * --------- INSTALLATION TASKS -----------
+	 * ========================================
+	 */
 
-	return {
-		'serve': [
-			'config:development',
-			'templates-cache-clean',
-			'connect:server'
-		],
+	// Internally used by Grunt for installation,
+	// Run along with npm install
+	install: [
+		'git-changed-files',
+		'clean:bower',
+		'clean:install',
+		'shell:bower-install',
+		'force:gitclone-bower',
+		'bowercopy',
+		'githooks',
+		'copy:container',
+		'config:local',
+		'symlink',
+		'less'
+	],
 
-		// Checks unit-test code coverage
-		'coverage': [
-			'karma:coverage'
-		],
+	/*
+	 * ========================================
+	 * --------- CONFIGURATION TASKS ----------
+	 * ========================================
+	 */
 
-		// Executes complete app testing
-		'test': [
-			'jshint:test',
-			'test:e2e',
-			'test:unit'
-		],
+	// Set-up container configuration to local settings
+	'config--local': [
+		'config:local'
+	],
 
-		// Runs unit app testing
-		'test:unit': [
-			'karma:unit'
-		],
+	// Set-up container configuration to development settings
+	'config--development': [
+		'config:development'
+	],
 
-		// Runs e2e app testing
-		'test:e2e': [
-			'connect:test',
-			'shell:webdriver-update',
-			'protractor:singlerun'
-		],
+	// Set-up container configuration to staging settings
+	'config--staging': [
+		'config:staging'
+	],
 
-		// Creates production version of code in /dist catalog
-		'build:production': [
-			'clean:build',
-			'config:production',
-			'gettext-compile',
-			'less',
-			'useminPrepare',
-			'templates-cache',
-			'concat',
-			'cssmin',
-			'copy',
-			'requirejs:production',
-			'ngAnnotate:production',
-			'uglify:production',
-			'rev',
-			'usemin',
-			'clean:postBuild'
-		],
+	// Set-up container configuration to production settings
+	'config--production': [
+		'config:production'
+	],
 
-		// Creates development/ci version of code in /dist catalog
-		'build:development': [],
+	/*
+	 * ========================================
+	 * ------------- SERVER TASKS -------------
+	 * ========================================
+	 */
 
-		// Creates staging version of code in /dist catalog
-		'build:staging': [],
+	// Set up local configuration of container
+	// Runs local server for code development
+	'serve': [
+		'config:local',
+		'gettext-compile',
+		'templates-cache-clean',
+		'connect:serve'
+	],
 
-		// Deploy built app on nexus and bump version of code on master branch
-		'release:production': [
-			'compress',
-			'nexus:production'
-		],
+	// Runs local server for built
+	'serve--build': [
+		'connect:build'
+	],
 
-		// Deploy built app on nexus and bump version of code on master branch
-		'release:development': [],
+	/*
+	 * ========================================
+	 * ------------ TESTING TASKS -------------
+	 * ========================================
+	 */
 
-		// Deploy built app on nexus and bump version of code on master branch
-		'release:staging': [],
+	// Checks unit-test code coverage
+	'coverage': [
+		'karma:coverage'
+	],
 
-		// Generates JSDoc documentation
-		'docs': [
-			'jsdoc'
-		],
+	// Executes complete app testing
+	'test': [
+		'jshint',
+		'test:e2e',
+		'test:unit'
+	],
 
-		// Internally used form "npm install" installation task
-		install: [
-			'git-changed-files',
-			'clean:install',
-			'shell:bower-apps',
-			'force:gitclone-bower',
-			'clean:bower',
-			'bowercopy',
-			'githooks',
-			'config:development',
-			'secure-symlink',
-			'gettext-compile',
-			'templates-cache-clean',
-			'less'
-		]
-	};
+	// Runs unit app testing
+	'test--unit': [
+		'karma:unit'
+	],
+
+	// Runs e2e app testing
+	'test--e2e': [
+		'connect:test',
+		'shell:webdriver-update',
+		'protractor:singlerun'
+	],
+
+	/*
+	 * ========================================
+	 * ------------- BUILD TASKS --------------
+	 * ========================================
+	 */
+
+	// Creates development/CI version of code in /build catalog
+	'build--development': [
+		'jshint',
+		'clean:preBuild',
+		'config:development',
+		'gettext-compile',
+		'less',
+		'useminPrepare',
+		'templates-cache',
+		'concat',
+		'cssmin',
+		'copy:build',
+		'requirejs',
+		'annotate',
+		'uglify:development',
+		'rev',
+		'usemin',
+		'clean:postBuild'
+	],
+
+	// Creates staging version of code in /build catalog
+	'build--staging': [
+		'jshint',
+		'clean:preBuild',
+		'config:staging',
+		'gettext-compile',
+		'less',
+		'useminPrepare',
+		'templates-cache',
+		'concat',
+		'cssmin',
+		'copy:build',
+		'requirejs',
+		'annotate',
+		'uglify:staging',
+		'rev',
+		'usemin',
+		'clean:postBuild'
+	],
+
+	// Creates production version of code in /build catalog
+	'build--production': [
+		'jshint',
+		'clean:preBuild',
+		'config:production',
+		'gettext-compile',
+		'less',
+		'useminPrepare',
+		'templates-cache',
+		'concat',
+		'cssmin',
+		'copy:build',
+		'requirejs',
+		'annotate',
+		'uglify:production',
+		'rev',
+		'usemin',
+		'clean:postBuild'
+	],
+
+	/*
+	 * ========================================
+	 * ------------ RELEASE TASKS -------------
+	 * ========================================
+	 */
+
+	// Deploys development snapshot to nexus artifact repository
+	'release--development': [
+		'compress:development',
+		'nexus:development'
+	],
+
+	// Deploys production code to nexus artifact repository
+	// add git tag on development branch
+	'release--staging': [
+		'gittag:staging',
+		'compress:staging',
+		'nexus:staging'
+	],
+
+	// Deploys production code to nexus artifact repository
+	'release--production': [
+		'compress:production',
+		'nexus:production'
+	],
+
+	/*
+	 * ========================================
+	 * --------- DOCUMENTATION TASKS ----------
+	 * ========================================
+	 */
+
+	// Generates JSDoc documentation
+	'docs': [
+		'jsdoc'
+	]
 };
 

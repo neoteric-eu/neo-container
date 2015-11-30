@@ -1,0 +1,9 @@
+{
+  "debugEnabled": true,
+  "predefinedLogins": [],
+  "cookiesProviderConfig": {
+    "domain": "example-api.neoteric.eu"
+  },
+  "apiUrl": "http://example-api.neoteric.eu/"
+}
+

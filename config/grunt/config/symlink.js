@@ -3,7 +3,6 @@ module.exports = function (grunt) {
 
 	var defaultFiles = [{
 		expand: true,
-		overwrite: false,
 		cwd: '<%= paths.seed %>/__misc/_assets',
 		src: ['*'],
 		dest: '<%= paths.assets %>/seed'
@@ -12,22 +11,19 @@ module.exports = function (grunt) {
 	grunt.file
 		.expand({filter: 'isDirectory'}, ['src/apps/*'])
 		.forEach(function (path) {
-			try {
-				defaultFiles.push({
-					expand: true,
-					overwrite: false,
-					cwd: path + '/__misc/_assets',
-					src: ['*'],
-					dest: '<%= paths.assets %>/' + path.split('/').pop()
-				});
-			} catch (e) {
-				// Handle exception
-			}
+			defaultFiles.push({
+				expand: true,
+				cwd: path + '/__misc/_assets',
+				src: ['*'],
+				dest: '<%= paths.assets %>/' + path.split('/').pop()
+			});
 		});
 
 	return {
 		options: {
-			overwrite: true,
+			overwrite: true
+		},
+		install: {
 			files: defaultFiles
 		}
 	};

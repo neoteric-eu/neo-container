@@ -14,11 +14,11 @@ module.exports = function (grunt) {
     });
 
   return {
-		production: {
+		build: {
 			options: {
 				baseUrl: 'src/',
 				optimize: 'none',
-				out: '<%= paths.dist %>/assets/js/container.js',
+				out: '<%= paths.build %>/assets/js/container.js',
 				generateSourceMaps: false,
 				preserveLicenseComments: false,
 				useStrict: true,
@@ -27,10 +27,6 @@ module.exports = function (grunt) {
 				removeCombined: true,
 				optimizeAllPluginResources: true,
 				waitSeconds: 0,
-				replaceRequireScript: [{
-					files: ['<%= paths.dist %>/index.html'],
-					module: 'container'
-				}],
 				include: ['container']
 			}
 		}

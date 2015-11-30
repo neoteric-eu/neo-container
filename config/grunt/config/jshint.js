@@ -1,7 +1,3 @@
-/*
- * Validate files with JSHint, ensuring consistent code style.
- */
-
 module.exports = function (grunt) {
 	'use strict';
 

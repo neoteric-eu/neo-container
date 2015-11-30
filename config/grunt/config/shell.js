@@ -1,4 +1,3 @@
-// Command line actions configuration
 module.exports = {
 	// Command line conf
 	options: {
@@ -9,7 +8,7 @@ module.exports = {
 		command: 'node ./node_modules/protractor/bin/webdriver-manager update'
 	},
 
-	'bower-apps': {
+	'bower-install': {
 		command: 'bower install'
 	}
 };

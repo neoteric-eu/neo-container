@@ -2,34 +2,35 @@ module.exports = function () {
 	'use strict';
 
 	return {
+		options: {
+			banner: '<%= banner %>',
+			preserveComments: false
+		},
 		development: {
 			options: {
-				mangle: false,
-				sourceMap: true,
-				preserveComments: true
+				mangle: true,
+				sourceMap: true
 			},
 			files: {
-				'<%= paths.dist %>/assets/js/container.js': '<%= paths.dist %>/assets/js/container.js'
+				'<%= paths.build %>/assets/js/container.js': '<%= paths.build %>/assets/js/container.js'
 			}
 		},
 		staging: {
 			options: {
-				mangle: false,
-				sourceMap: true,
-				preserveComments: false
+				beautify: true,
+				sourceMap: true
 			},
 			files: {
-				'<%= paths.dist %>/assets/js/container.js': '<%= paths.dist %>/assets/js/container.js'
+				'<%= paths.build %>/assets/js/container.js': '<%= paths.build %>/assets/js/container.js'
 			}
 		},
 		production: {
 			options: {
-				mangle: false,
-				sourceMap: false,
-				preserveComments: false
+				mangle: true,
+				sourceMap: false
 			},
 			files: {
-				'<%= paths.dist %>/assets/js/container.js': '<%= paths.dist %>/assets/js/container.js'
+				'<%= paths.build %>/assets/js/container.js': '<%= paths.build %>/assets/js/container.js'
 			}
 		}
 	};
