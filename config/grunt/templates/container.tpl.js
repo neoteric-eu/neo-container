@@ -1,9 +1,9 @@
-requirejs([
+require([
 	/* deps */
 ], function () {
 	'use strict';
 
-	requirejs([
+	require([
 		'apps/_includes',
 		'apps/module'
 	], function () {

@@ -1,19 +1,15 @@
 module.exports = function (grunt) {
-  'use strict';
+	'use strict';
 
-  var requirejsConfigs = [];
+	var requirejsConfigs = [];
 
-  grunt.file
-    .expand({filter: 'isFile'}, ['src/apps/*/require.conf.js', 'src/seed/require.conf.js'])
-    .forEach(function (path) {
-      try {
-        requirejsConfigs.push(path);
-      } catch (e) {
-				grunt.util.error('Error reading files', e);
-      }
-    });
+	grunt.file
+		.expand({filter: 'isFile'}, ['src/apps/*/require.conf.js', 'src/seed/require.conf.js'])
+		.forEach(function (path) {
+			requirejsConfigs.push(path);
+		});
 
-  return {
+	return {
 		build: {
 			options: {
 				baseUrl: 'src/',
@@ -30,5 +26,5 @@ module.exports = function (grunt) {
 				include: ['container']
 			}
 		}
-  };
+	};
 };

@@ -3,26 +3,25 @@
  */
 
 define(['angular', 'angular-gettext'], function (ng) {
-  'use strict';
+	'use strict';
 
-  var container = ng.module('app', [
-    'seed',
-    'app.conf',
-    'app.dashboard'
-  ]);
+	var container = ng.module('app', [
+		'seed',
+		'app.conf',
+		'app.dashboard'
+	]);
 
-	container.config(function($cookiesProvider, appConf) {
-			_.extend($cookiesProvider, appConf.environmentSettings.cookiesProviderConfig);
-		}
-	);
+	container.config(function ($cookiesProvider, appConf) {
+		_.extend($cookiesProvider, appConf.environmentSettings.cookiesProviderConfig);
+	});
 
 	container.run(function ($log, $rootScope) {
-    $log = $log.getInstance('app.module');
+		$log = $log.getInstance('app.module');
 
-    $rootScope.appReady = true;
+		$rootScope.appReady = true;
 
-    $log.debug('Set up container configuration');
-  });
+		$log.debug('Set up container configuration');
+	});
 
-  return container;
+	return container;
 });
