@@ -4,7 +4,6 @@ module.exports = function () {
 	return {
 		staging: {
 			options: {
-				branch: 'development',
 				tags: true
 			}
 		}
