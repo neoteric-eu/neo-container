@@ -1,9 +1,9 @@
-requirejs([
+require([
 	'seed/require.conf'
 ], function () {
 	'use strict';
 
-	requirejs([
+	require([
 		'apps/_includes',
 		'apps/module'
 	], function () {

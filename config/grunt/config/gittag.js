@@ -3,8 +3,9 @@ module.exports = function () {
 
 	return {
 		staging: {
-			tag: 'STAG-<%= grunt.template.today("yyyy-mm-dd/HH:MM") %>',
-			message: 'Release to staging environment'
+			options: {
+				tag: 'STAG-<%= grunt.template.today("yyyymmdd.HHMMss") %>'
+			}
 		}
 	};
 };

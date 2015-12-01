@@ -16,7 +16,8 @@ module.exports = function (grunt) {
 		data: {
 			meta: {
 				version: bower.version,
-				name: bower.name
+				name: bower.name,
+				project: bower.project
 			},
 			banner: '/**\n' +
 			' * <%= meta.name %>\n' +

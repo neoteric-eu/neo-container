@@ -3,6 +3,7 @@ module.exports = {
 		files: [{
 			expand: true,
 			src: [
+				'bower_components',
 				'<%= paths.build %>',
 				'<%= paths.tmp %>',
 				'<%= paths.release %>',
@@ -17,11 +18,11 @@ module.exports = {
 			]
 		}]
 	},
-	bower: {
+	preDocs: {
 		files: [{
 			expand: true,
 			src: [
-				'bower_components'
+				'<%= paths.docs %>'
 			]
 		}]
 	},
@@ -30,9 +31,7 @@ module.exports = {
 			expand: true,
 			src: [
 				'<%= paths.build %>',
-				'<%= paths.release %>',
-				'<%= paths.test %>',
-				'<%= paths.docs %>'
+				'<%= paths.test %>'
 			]
 		}]
 	},
@@ -41,6 +40,14 @@ module.exports = {
 			expand: true,
 			src: [
 				'<%= paths.tmp %>'
+			]
+		}]
+	},
+	preRelease: {
+		files: [{
+			expand: true,
+			src: [
+				'<%= paths.release %>'
 			]
 		}]
 	}

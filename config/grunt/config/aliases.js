@@ -9,7 +9,6 @@ module.exports = {
 	// Run along with npm install
 	install: [
 		'git-changed-files',
-		'clean:bower',
 		'clean:install',
 		'shell:bower-install',
 		'force:gitclone-bower',
@@ -171,21 +170,24 @@ module.exports = {
 
 	// Deploys development snapshot to nexus artifact repository
 	'release--development': [
-		'compress:development',
+		'clean:preRelease',
+		'compress',
 		'nexus:development'
 	],
 
 	// Deploys production code to nexus artifact repository
 	// add git tag on development branch
 	'release--staging': [
+		'clean:preRelease',
 		'gittag:staging',
-		'compress:staging',
+		'compress',
 		'nexus:staging'
 	],
 
 	// Deploys production code to nexus artifact repository
 	'release--production': [
-		'compress:production',
+		'clean:preRelease',
+		'compress',
 		'nexus:production'
 	],
 
@@ -197,6 +199,7 @@ module.exports = {
 
 	// Generates JSDoc documentation
 	'docs': [
+		'clean:preDocs',
 		'jsdoc'
 	]
 };
