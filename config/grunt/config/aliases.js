@@ -180,6 +180,7 @@ module.exports = {
 	'release--staging': [
 		'clean:preRelease',
 		'gittag:staging',
+		'gitpush:staging',
 		'compress',
 		'nexus:staging'
 	],
