@@ -14,10 +14,18 @@ module.exports = {
 		'force:gitclone-bower',
 		'bowercopy',
 		'githooks',
-		'copy:container',
+		'generate--container',
 		'config:local',
 		'symlink',
 		'less'
+	],
+
+	// Generates container files based on installed apps
+	// injecting modules and requirejs dependencies
+	'generate--container': [
+		'copy:container',
+		'copy:module',
+		'copy:includes'
 	],
 
 	/*

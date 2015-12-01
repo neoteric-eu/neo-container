@@ -24,9 +24,6 @@ src/.htaccess
 src/require.js
 src/container.js
 
-!src/apps/_includes.js
-!src/apps/module.js
-
 src/apps/*/__misc/_templates/
 
 ### SublimeText ###

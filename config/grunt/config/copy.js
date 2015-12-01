@@ -12,17 +12,20 @@ module.exports = function (grunt) {
 	var includes = [];
 
 	grunt.file
-		.expand({filter: 'isFile', cwd: 'src/'}, ['apps/*/_includes.js', 'seed/_includes.js'])
+		.expand({
+			filter: 'isFile',
+			cwd: 'src/'
+		}, ['apps/*/@(_includes|module).js'])
 		.forEach(function (path) {
-			includes.push(path);
+			includes.push(path.replace('.js', ''));
 		});
 
 	var modules = [];
 
 	grunt.file
-		.expand({filter: 'isFile', cwd: 'src/'}, ['apps/*/module.js', 'seed/module.js'])
+		.expand({filter: 'isDirectory', cwd: 'src/'}, ['apps/*'])
 		.forEach(function (path) {
-			modules.push(path);
+			modules.push('app.' + path.split('/').pop());
 		});
 
 	return {
@@ -34,6 +37,7 @@ module.exports = function (grunt) {
 				dest: '<%= paths.build %>',
 				src: [
 					'require.js',
+					'.htaccess',
 					'index.html',
 					'assets/*/fonts/**',
 					'assets/*/img/**',
@@ -47,6 +51,24 @@ module.exports = function (grunt) {
 			options: {
 				process: function (content) {
 					return content.replace('/* deps */', '\'' + requireConfigs.join('\',\'') + '\'');
+				}
+			}
+		},
+		includes: {
+			src: 'config/grunt/templates/includes.tpl.js',
+			dest: '<%= paths.apps %>/_includes.js',
+			options: {
+				process: function (content) {
+					return content.replace('/* includes */', '\'' + includes.join('\',\n\t\'') + '\'');
+				}
+			}
+		},
+		module: {
+			src: 'config/grunt/templates/module.tpl.js',
+			dest: '<%= paths.apps %>/module.js',
+			options: {
+				process: function (content) {
+					return content.replace('/* modules */', '\'' + modules.join('\',\n\t\'') + '\'');
 				}
 			}
 		}

@@ -14,7 +14,7 @@ define(['angular', 'angular-gettext'], function (ng) {
 	var container = ng.module('app', [
 		'seed',
 		'app.conf',
-		'app.dashboard'
+		/* modules */
 	]);
 
 	container.config(function ($cookiesProvider, appConf) {
