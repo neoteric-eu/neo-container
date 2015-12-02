@@ -11,7 +11,7 @@ module.exports = {
 		'git-changed-files',
 		'clean:install',
 		'shell:bower-install',
-		'force:gitclone-bower',
+		'gitclone-bower',
 		'bowercopy',
 		'githooks',
 		'generate--container',
@@ -39,19 +39,9 @@ module.exports = {
 		'config:local'
 	],
 
-	// Set-up container configuration to development settings
-	'config--development': [
+	// Set-up container configuration to build (variable based) settings
+	'config--build': [
 		'config:development'
-	],
-
-	// Set-up container configuration to staging settings
-	'config--staging': [
-		'config:staging'
-	],
-
-	// Set-up container configuration to production settings
-	'config--production': [
-		'config:production'
 	],
 
 	/*
@@ -114,7 +104,7 @@ module.exports = {
 	'build--development': [
 		'jshint',
 		'clean:preBuild',
-		'config:development',
+		'config:build',
 		'gettext-compile',
 		'less',
 		'useminPrepare',
@@ -134,7 +124,7 @@ module.exports = {
 	'build--staging': [
 		'jshint',
 		'clean:preBuild',
-		'config:staging',
+		'config:build',
 		'gettext-compile',
 		'less',
 		'useminPrepare',
@@ -154,7 +144,7 @@ module.exports = {
 	'build--production': [
 		'jshint',
 		'clean:preBuild',
-		'config:production',
+		'config:build',
 		'gettext-compile',
 		'less',
 		'useminPrepare',

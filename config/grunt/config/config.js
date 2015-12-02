@@ -38,31 +38,11 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		development: {
+		build: {
 			constants: {
 				appConf: {
 					appsSettings: appSettings,
-					environmentSettings: grunt.file.readJSON('src/config/environments/development.json'),
-					generalSettings: generalSettings,
-					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
-				}
-			}
-		},
-		staging: {
-			constants: {
-				appConf: {
-					appsSettings: appSettings,
-					environmentSettings: grunt.file.readJSON('src/config/environments/staging.json'),
-					generalSettings: generalSettings,
-					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
-				}
-			}
-		},
-		production: {
-			constants: {
-				appConf: {
-					appsSettings: appSettings,
-					environmentSettings: grunt.file.readJSON('src/config/environments/production.json'),
+					environmentSettings: grunt.file.readJSON('src/config/environments/build.json'),
 					generalSettings: generalSettings,
 					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
 				}
