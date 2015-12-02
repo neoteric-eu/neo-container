@@ -24,7 +24,9 @@ define(['angular', 'angular-gettext'], function (ng) {
 	container.run(function ($log, $rootScope, appConf) {
 		$log = $log.getInstance('app.module');
 
-		$rootScope.appReady = true;
+		if (appConf.generalSettings.autoContainerRun) {
+			$rootScope.appReady = true;
+		}
 
 		$log.debug('Set up container configuration');
 

@@ -24,14 +24,16 @@ define(['angular', 'angular-gettext'], function (ng) {
 	container.run(function ($log, $rootScope, appConf) {
 		$log = $log.getInstance('app.module');
 
-		$rootScope.appReady = true;
+		//if(appConf.generalSettings.autoContainerRun) {
+			$rootScope.appReady = true;
+		//}
 
 		$log.debug('Set up container configuration');
 
-		$log.info('Launching ' + appConf.generalSettings.name + ' in version: ' + appConf.generalSettings.version);
+		$log.info('Launching container ' + appConf.generalSettings.name + ' in version: ' + appConf.generalSettings.version);
 
 		_.each(appConf.appsSettings, function (settings) {
-			$log.info('Launching ' + settings.dependency + ' in version: ' + settings.version);
+			$log.info('Launching micro-app ' + settings.dependency + ' in version: ' + settings.version);
 		});
 	});
 

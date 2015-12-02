@@ -17,8 +17,8 @@ module.exports = function () {
 		},
 		staging: {
 			options: {
-				beautify: true,
-				sourceMap: true
+				mangle: true,
+				sourceMap: false
 			},
 			files: {
 				'<%= paths.build %>/assets/js/container.js': '<%= paths.build %>/assets/js/container.js'
