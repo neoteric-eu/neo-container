@@ -1,6 +1,27 @@
 module.exports = function (grunt) {
 	'use strict';
 
+	var _ = require('lodash');
+
+	var appSettings = grunt.file.readJSON('src/config/settings/apps.json');
+	var generalSettings = grunt.file.readJSON('src/config/settings/general.json');
+
+	// Add application version to configuration
+	_.each(appSettings, function (settings) {
+		try {
+			if (grunt.file.exists('bower_components/' + settings.dependency + '/bower.json')) {
+				settings.version = grunt.file.readJSON('bower_components/' + settings.dependency + '/bower.json').version;
+			} else {
+				settings.version = grunt.file.readJSON('src/apps/' + settings.directory + '/bower.json').version;
+			}
+		} catch (e) {
+			grunt.fail.fatal('Could not find "bower.json" file with "version" property for dependency: ' + settings.dependency);
+		}
+	});
+
+	// Add container version to general configuration
+	generalSettings.version = grunt.file.readJSON('src/bower.json').version;
+
 	return {
 		options: {
 			name: 'app.conf',
@@ -10,9 +31,9 @@ module.exports = function (grunt) {
 		local: {
 			constants: {
 				appConf: {
-					appsSettings: grunt.file.readJSON('src/config/settings/apps.json'),
+					appsSettings: appSettings,
 					environmentSettings: grunt.file.readJSON('src/config/environments/local.json'),
-					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
+					generalSettings: generalSettings,
 					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
 				}
 			}
@@ -20,9 +41,9 @@ module.exports = function (grunt) {
 		development: {
 			constants: {
 				appConf: {
-					appsSettings: grunt.file.readJSON('src/config/settings/apps.json'),
+					appsSettings: appSettings,
 					environmentSettings: grunt.file.readJSON('src/config/environments/development.json'),
-					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
+					generalSettings: generalSettings,
 					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
 				}
 			}
@@ -30,9 +51,9 @@ module.exports = function (grunt) {
 		staging: {
 			constants: {
 				appConf: {
-					appsSettings: grunt.file.readJSON('src/config/settings/apps.json'),
+					appsSettings: appSettings,
 					environmentSettings: grunt.file.readJSON('src/config/environments/staging.json'),
-					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
+					generalSettings: generalSettings,
 					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
 				}
 			}
@@ -40,9 +61,9 @@ module.exports = function (grunt) {
 		production: {
 			constants: {
 				appConf: {
-					appsSettings: grunt.file.readJSON('src/config/settings/apps.json'),
+					appsSettings: appSettings,
 					environmentSettings: grunt.file.readJSON('src/config/environments/production.json'),
-					generalSettings: grunt.file.readJSON('src/config/settings/general.json'),
+					generalSettings: generalSettings,
 					languageSettings: grunt.file.readJSON('src/config/settings/language.json')
 				}
 			}

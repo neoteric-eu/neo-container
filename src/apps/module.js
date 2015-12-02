@@ -21,12 +21,18 @@ define(['angular', 'angular-gettext'], function (ng) {
 		_.extend($cookiesProvider, appConf.environmentSettings.cookiesProviderConfig);
 	});
 
-	container.run(function ($log, $rootScope) {
+	container.run(function ($log, $rootScope, appConf) {
 		$log = $log.getInstance('app.module');
 
 		$rootScope.appReady = true;
 
 		$log.debug('Set up container configuration');
+
+		$log.info('Launching ' + appConf.generalSettings.name + ' in version: ' + appConf.generalSettings.version);
+
+		_.each(appConf.appsSettings, function (settings) {
+			$log.info('Launching ' + settings.dependency + ' in version: ' + settings.version);
+		});
 	});
 
 	return container;

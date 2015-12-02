@@ -1,7 +1,7 @@
 [
   {
-    "name": "Dashboard",
-    "path": "apps/dashboard",
+		"dependency": "neo-dashboard",
+		"directory": "dashboard",
     "order": 0
   }
 ]
