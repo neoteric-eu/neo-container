@@ -1,3 +1,55 @@
+<a name="1.2.0"></a>
+# [1.2.0](//compare/v1.1.7...v1.2.0) (2015-12-03)
+
+### Bug Fixes
+
+* **Grunt:** #3219 - Resolving gitclone-bower versions da94bfc, closes #3219
+
+### Features
+
+* **configuration:** #3251 - Parametrise production configuration of the application 8e79e62, closes #3251
+* **container:** #3251 - Parametrise environment configuration of the application 74e5e9f
+* **Grunt:** #3348 - Jshint is not triggered when committing from application 945f01e, closes #3348
+* **LanguageAPI:** #3330 - Add Accept-Language to neoRequestHeaders 5c2e94f
+* **neoVersionTag:** #3394 - Add container version directive 8cdeb86
+
+### Reverts
+
+* Rollback gettext-compile task to correct module config 01929b5
+
+
+### BREAKING CHANGES
+
+* Container: Introduced set of Grunt tasks for CI:
+
+	* `build--[development|production|staging]`
+	* `release--[development|production|staging]`
+	* `config--[local|build]`
+	* `generate--container`
+
+* LanguageAPI: 
+
+	*	Update `.po` files languages from underscore to dash (`pl_PL` -> `pl-PL`)
+	* Change `language.json` locale in your container configuration from underscore to dash (`pl_PL` -> `pl-PL`)
+
+* Automatic wiredeping container dependencies based on defined set of micro-apps.
+* All releases are now send to snapshot/release repository on Nexus.
+
+* Please manually __update__ following files/catalogs:
+
+	* `config/`
+	* `src/index.html`
+	* `package.json`
+	* `Gruntfile.js`
+	* `.gitignore`
+
+* Please manually __remove__ following files/catalogs from GIT repository:
+
+	* `src/container.js`
+	* `src/apps/_includes.js`
+	* `src/apps/module.js`
+
+
 <a name="1.1.4"></a>
 ## [1.1.4](//compare/v1.1.2...v1.1.4) (2015-11-17)
 
