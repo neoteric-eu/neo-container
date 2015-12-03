@@ -1,3 +1,12 @@
+<a name="1.2.1"></a>
+# [1.2.1](//compare/v1.2.1...v1.2.0) (2015-12-03)
+
+
+### Bug Fixes
+
+* **config.js:** Fixed installation problem 98a0729
+
+
 <a name="1.2.0"></a>
 # [1.2.0](//compare/v1.1.7...v1.2.0) (2015-12-03)
 
