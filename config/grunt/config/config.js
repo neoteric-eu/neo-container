@@ -21,6 +21,8 @@ module.exports = function (grunt) {
 
 	// Add container version to general configuration
 	generalSettings.version = grunt.file.readJSON('src/bower.json').version;
+	// Add CI build number
+	generalSettings.ciBuildNumber = process.env.BUILD_NUMBER;
 
 	return {
 		options: {
