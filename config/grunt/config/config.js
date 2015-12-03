@@ -11,7 +11,8 @@ module.exports = function (grunt) {
 		try {
 			if (grunt.file.exists('bower_components/' + settings.dependency + '/bower.json')) {
 				settings.version = grunt.file.readJSON('bower_components/' + settings.dependency + '/bower.json').version;
-			} else {
+			}
+			if (grunt.file.exists('src/apps/' + settings.directory + '/bower.json')) {
 				settings.version = grunt.file.readJSON('src/apps/' + settings.directory + '/bower.json').version;
 			}
 		} catch (e) {
