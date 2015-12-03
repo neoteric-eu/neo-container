@@ -14,7 +14,7 @@ define(['angular', 'angular-gettext'], function (ng) {
 	var container = ng.module('app', [
 		'seed',
 		'app.conf',
-		'app.dashboard'
+		/* modules */
 	]);
 
 	container.config(function ($cookiesProvider, appConf) {
@@ -24,9 +24,9 @@ define(['angular', 'angular-gettext'], function (ng) {
 	container.run(function ($log, $rootScope, appConf) {
 		$log = $log.getInstance('app.module');
 
-		//if(appConf.generalSettings.autoContainerRun) {
+		if (appConf.generalSettings.autoContainerRun) {
 			$rootScope.appReady = true;
-		//}
+		}
 
 		$log.debug('Set up container configuration');
 

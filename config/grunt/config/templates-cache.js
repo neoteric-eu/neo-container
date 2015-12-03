@@ -63,7 +63,7 @@ module.exports = function (grunt) {
 						return 'define([\'angular\'], function(angular) { ' +
 							'/*jshint quotmark: false*/ "use strict"; ' +
 							'return angular' +
-							'.module("app.' + appName + '.templateCache",[])' +
+							'.module("seed.templateCache")' +
 							'.run(function ($templateCache, $log) {' +
 							'$log = $log.getInstance(\'apps.' + appName + '.templateCache.module\');' +
 							script +

@@ -4,17 +4,19 @@
  * Please do not modify this file manually. To re-build dependencies use `grunt generate--container` task.
  */
 
-define([
-	// Seed
-	'seed/_includes',
-	'seed/module',
-
-	// Load config
-	'apps/module.conf',
-
-	// Apps
-	'apps/dashboard/_includes',
-	'apps/dashboard/module'
+require([
+	/* deps */
 ], function () {
 	'use strict';
+
+	require([
+		'apps/_includes',
+		'apps/module'
+	], function () {
+		angular
+			.element(document)
+			.ready(function () {
+				angular.bootstrap(angular.element('html').addClass('ng-app'), ['app']);
+			});
+	});
 });

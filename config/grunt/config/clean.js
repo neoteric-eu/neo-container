@@ -3,7 +3,8 @@ module.exports = {
 		files: [{
 			expand: true,
 			src: [
-				'<%= paths.dist %>',
+				'bower_components',
+				'<%= paths.build %>',
 				'<%= paths.tmp %>',
 				'<%= paths.release %>',
 				'<%= paths.test %>',
@@ -17,23 +18,36 @@ module.exports = {
 			]
 		}]
 	},
-	bower: {
+	preDocs: {
 		files: [{
 			expand: true,
 			src: [
-				'bower_components'
+				'<%= paths.docs %>'
 			]
 		}]
 	},
-	dist: {
+	preBuild: {
 		files: [{
 			expand: true,
 			src: [
-				'<%= paths.dist %>',
-				'<%= paths.tmp %>',
-				'<%= paths.release %>',
-				'<%= paths.test %>',
-				'<%= paths.docs %>'
+				'<%= paths.build %>',
+				'<%= paths.test %>'
+			]
+		}]
+	},
+	postBuild: {
+		files: [{
+			expand: true,
+			src: [
+				'<%= paths.tmp %>'
+			]
+		}]
+	},
+	preRelease: {
+		files: [{
+			expand: true,
+			src: [
+				'<%= paths.release %>'
 			]
 		}]
 	}

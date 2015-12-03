@@ -1,8 +1,6 @@
 module.exports = function (grunt) {
 	'use strict';
 
-
-
 	function getVersion(bowerFile) {
 		var ver ;
 		if (grunt.file.exists(bowerFile)) {

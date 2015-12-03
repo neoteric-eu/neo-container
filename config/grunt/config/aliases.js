@@ -1,114 +1,205 @@
-module.exports = function () {
-	'use strict';
+module.exports = {
+	/*
+	 * ========================================
+	 * --------- INSTALLATION TASKS -----------
+	 * ========================================
+	 */
 
-	return {
-		'serve': {
-			description: 'Runs locally server with application',
-			tasks: [
-				'config:development',
-				'templates-cache-clean',
-				'connect:server'
-			]
-		},
-		'servedev': {
-			description: 'Runs locally server with application',
-			tasks: [
-				'config:development',
-				'connect:livereload',
-				'watch'
-			]
-		},
-		'coverage': {
-			description: 'Checks unit-test code coverage',
-			tasks: [
-				'karma:coverage'
-			]
-		},
+	// Internally used by Grunt for installation,
+	// Run along with npm install
+	install: [
+		'git-changed-files',
+		'clean:install',
+		'shell:bower-install',
+		'gitclone-bower',
+		'bowercopy',
+		'githooks',
+		'generate--container',
+		'config:local',
+		'symlink',
+		'less'
+	],
 
-		'test': {
-			description: 'Executes complete app testing',
-			tasks: [
-				'jshint:test',
-				'test:e2e',
-				'test:unit'
-			]
-		},
+	// Generates container files based on installed apps
+	// injecting modules and requirejs dependencies
+	'generate--container': [
+		'copy:container',
+		'copy:module',
+		'copy:includes'
+	],
 
-		'test:unit': {
-			description: 'Runs unit app testing',
-			tasks: [
-				'karma:unit'
-			]
-		},
+	/*
+	 * ========================================
+	 * --------- CONFIGURATION TASKS ----------
+	 * ========================================
+	 */
 
-		'test:e2e': {
-			description: 'Runs e2e app testing',
-			tasks: [
-				'connect:test',
-				'shell:webdriver-update',
-				'protractor:singlerun'
-			]
-		},
+	// Set-up container configuration to local settings
+	'config--local': [
+		'config:local'
+	],
 
-		'dist': {
-			description: 'Creates production version of code in /dist catalog',
-			tasks: [
-				'clean:dist',
-				'config:production',
-				'gettext-compile',
-				'less',
-				'useminPrepare',
-				'templates-cache',
-				'concat',
-				'cssmin',
-				'copy',
-				'requirejs',
-				'rev',
-				'usemin'
-			]
-		},
+	// Set-up container configuration to build (variable based) settings
+	'config--build': [
+		'config:development'
+	],
 
-		release: {
-			description: 'Deploy built app on nexus and bump version of code on master branch',
-			tasks: [
-				'changelog',
-				'compress',
-				'nexus'
-			]
-		},
+	/*
+	 * ========================================
+	 * ------------- SERVER TASKS -------------
+	 * ========================================
+	 */
 
-		'docs': {
-			description: 'Generates JSDoc documentation',
-			tasks: [
-				'jsdoc'
-			]
-		},
+	// Set up local configuration of container
+	// Runs local server for code development
+	'serve': [
+		'config:local',
+		'gettext-compile',
+		'templates-cache-clean',
+		'connect:serve'
+	],
 
-		'default': {
-			description: 'Create production version on app after testing',
-			tasks: [
-				'jshint:app',
-				'test',
-				'dist'
-			]
-		},
+	// Runs local server for built
+	'serve--build': [
+		'connect:build'
+	],
 
-		install: {
-			description: 'Internally used form "npm install" installation task',
-			tasks: [
-				'git-changed-files',
-				'clean:install',
-				'shell:bower-apps',
-				'force:gitclone-bower',
-				'bower',
-				'githooks',
-				'config:development',
-				'secure-symlink',
-				'gettext-compile',
-				'templates-cache-clean',
-				'less'
-			]
-		}
-	};
+	/*
+	 * ========================================
+	 * ------------ TESTING TASKS -------------
+	 * ========================================
+	 */
+
+	// Checks unit-test code coverage
+	'coverage': [
+		'karma:coverage'
+	],
+
+	// Executes complete app testing
+	'test': [
+		'jshint',
+		'test:e2e',
+		'test:unit'
+	],
+
+	// Runs unit app testing
+	'test--unit': [
+		'karma:unit'
+	],
+
+	// Runs e2e app testing
+	'test--e2e': [
+		'connect:test',
+		'shell:webdriver-update',
+		'protractor:singlerun'
+	],
+
+	/*
+	 * ========================================
+	 * ------------- BUILD TASKS --------------
+	 * ========================================
+	 */
+
+	// Creates development/CI version of code in /build catalog
+	'build--development': [
+		'jshint',
+		'clean:preBuild',
+		'config:build',
+		'gettext-compile',
+		'less',
+		'useminPrepare',
+		'templates-cache',
+		'concat',
+		'cssmin',
+		'copy:build',
+		'requirejs',
+		'annotate',
+		'uglify:development',
+		'rev',
+		'usemin',
+		'clean:postBuild'
+	],
+
+	// Creates staging version of code in /build catalog
+	'build--staging': [
+		'jshint',
+		'clean:preBuild',
+		'config:build',
+		'gettext-compile',
+		'less',
+		'useminPrepare',
+		'templates-cache',
+		'concat',
+		'cssmin',
+		'copy:build',
+		'requirejs',
+		'annotate',
+		'uglify:staging',
+		'rev',
+		'usemin',
+		'clean:postBuild'
+	],
+
+	// Creates production version of code in /build catalog
+	'build--production': [
+		'jshint',
+		'clean:preBuild',
+		'config:build',
+		'gettext-compile',
+		'less',
+		'useminPrepare',
+		'templates-cache',
+		'concat',
+		'cssmin',
+		'copy:build',
+		'requirejs',
+		'annotate',
+		'uglify:production',
+		'rev',
+		'usemin',
+		'clean:postBuild'
+	],
+
+	/*
+	 * ========================================
+	 * ------------ RELEASE TASKS -------------
+	 * ========================================
+	 */
+
+	// Deploys development snapshot to nexus artifact repository
+	'release--development': [
+		'clean:preRelease',
+		'compress',
+		'nexus:development'
+	],
+
+	// Deploys production code to nexus artifact repository
+	// add git tag on development branch
+	'release--staging': [
+		'clean:preRelease',
+		'gittag:staging',
+		'gitpush:staging',
+		'compress',
+		'nexus:staging'
+	],
+
+	// Deploys production code to nexus artifact repository
+	'release--production': [
+		'clean:preRelease',
+		'compress',
+		'nexus:production'
+	],
+
+	/*
+	 * ========================================
+	 * --------- DOCUMENTATION TASKS ----------
+	 * ========================================
+	 */
+
+	// Generates JSDoc documentation
+	'docs': [
+		'clean:preDocs',
+		'jsdoc'
+	]
 };
 

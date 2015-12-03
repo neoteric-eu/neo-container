@@ -1,17 +1,14 @@
-module.exports = function (grunt) {
+module.exports = function () {
 	'use strict';
 
-	var bowerConf = grunt.file.readJSON('src/bower.json');
-
 	return {
-		default: {
+		build: {
 			options: {
-				archive: '<%= paths.release %>/' + bowerConf.name + '-' + bowerConf.version + '.zip',
-				mode: 'zip'
+				archive: '<%= paths.release %>/<%= meta.name %>-<%= meta.version %>.zip'
 			},
 			files: [{
 				expand: true,
-				src: ['<%= paths.dist %>/**']
+				src: ['<%= paths.build %>/**']
 			}]
 		}
 	};

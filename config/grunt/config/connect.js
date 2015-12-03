@@ -28,17 +28,7 @@ module.exports = function () {
 		};
 
 	return {
-		livereload: {
-			options: {
-				hostname: 'localhost',
-				port: 9000,
-				base: '<%= paths.src %>',
-				livereload: 35729,
-				open: false,
-				middleware: middleware
-			}
-		},
-		server: {
+		serve: {
 			options: {
 				hostname: 'localhost',
 				port: 9000,
@@ -56,11 +46,11 @@ module.exports = function () {
 				middleware: middleware
 			}
 		},
-		dist: {
+		build: {
 			options: {
 				hostname: 'localhost',
 				port: 9040,
-				base: '<%= paths.dist %>',
+				base: '<%= paths.build %>',
 				open: true,
 				keepalive: true,
 				middleware: middleware

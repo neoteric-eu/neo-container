@@ -1,9 +1,8 @@
-// Performs rewrites based on rev and the useminPrepare configuration
 module.exports = {
-	html: ['<%= paths.dist %>/index.html'],
-	js: ['<%= paths.dist %>/apps/*.js'],
-	css: ['<%= paths.dist %>/assets/css/*.css'],
+	html: ['<%= paths.build %>/index.html'],
+	js: ['<%= paths.build %>/assets/js/*.js'],
+	css: ['<%= paths.build %>/assets/css/*.css'],
 	options: {
-		assetsDirs: ['<%= paths.dist %>']
+		assetsDirs: ['<%= paths.build %>']
 	}
 };

@@ -1,5 +1,5 @@
 module.exports = {
-	dist: {
+	build: {
 		src: [
 			'<%= paths.apps %>/**/*.js',
 			'!<%= paths.apps %>/*/__misc/**'

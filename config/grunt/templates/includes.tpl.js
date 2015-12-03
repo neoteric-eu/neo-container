@@ -13,8 +13,7 @@ define([
 	'apps/module.conf',
 
 	// Apps
-	'apps/dashboard/_includes',
-	'apps/dashboard/module'
+	/* includes */
 ], function () {
 	'use strict';
 });

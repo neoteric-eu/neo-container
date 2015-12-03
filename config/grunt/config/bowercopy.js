@@ -12,7 +12,7 @@ module.exports = function (grunt) {
 			try {
 				bowerFiles.push(grunt.file.readJSON(bowerPath));
 			} catch (e) {
-				grunt.log.error(e);
+				grunt.log.error('Error reading files', e);
 			}
 		});
 

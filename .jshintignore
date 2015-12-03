@@ -1,7 +1,6 @@
-src/apps/demo/
 src/assets/
-dist/
-relase/
+build/
+release/
 node_modules/
 bower_components/
 
