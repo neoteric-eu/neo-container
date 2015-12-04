@@ -1,14 +1,13 @@
 ![Neoteric Logo](http://burczu-programator.pl/wp-content/uploads/2015/02/yeoman_io.png)
 
-neoContainer (Angular) 
-======
+# neoContainer (Angular) 
 
-## General guidelines
+## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/favourite-2-icon.png) Guidelines
+* [Code style guide] (https://gitlab.neoteric.eu/frontend/neo-container/wikis/guidlines)
+* [Commit message format](https://gitlab.neoteric.eu/frontend/neo-container/wikis/commit-message) 
 
-* [Commit message format](commit-message) 
 
-
-## ![](http://icons.iconarchive.com/icons/graphicloads/100-flat/48/stop-icon.png) Installation
+## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/stop-icon.png) Installation
 Project requires having installed:
 
 * [NodeJS](http://nodejs.org/)
@@ -21,15 +20,16 @@ After downloading the project form Gitlab repository run command from command li
 npm install
 ```
 
-## ![](http://icons.iconarchive.com/icons/graphicloads/100-flat/48/play-icon.png)  Running
-By default after installation application configuration is set to _development_.
+## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/play-icon.png)  Running
+By default after installation application configuration is set to 
+_local_ based on `src/config/environments/local.json` file.
 Local server can by run by command:
 
 ```javascript
 grunt serve
 ```
 
-## ![](http://icons.iconarchive.com/icons/graphicloads/100-flat/48/upload-icon.png)  Deploy
+## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/upload-icon.png)  Deploy
 You can locally create production version of code by running:
 
 ```javascript
@@ -45,7 +45,7 @@ Then run in order to test working app in browser:
 grunt serve--build
 ```
 
-## ![](http://icons.iconarchive.com/icons/graphicloads/100-flat/48/laboratory-icon.png)  Tests
+## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/laboratory-icon.png)  Tests
 You can run multiple type of test on your local environment:
 
 * E2E _(via. Protractor)_
@@ -72,11 +72,13 @@ grunt test
 ```
 
 
-## ![](http://icons.iconarchive.com/icons/graphicloads/100-flat/48/announcement-icon.png) ChangeLog
+## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/announcement-icon.png) ChangeLog
 
-To check changes and migration guides between versions see [changelog](changelog)
+To check changes and migration guides between versions see 
+[changelog](https://gitlab.neoteric.eu/frontend/neo-container/blob/master/CHANGELOG.md)
 
 
-## ![](http://icons.iconarchive.com/icons/graphicloads/100-flat/48/info-icon.png)  Reference
-Additional documentation available on [Wiki](wiki)
+## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/info-icon.png)  Reference
+Additional documentation available on 
+[wiki](https://gitlab.neoteric.eu/frontend/neo-container/wikis/home)
 
