@@ -2,12 +2,7 @@
 
 # neoContainer (Angular) 
 
-## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/favourite-2-icon.png) Guidelines
-* [Code style guide] (https://gitlab.neoteric.eu/frontend/neo-container/wikis/guidlines)
-* [Commit message format](https://gitlab.neoteric.eu/frontend/neo-container/wikis/commit-message) 
-
-
-## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/stop-icon.png) Installation
+## ![Installation](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/stop-icon.png) Installation
 Project requires having installed:
 
 * [NodeJS](http://nodejs.org/)
@@ -20,7 +15,7 @@ After downloading the project form Gitlab repository run command from command li
 npm install
 ```
 
-## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/play-icon.png)  Running
+## ![Running](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/play-icon.png) Running
 By default after installation application configuration is set to 
 _local_ based on `src/config/environments/local.json` file.
 Local server can by run by command:
@@ -29,8 +24,10 @@ Local server can by run by command:
 grunt serve
 ```
 
-## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/upload-icon.png)  Deploy
-You can locally create production version of code by running:
+## ![Building](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/upload-icon.png) Building
+Building tasks should be done automatically by CI jobs, but it is possible to locally 
+create production version of code. Depending on selected configuration the build 
+will optionally include source maps allowing to debug the code.
 
 ```javascript
 grunt build--[development|staging|production]
@@ -45,7 +42,17 @@ Then run in order to test working app in browser:
 grunt serve--build
 ```
 
-## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/laboratory-icon.png)  Tests
+## ![Releasing](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/cloud-icon.png) Releasing
+Releasing tasks should be done automatically by CI jobs, but it is possible to do it manually. 
+As an effect previously built production code will be zipped and put on Nexus repository depending 
+on selected release configuration. 
+
+```javascript
+grunt release--[development|staging|production]
+```
+
+
+## ![Testing](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/laboratory-icon.png) Testing
 You can run multiple type of test on your local environment:
 
 * E2E _(via. Protractor)_
@@ -71,14 +78,20 @@ To run all tests simply type:
 grunt test
 ```
 
+## ![Guidelines](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/favourite-2-icon.png) Guidelines
 
-## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/announcement-icon.png) ChangeLog
+* [Code style guide] (https://gitlab.neoteric.eu/frontend/neo-container/wikis/guidlines)
+* [Commit message format](https://gitlab.neoteric.eu/frontend/neo-container/wikis/commit-message) 
+
+
+
+## ![ChangeLog](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/announcement-icon.png) Changelog
 
 To check changes and migration guides between versions see 
 [changelog](https://gitlab.neoteric.eu/frontend/neo-container/blob/master/CHANGELOG.md)
 
 
-## ![](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/info-icon.png)  Reference
+## ![Reference](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/info-icon.png) Reference
 Additional documentation available on 
 [wiki](https://gitlab.neoteric.eu/frontend/neo-container/wikis/home)
 
