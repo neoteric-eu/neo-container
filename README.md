@@ -1,6 +1,6 @@
 ![Neoteric Logo](http://burczu-programator.pl/wp-content/uploads/2015/02/yeoman_io.png)
 
-# neoContainer (Angular) 
+# neoContainer
 
 ## ![Installation](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/stop-icon.png) Installation
 Project requires having installed:
@@ -79,6 +79,8 @@ grunt test
 ```
 
 ## ![Guidelines](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/favourite-2-icon.png) Guidelines
+
+Before contributing please read following documents:
 
 * [Code style guide] (https://gitlab.neoteric.eu/frontend/neo-container/wikis/guidlines)
 * [Commit message format](https://gitlab.neoteric.eu/frontend/neo-container/wikis/commit-message) 
