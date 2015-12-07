@@ -3,7 +3,8 @@ module.exports = function (grunt) {
 
 	var defaultConf = {
 		container: {
-			'pre-commit': 'jshint:container'
+			'pre-commit': 'jshint:container',
+			'post-checkout': 'generate--container'
 		},
 		seed: {
 			options: {
