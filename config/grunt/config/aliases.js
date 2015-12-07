@@ -41,7 +41,7 @@ module.exports = {
 
 	// Set-up container configuration to build (variable based) settings
 	'config--build': [
-		'config:development'
+		'config:build'
 	],
 
 	/*

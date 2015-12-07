@@ -1,7 +1,5 @@
 ![Neoteric Logo](http://burczu-programator.pl/wp-content/uploads/2015/02/yeoman_io.png)
 
-# neoContainer
-
 ## ![Installation](https://gitlab.neoteric.eu/frontend/neo-container/wikis/assets/stop-icon.png) Installation
 Project requires having installed:
 

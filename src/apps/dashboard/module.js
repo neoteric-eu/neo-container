@@ -8,7 +8,7 @@ define(['angular'], function (ng) {
 			.state('app.dashboard', {
 				url: '/dashboard',
 				views: {
-					'content@app': {
+					content: {
 						templateUrl: 'apps/dashboard/views/dashboard.html'
 					}
 				},
