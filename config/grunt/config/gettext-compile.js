@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 		seed: {
 			options: {
 				requirejs: true,
-				modulePath: 'seed/module'
+				modulePath: 'angular-gettext'
 			},
 			files: [{
 				dest: '<%= paths.seed %>/__misc/_locale/translation.js',
@@ -22,7 +22,7 @@ module.exports = function (grunt) {
 			defaultConf[appName] = {
 				options: {
 					requirejs: true,
-					modulePath: 'apps/' + appName + '/module'
+					modulePath: 'angular-gettext'
 				},
 				files: [{
 					src: path + '/__misc/_locale/*.po',
