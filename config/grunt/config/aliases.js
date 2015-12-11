@@ -21,13 +21,12 @@ module.exports = {
 		'bowercopy',
 		'githooks',
 		'generate--container',
-		'symlink',
-		'less'
+		'symlink'
 	],
 
 	// Internally used by Grunt for installation,
 	// Run along with npm install
-	// Compile assets prepare environment
+	// Compile assets & prepare environment
 	postInstall: [
 		'less',
 		'gettext-compile',

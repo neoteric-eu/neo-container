@@ -64,11 +64,8 @@
 		"node": ">=4.0.0"
 	},
 	"scripts": {
-		"preInstall": "grunt perInstall",
+		"preinstall": "grunt preInstall",
 		"install": "grunt install",
-		"postinstall": [
-			"grunt postInstall",
-			"npm prune"
-		]
+		"postinstall": "grunt postInstall && npm prune"
 	}
 }
