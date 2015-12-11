@@ -1,3 +1,24 @@
+<a name="1.2.2"></a>
+## [1.2.2](//compare/v1.2.1...v1.2.2) (2015-12-11)
+
+
+### Bug Fixes
+
+* **aliases.js:** #3426 - Split grunt installation into preInstall and postInstall 57d9602, closes #3426
+* **gettext-compile:** Fixed order of loading translations in Require.js e883be1
+* **githooks.js:** #3417 - Rebuild container-generated files when switching container branches 04280b7, closes #3417
+* **LanguageAPI:** #3424 - Enable both ISO and POSIX language codes 1b5ca1a, closes #3424
+
+
+### BREAKING CHANGES
+
+* aliases.js: Manually update `config/grunt/config/aliases.js` and `package.json`
+* LanguageAPI: Manually update `config/settings/language.json`
+* gettext-compile: Manually update `config/grunt/config/gettext-compile.js` file.
+* githooks.js:  Manually update `config/grunt/config/githooks.js` file.
+
+
+
 <a name="1.2.1"></a>
 # [1.2.1](//compare/v1.2.1...v1.2.0) (2015-12-03)
 
