@@ -7,17 +7,31 @@ module.exports = {
 
 	// Internally used by Grunt for installation,
 	// Run along with npm install
-	install: [
+	// Set up application repositories
+	preInstall: [
 		'git-changed-files',
 		'clean:install',
 		'shell:bower-install',
-		'gitclone-bower',
+		'gitclone-bower'
+	],
+
+	// Internally used by Grunt for installation,
+	// Run along with npm install
+	install: [
 		'bowercopy',
 		'githooks',
 		'generate--container',
-		'config:local',
 		'symlink',
 		'less'
+	],
+
+	// Internally used by Grunt for installation,
+	// Run along with npm install
+	// Compile assets prepare environment
+	postInstall: [
+		'less',
+		'gettext-compile',
+		'templates-cache-clean'
 	],
 
 	// Generates container files based on installed apps
