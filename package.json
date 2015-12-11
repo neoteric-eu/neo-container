@@ -61,10 +61,14 @@
 		"time-grunt": "~1.0.0"
 	},
 	"engines": {
-	  "node": ">=4.0.0"
+		"node": ">=4.0.0"
 	},
 	"scripts": {
+		"preInstall": "grunt perInstall",
 		"install": "grunt install",
-		"postinstall": "npm prune"
+		"postinstall": [
+			"grunt postInstall",
+			"npm prune"
+		]
 	}
 }
