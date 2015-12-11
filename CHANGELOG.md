@@ -1,3 +1,15 @@
+<a name="1.2.4"></a>
+## [1.2.4](//compare/v1.2.3...v1.2.4) (2015-12-11)
+
+
+### Bug Fixes
+
+* Fixed broken builds in container versions 1.2.2 and 1.2.3 794eef9
+
+### BREAKING CHANGES
+* aliases.js: Manually update `config/grunt/config/aliases.js` and `package.json`
+
+
 <a name="1.2.3"></a>
 ## [1.2.3](//compare/v1.2.2...v1.2.3) (2015-12-11)
 
