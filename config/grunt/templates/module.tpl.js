@@ -9,33 +9,37 @@
  */
 
 define(['angular', 'angular-gettext'], function (ng) {
-	'use strict';
+  'use strict';
 
-	var container = ng.module('app', [
-		'seed',
-		'app.conf',
-		/* modules */
-	]);
+  var container = ng.module('app', [
+    'seed',
+    'app.conf',
+    /* modules */
+  ]);
 
-	container.config(function ($cookiesProvider, appConf) {
-		_.extend($cookiesProvider, appConf.environmentSettings.cookiesProviderConfig);
-	});
+  container.config(function ($cookiesProvider, appConf) {
+    _.extend($cookiesProvider, appConf.environmentSettings.cookiesProviderConfig);
+  });
 
-	container.run(function ($log, $rootScope, appConf) {
-		$log = $log.getInstance('app.module');
+  container.run(function ($log, $rootScope, neoSession, appConf) {
+    $log = $log.getInstance('app.module');
 
-		if (appConf.generalSettings.autoContainerRun) {
-			$rootScope.appReady = true;
-		}
+    neoSession
+      .checkSession()
+      .finally(function () {
+        if (appConf.generalSettings.autoContainerRun) {
+          $rootScope.appReady = true;
+        }
+      });
 
-		$log.debug('Set up container configuration');
+    $log.debug('Set up container configuration');
 
-		$log.info('Launching container ' + appConf.generalSettings.name + ' in version: ' + appConf.generalSettings.version);
+    $log.info('Launching container ' + appConf.generalSettings.name + ' in version: ' + appConf.generalSettings.version);
 
-		_.each(appConf.appsSettings, function (settings) {
-			$log.info('Launching micro-app ' + settings.dependency + ' in version: ' + settings.version);
-		});
-	});
+    _.each(appConf.appsSettings, function (settings) {
+      $log.info('Launching micro-app ' + settings.dependency + ' in version: ' + settings.version);
+    });
+  });
 
-	return container;
+  return container;
 });
