@@ -1,4 +1,14 @@
 <a name="1.2.4"></a>
+## [1.2.4](//compare/v1.2.4...v1.2.4) (2015-12-14)
+
+
+### Bug Fixes
+
+* **package.json:** Fixed grunt installation problem. 251bbda
+
+
+
+<a name="1.2.4"></a>
 ## [1.2.4](//compare/v1.2.3...v1.2.4) (2015-12-11)
 
 
