@@ -113,6 +113,26 @@ module.exports = {
 	 * ========================================
 	 */
 
+	// Creates local version of development code
+	'build--local': [
+		'jshint',
+		'clean:preBuild',
+		'config:local',
+		'gettext-compile',
+		'less',
+		'useminPrepare',
+		'templates-cache',
+		'concat',
+		'cssmin',
+		'copy:build',
+		'requirejs',
+		'annotate',
+		'uglify:development',
+		'rev',
+		'usemin',
+		'clean:postBuild'
+	],
+
 	// Creates development/CI version of code in /build catalog
 	'build--development': [
 		'jshint',
