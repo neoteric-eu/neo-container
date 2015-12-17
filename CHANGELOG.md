@@ -1,3 +1,13 @@
+<a name="2.0.1"></a>
+## [2.0.1](//compare/v2.0.0...v2.0.1) (2015-12-17)
+
+
+### Bug Fixes
+
+* **less:** Fixed missing vendor.less in index.html 8d33cd1
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](//compare/v1.2.6...v2.0.0) (2015-12-17)
 
