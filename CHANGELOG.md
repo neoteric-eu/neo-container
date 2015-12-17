@@ -1,5 +1,16 @@
-<a name="1.2.4"></a>
-## [1.2.4](//compare/v1.2.4...v1.2.4) (2015-12-14)
+<a name="1.2.6"></a>
+## [1.2.5](//compare/v1.2.5...v1.2.6) (2015-12-14)
+
+
+### Bug Fixes
+
+* **aliases:** Added new Grunt task `build--local` that allows to browse build code with local configuration 4763869
+* **permission:** Fixed problem with initial unset permissions. 2de5fa6
+
+
+
+<a name="1.2.5"></a>
+## [1.2.4](//compare/v1.2.4...v1.2.5) (2015-12-14)
 
 
 ### Bug Fixes
