@@ -10,7 +10,7 @@ module.exports = function () {
 				'<%= paths.assets %>/vendor/css/apps.css': '<%= paths.config %>/styles/apps.less',
 				'<%= paths.assets %>/vendor/css/seed.css': '<%= paths.config %>/styles/seed.less',
 				'<%= paths.assets %>/vendor/css/smart-admin.css': '<%= paths.config %>/styles/smart-admin.less',
-				'<%= paths.assets %>/vendor/css/container.css': '<%= paths.config %>/styles/container.less'
+				'<%= paths.assets %>/vendor/css/vendor.css': '<%= paths.config %>/styles/vendor.less'
 			}
 		}
 	};
