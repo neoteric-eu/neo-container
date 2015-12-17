@@ -5,6 +5,7 @@ docs/
 node_modules/
 bower_components/
 test/
+config/
 .tmp/
 
 ### Extensions ###
@@ -16,8 +17,13 @@ test/
 
 ### Files ###
 npm-debug.log
+.editorconfig
+.jshintignore
+.jshintrc
+Gruntfile.js
+package.json
 src/**
-!src/config
+!src/config/
 !src/bower.json
 
 
