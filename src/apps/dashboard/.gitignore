@@ -1,9 +1,0 @@
-### Extensions ###
-__misc/_locale/*.mo
-__misc/_locale/*.pot
-
-### Files ###
-__misc/_templates/module.js
-__misc/_locale/translation.js
-
-

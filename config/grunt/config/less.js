@@ -1,44 +1,17 @@
-module.exports = function (grunt) {
+module.exports = function () {
 	'use strict';
 
-	var files = [{
-		expand: true,
-		cwd: '<%= paths.assets %>/vendor/less',
-		src: [
-			'**/*.less',
-			//Exclusions from vendor
-			'!**/_*.less',
-			'!bootstrap/**',
-			'!elements/**',
-			'!animate/**',
-			'!font-awesome/**'
-		],
-		dest: '<%= paths.assets %>/vendor/css',
-		ext: '.css'
-	}];
-
-	grunt.file
-		.expand({filter: 'isDirectory'}, ['src/assets/*', '!src/assets/vendor'])
-		.forEach(function (path) {
-			try {
-				files.push({
-					expand: true,
-					cwd: path + '/less',
-					src: ['**/*.less', '!**/_*.less'],
-					dest: path + '/css',
-					ext: '.css'
-				});
-			} catch (e) {
-				// Handle exception
-			}
-		});
-
 	return {
-		default: {
+		container: {
 			options: {
-				paths: ['src/']
+				paths: ['src/assets', 'src/config']
 			},
-			files: files
+			files: {
+				'<%= paths.assets %>/vendor/css/apps.css': '<%= paths.config %>/styles/apps.less',
+				'<%= paths.assets %>/vendor/css/seed.css': '<%= paths.config %>/styles/seed.less',
+				'<%= paths.assets %>/vendor/css/smart-admin.css': '<%= paths.config %>/styles/smart-admin.less',
+				'<%= paths.assets %>/vendor/css/container.css': '<%= paths.config %>/styles/container.less'
+			}
 		}
 	};
 };

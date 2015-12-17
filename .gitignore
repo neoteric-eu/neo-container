@@ -4,11 +4,7 @@ release/
 docs/
 node_modules/
 bower_components/
-test/results/
-src/seed/
-src/assets/
-src/apps/**
-!src/apps/dashboard/
+test/
 .tmp/
 
 ### Extensions ###
@@ -20,11 +16,10 @@ src/apps/**
 
 ### Files ###
 npm-debug.log
-src/.htaccess
-src/require.js
-src/container.js
+src/**
+!src/config
+!src/bower.json
 
-src/apps/*/__misc/_templates/
 
 ### SublimeText ###
 # cache files for sublime text
