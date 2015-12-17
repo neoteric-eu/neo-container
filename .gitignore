@@ -7,6 +7,7 @@ bower_components/
 test/
 config/
 .tmp/
+!src/config/
 
 ### Extensions ###
 **/*.todo
@@ -14,16 +15,17 @@ config/
 **/*.tmp
 **/*.mo
 **/*.pot
+**/*.default
 
 ### Files ###
 npm-debug.log
 .editorconfig
+.gitignore
 .jshintignore
 .jshintrc
 Gruntfile.js
 package.json
 src/**
-!src/config/
 !src/bower.json
 
 
