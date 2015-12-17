@@ -5,7 +5,7 @@ module.exports = function (grunt) {
 		expand: true,
 		cwd: '<%= paths.assets %>/vendor/less',
 		src: [
-			'*.less',
+			'**/*.less',
 			//Exclusions from vendor
 			'!**/_*.less',
 			'!bootstrap/**',
