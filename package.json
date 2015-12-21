@@ -3,9 +3,6 @@
 	"version": "1.0.0",
 	"private": true,
 	"dependencies": {
-		"grunt-gitclone-bower": "config/grunt/tasks/grunt-gitclone-bower",
-		"grunt-git-changed-files": "config/grunt/tasks/grunt-git-changed-files",
-		"grunt-conventional-changelog": "config/grunt/tasks/grunt-conventional-changelog"
 	},
 	"devDependencies": {
 		"bower": "~1.4.1",
@@ -15,6 +12,7 @@
 		"grunt-angular-gettext": "~2.0.1",
 		"grunt-angular-templates": "^0.5.7",
 		"grunt-bowercopy": "1.2.3",
+		"grunt-changelog": "5.0.0",
 		"grunt-cli": "^0.1.13",
 		"grunt-contrib-clean": "~0.5.0",
 		"grunt-contrib-compress": "^0.13.0",
@@ -28,6 +26,8 @@
 		"grunt-contrib-symlink": "^0.3.0",
 		"grunt-contrib-uglify": "^0.11.0",
 		"grunt-git": "^0.3.5",
+		"grunt-git-changed-files": "1.0.1",
+		"grunt-gitclone-bower": "1.0.3",
 		"grunt-githooks": "^0.3.1",
 		"grunt-jsdoc": "^0.6.2",
 		"grunt-karma": "^0.10.1",
@@ -64,7 +64,7 @@
 		"node": ">=4.0.0"
 	},
 	"scripts": {
-		"install": "grunt preInstall && grunt install",
-		"postinstall": "grunt postInstall && npm prune"
+		"install": "grunt preInstall && grunt install && grunt postInstall",
+		"postinstall": "npm prune"
 	}
 }
