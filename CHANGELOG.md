@@ -1,3 +1,11 @@
+<a name="2.0.2"></a>
+## [2.0.2](//compare/v2.0.1...v2.0.2) (2015-12-21)
+
+### Features
+
+* **grunt:** Moved tasks from local to private npm 42b4fa34
+
+
 <a name="2.0.1"></a>
 ## [2.0.1](//compare/v2.0.0...v2.0.1) (2015-12-17)
 
