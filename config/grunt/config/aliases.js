@@ -91,8 +91,8 @@ module.exports = {
 	// Executes complete app testing
 	'test': [
 		'jshint',
-		'test:e2e',
-		'test:unit'
+		'test--e2e',
+		'test--unit'
 	],
 
 	// Runs unit app testing

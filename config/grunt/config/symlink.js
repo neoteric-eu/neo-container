@@ -1,15 +1,10 @@
 module.exports = function (grunt) {
 	'use strict';
 
-	var defaultFiles = [{
-		expand: true,
-		cwd: '<%= paths.seed %>/__misc/_assets',
-		src: ['*'],
-		dest: '<%= paths.assets %>/seed'
-	}];
+	var defaultFiles = [];
 
 	grunt.file
-		.expand({filter: 'isDirectory'}, ['src/apps/*'])
+		.expand({filter: 'isDirectory'}, ['src/apps/*', 'src/seed'])
 		.forEach(function (path) {
 			defaultFiles.push({
 				expand: true,

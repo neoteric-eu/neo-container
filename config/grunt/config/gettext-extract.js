@@ -1,16 +1,7 @@
 module.exports = function (grunt) {
 	'use strict';
 
-	var defaultConf = {
-		seed: {
-			files: [{
-				dest: '<%= paths.seed %>/__misc/_locale/template.pot',
-				src: [
-					'<%= paths.seed %>/**/*@(.html|.js)'
-				]
-			}]
-		}
-	};
+	var defaultConf = {};
 
 	grunt.file
 		.expand({filter: 'isDirectory'}, ['src/apps/*'])

@@ -20,27 +20,6 @@ module.exports = function (grunt) {
 				removeScriptTypeAttributes: true,
 				removeStyleLinkTypeAttributes: true
 			}
-		},
-
-		seed: {
-			files: [{
-				src: ['seed/**/*.html'],
-				cwd: '<%= paths.src %>',
-				dest: '<%= paths.seed %>/__misc/_templates/module.js'
-			}],
-			options: {
-				bootstrap: function (module, script) {
-					script = script.replace('\'use strict\';', '');
-					return 'define([\'angular\'], function(angular) { ' +
-						'/*jshint quotmark: false*/ "use strict"; ' +
-						'return angular' +
-						'.module("seed.templateCache",[])' +
-						'.run(function ($templateCache, $log) {' +
-						'$log = $log.getInstance(\'seed.templateCache.module\');' +
-						script +
-						' $log.debug(\'Initiated module\');});});';
-				}
-			}
 		}
 	};
 

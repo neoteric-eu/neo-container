@@ -21,19 +21,6 @@ module.exports = function (grunt) {
 				}
 			},
 			src: 'CHANGELOG.md'
-		},
-		seed: {
-			options: {
-				changelogOpts: {
-					releaseCount: 1,
-					preset: 'angular'
-				},
-				context: {
-					version: getVersion('src/seed/bower.json')
-				},
-				path: 'src/seed'
-			},
-			src: 'CHANGELOG.md'
 		}
 	};
 

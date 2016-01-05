@@ -7,7 +7,7 @@ module.exports = function (grunt) {
 	var bowerFiles = [];
 
 	grunt.file
-		.expand({filter: 'isFile'}, ['src/**/bower.json'])
+		.expand({filter: 'isFile'}, ['src/apps/*/bower.json', 'bower_components/neo-seed/bower.json'])
 		.forEach(function (bowerPath) {
 			try {
 				bowerFiles.push(grunt.file.readJSON(bowerPath));
@@ -17,11 +17,18 @@ module.exports = function (grunt) {
 		});
 
 	var defaultConf = {
+		seed: {
+			options: {
+				destPrefix: '<%=paths.src%>'
+			},
+			files: {
+				'seed': 'neo-seed/build'
+			}
+		},
 		js: {
 			options: {
 				destPrefix: '<%=paths.assets%>/vendor/js'
-			},
-			files: {}
+			}
 		},
 		less: {
 			options: {

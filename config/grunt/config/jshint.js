@@ -10,7 +10,7 @@ module.exports = function (grunt) {
 			options: {
 				ignores: [
 					'<%= paths.src %>/require.js',
-					'<%= paths.src %>/assets',
+					'<%= paths.assets %>',
 					'<%= paths.apps %>',
 					'<%= paths.seed %>'
 				]
@@ -20,14 +20,6 @@ module.exports = function (grunt) {
 				'config/',
 				'Gruntfile.js'
 			]
-		},
-		seed: {
-			options: {
-				ignores: [
-					'<%= paths.seed %>/__misc/'
-				]
-			},
-			src: ['<%= paths.seed %>']
 		}
 	};
 

@@ -5,12 +5,6 @@ module.exports = function (grunt) {
 		container: {
 			'pre-commit': 'jshint:container',
 			'post-checkout': 'generate--container'
-		},
-		seed: {
-			options: {
-				dest: 'seed/.git/hooks'
-			},
-			'pre-commit': 'jshint:seed'
 		}
 	};
 

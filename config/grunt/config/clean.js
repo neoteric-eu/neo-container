@@ -8,21 +8,10 @@ module.exports = {
 				'<%= paths.tmp %>',
 				'<%= paths.release %>',
 				'<%= paths.test %>',
-				'<%= paths.docs %>',
 				'<%= paths.src %>/require.js',
 				'<%= paths.apps %>/module.conf.js',
 				'<%= paths.apps %>/!(*.js)',
-				'!<%= paths.apps %>/dashboard',
-				'<%= paths.seed %>',
 				'<%= paths.assets %>'
-			]
-		}]
-	},
-	preDocs: {
-		files: [{
-			expand: true,
-			src: [
-				'<%= paths.docs %>'
 			]
 		}]
 	},

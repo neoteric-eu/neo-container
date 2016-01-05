@@ -1,19 +1,7 @@
 module.exports = function (grunt) {
 	'use strict';
 
-	var defaultConf = {
-		seed: {
-			options: {
-				requirejs: true,
-				modulePath: 'angular-gettext'
-			},
-			files: [{
-				dest: '<%= paths.seed %>/__misc/_locale/translation.js',
-				src: '<%= paths.seed %>/__misc/_locale/*.po'
-			}]
-		}
-	};
-
+	var defaultConf = {};
 
 	grunt.file
 		.expand({filter: 'isDirectory'}, ['src/apps/*'])
