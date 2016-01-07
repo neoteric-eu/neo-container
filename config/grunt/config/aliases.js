@@ -20,7 +20,6 @@ module.exports = {
 	install: [
 		'bowercopy',
 		'githooks',
-		'generate--container',
 		'symlink'
 	],
 
@@ -28,6 +27,7 @@ module.exports = {
 	// Run along with npm install
 	// Compile assets & prepare environment
 	postInstall: [
+		'generate--container',
 		'less',
 		'gettext-compile',
 		'templates-cache-clean'
