@@ -1,7 +1,7 @@
 [
-  {
-	"dependency": "neo-dashboard",
-	"directory": "dashboard",
-	"order": 0
-  }
+	{
+		"dependency": "neo-dashboard",
+		"directory": "dashboard",
+		"order": 0
+	}
 ]

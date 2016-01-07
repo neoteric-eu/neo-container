@@ -1,9 +1,10 @@
 {
 	"name": "container",
-	"version": "2.0.2",
+	"version": "2.1.0",
 	"project": "neo",
 	"private": true,
 	"dependencies": {
-		"neo-seed": "~1"
+		"neo-dashboard": "1.x",
+		"neo-seed": "2.1.x"
 	}
 }

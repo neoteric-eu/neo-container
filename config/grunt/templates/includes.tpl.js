@@ -6,7 +6,6 @@
 
 define([
 	// Seed
-	'seed/_includes',
 	'seed/module',
 
 	// Load config

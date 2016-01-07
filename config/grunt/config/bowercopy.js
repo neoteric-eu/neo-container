@@ -22,13 +22,15 @@ module.exports = function (grunt) {
 				destPrefix: '<%=paths.src%>'
 			},
 			files: {
-				'seed': 'neo-seed/build'
+				'seed': 'neo-seed/build',
+				'seed/bower.json': 'neo-seed/bower.json'
 			}
 		},
 		js: {
 			options: {
 				destPrefix: '<%=paths.assets%>/vendor/js'
-			}
+			},
+			files: {}
 		},
 		less: {
 			options: {

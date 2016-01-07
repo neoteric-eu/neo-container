@@ -83,25 +83,9 @@ module.exports = {
 	 * ========================================
 	 */
 
-	// Checks unit-test code coverage
-	'coverage': [
-		'karma:coverage'
-	],
-
 	// Executes complete app testing
 	'test': [
 		'jshint',
-		'test--e2e',
-		'test--unit'
-	],
-
-	// Runs unit app testing
-	'test--unit': [
-		'karma:unit'
-	],
-
-	// Runs e2e app testing
-	'test--e2e': [
 		'connect:test',
 		'shell:webdriver-update',
 		'protractor:singlerun'
