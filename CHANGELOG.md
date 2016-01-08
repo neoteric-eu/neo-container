@@ -1,3 +1,13 @@
+<a name="2.1.3"></a>
+## [2.1.3](//compare/v2.1.2...v2.1.3) (2016-01-08)
+
+
+### Features
+
+* Bumped gitclone-bower task to newer version 90e8128
+
+
+
 <a name="2.1.2"></a>
 # [2.1.2](//compare/v2.0.2...v2.1.2) (2016-01-07)
 
