@@ -7,6 +7,9 @@ bower_components/
 test/
 config/
 .tmp/
+src/seed/
+src/assets/
+src/apps/
 
 ### Extensions ###
 **/*.todo
@@ -16,17 +19,17 @@ config/
 **/*.pot
 
 ### Files ###
+src/.htaccess
+src/container.js
+src/index.html
+src/require.js
 npm-debug.log
 .editorconfig
-.gitignore
 .jshintignore
+.gitignore
 .jshintrc
 Gruntfile.js
 package.json
-src/**
-!src/config/
-!src/bower.json
-
 
 ### SublimeText ###
 # cache files for sublime text
@@ -63,3 +66,56 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 
+### Linux template
+*~
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+### Windows template
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+### OSX template
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
