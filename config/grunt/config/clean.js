@@ -3,6 +3,7 @@ module.exports = {
 		files: [{
 			expand: true,
 			src: [
+				'bower_components',
 				'<%= paths.build %>',
 				'<%= paths.tmp %>',
 				'<%= paths.release %>',
