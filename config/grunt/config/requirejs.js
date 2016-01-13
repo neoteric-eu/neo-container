@@ -4,7 +4,7 @@ module.exports = function (grunt) {
 	var requirejsConfigs = [];
 
 	grunt.file
-		.expand({filter: 'isFile'}, ['src/apps/*/require.conf.js', 'assets/seed/js/require.conf.js'])
+		.expand({filter: 'isFile'}, ['src/apps/*/require.conf.js', 'src/seed/require.conf.js'])
 		.forEach(function (path) {
 			requirejsConfigs.push(path);
 		});

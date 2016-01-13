@@ -17,6 +17,7 @@ src/apps/
 **/*.tmp
 **/*.mo
 **/*.pot
+**/*.default
 
 ### Files ###
 src/.htaccess
@@ -94,6 +95,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
 ### OSX template
 .DS_Store
 .AppleDouble
