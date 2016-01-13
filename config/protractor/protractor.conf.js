@@ -32,7 +32,7 @@ exports.config = {
 	//
 	// Spec patterns are relative to the location of this config.
 	specs: [
-		'../../src/apps/**/test/**/*.e2e.js'
+		'../../src/apps/**/test/**/*.feature'
 	],
 
 	// ----- Capabilities to be passed to the webdriver instance ----
@@ -60,9 +60,17 @@ exports.config = {
 	rootElement: 'html',
 
 	// Enable Jasmine support
-	framework: 'jasmine2',
+	framework: 'custom',
+	frameworkPath: require.resolve('protractor-cucumber-framework'),
+	cucumberOpts: {
+	    // define your step definitions in this file
+	    require: '../../src/apps/**/test/**/*.steps.js',
+	    format: 'summary'
+  	},
+  	allScriptsTimeout: 50000,
+  	getPageTimeout: 50000
 
-	onPrepare: function () {
+	/*onPrepare: function () {
 		'use strict';
 
 		// Create jenkins report
@@ -100,5 +108,5 @@ exports.config = {
 		includeStackTrace: true,
 		// Default time to wait in ms before a test fails.
 		defaultTimeoutInterval: 10000
-	}
+	}*/
 };
