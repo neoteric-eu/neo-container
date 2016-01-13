@@ -53,7 +53,7 @@
 		"describe": false,
 		"ddescribe": false,
 		"dump": false,
-		"expect": false,
+		"expect": true,
 		"inject": false,
 		"it": false,
 		"iit": false,
