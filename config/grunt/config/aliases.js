@@ -205,18 +205,6 @@ module.exports = {
 		'clean:preRelease',
 		'compress',
 		'nexus:production'
-	],
-
-	/*
-	 * ========================================
-	 * --------- DOCUMENTATION TASKS ----------
-	 * ========================================
-	 */
-
-	// Generates JSDoc documentation
-	'docs': [
-		'clean:preDocs',
-		'jsdoc'
 	]
 };
 

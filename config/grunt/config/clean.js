@@ -10,7 +10,6 @@ module.exports = {
 				'<%= paths.test %>',
 				'<%= paths.src %>/require.js',
 				'<%= paths.apps %>/module.conf.js',
-				'<%= paths.apps %>/!(*.js)',
 				'<%= paths.seed %>',
 				'<%= paths.assets %>'
 			]
