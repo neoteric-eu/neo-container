@@ -1,3 +1,14 @@
+<a name="2.1.6"></a>
+## [2.1.6](//compare/v2.1.5...v2.1.6) (2016-01-18)
+
+
+### Features
+
+* **config:** Optimized app installation time. e51133b
+* **package.json:** Added chai.js peer-dependency a2b8e12
+
+
+
 <a name="2.1.5"></a>
 ## [2.1.5](//compare/v2.1.4...v2.1.5) (2016-01-13)
 

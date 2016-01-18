@@ -1,10 +1,8 @@
-/*jshint -W020 */
-_ = require('lodash');
-
 module.exports = function (grunt) {
 	'use strict';
 
 	var bowerFiles = [];
+	var _ = require('lodash');
 
 	grunt.file
 		.expand({filter: 'isFile'}, ['src/apps/*/bower.json', 'bower_components/neo-seed/bower.json'])

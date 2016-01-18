@@ -1,6 +1,8 @@
 module.exports = function (grunt) {
 	'use strict';
 
+	var _ = require('lodash');
+
 	var defaultConf = {
 		options: {
 			source: function (code) {
