@@ -1,3 +1,30 @@
+<a name="2.2.0"></a>
+# [2.2.0](//compare/v2.1.6...v2.2.0) (2016-01-21)
+
+
+### Features
+
+* **config:** Removed bower installation from npm install task aa56ef9
+
+
+### BREAKING CHANGES
+
+* config: Before running `npm install` run `bower install --force` to update bower dependencies or use always`yo neo`
+
+
+
+<a name="2.1.5"></a>
+## [2.1.5](//compare/v2.1.4...v2.1.5) (2016-01-13)
+
+
+
+
+<a name="2.1.4"></a>
+## [2.1.4](//compare/v2.1.3...v2.1.4) (2016-01-11)
+
+
+
+
 <a name="2.1.6"></a>
 ## [2.1.6](//compare/v2.1.5...v2.1.6) (2016-01-18)
 
