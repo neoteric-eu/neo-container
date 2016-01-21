@@ -17,6 +17,7 @@ module.exports = {
 	// Internally used by Grunt for installation,
 	// Run along with npm install
 	install: [
+		'bowercopy',
 		'githooks',
 		'symlink'
 	],
