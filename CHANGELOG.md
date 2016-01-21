@@ -1,3 +1,13 @@
+<a name="2.2.1"></a>
+## [2.2.1](//compare/v2.2.0...v2.2.1) (2016-01-21)
+
+
+### Bug Fixes
+
+* **bowercopy:** Fix generator and npm based installation 0e45072
+
+
+
 <a name="2.2.0"></a>
 # [2.2.0](//compare/v2.1.6...v2.2.0) (2016-01-21)
 

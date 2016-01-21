@@ -1,6 +1,6 @@
 {
 	"name": "container",
-	"version": "2.2.0",
+	"version": "2.2.1",
 	"project": "neo",
 	"private": true,
 	"dependencies": {
