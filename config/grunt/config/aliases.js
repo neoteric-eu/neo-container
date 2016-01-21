@@ -11,14 +11,12 @@ module.exports = {
 	preInstall: [
 		'git-changed-files',
 		'clean:install',
-		'shell:bower-install',
 		'gitclone-bower'
 	],
 
 	// Internally used by Grunt for installation,
 	// Run along with npm install
 	install: [
-		'bowercopy',
 		'githooks',
 		'symlink'
 	],

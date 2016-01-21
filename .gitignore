@@ -1,16 +1,15 @@
 ### Directories ###
-build/
-release/
-docs/
-node_modules/
-bower_components/
-test/
-config/
-.tmp/
-src/seed/
-src/assets/
-src/apps/
-
+/build/
+/release/
+/docs/
+/node_modules/
+/bower_components/
+/test/
+/config/
+/.tmp/
+/src/seed/
+/src/assets/
+/src/apps/
 ### Extensions ###
 **/*.todo
 **/*.ask
@@ -18,95 +17,72 @@ src/apps/
 **/*.mo
 **/*.pot
 **/*.default
-
 ### Files ###
-src/.htaccess
-src/container.js
-src/index.html
-src/require.js
+/src/.htaccess
+/src/container.js
+/src/index.html
+/src/require.js
 npm-debug.log
 .editorconfig
 .jshintignore
-.gitignore
 .jshintrc
 Gruntfile.js
 package.json
-
 ### SublimeText ###
 # cache files for sublime text
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
-
 # workspace files are user-specific
 *.sublime-workspace
-
 # project files should be checked into the repository, unless a significant
 # proportion of contributors will probably not be using SublimeText
 *.sublime-project
-
 # sftp configuration file
 sftp-config.json
-
-
 ### WebStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
 .idea/
-
 # File-based project format:
 *.iml
 *.ipr
 *.iws
-
 # Plugin-specific files:
 # JIRA plugin
 atlassian-ide-plugin.xml
-
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
-
 ### Linux template
 *~
-
 # KDE directory preferences
 .directory
-
 # Linux trash folder which might appear on any partition or disk
 .Trash-*
-
 ### Windows template
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
-
 # Folder config file
 Desktop.ini
-
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
-
 # Windows Installer files
 *.cab
 *.msi
 *.msm
 *.msp
-
 # Windows shortcuts
 *.lnk
-
 ### OSX template
 .DS_Store
 .AppleDouble
 .LSOverride
-
 # Icon must end with two \r
 Icon
-
 # Thumbnails
 ._*
-
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
@@ -114,7 +90,6 @@ Icon
 .TemporaryItems
 .Trashes
 .VolumeIcon.icns
-
 # Directories potentially created on remote AFP share
 .AppleDB
 .AppleDesktop
