@@ -1,3 +1,13 @@
+<a name="2.2.2"></a>
+## [2.2.1](//compare/v2.2.1...v2.2.1) (2016-01-24)
+
+
+### Bug Fixes
+
+* Removed post-install task in .bowerrc e42b49c
+
+Script was causing thrown error in newly created containers.
+
 <a name="2.2.1"></a>
 ## [2.2.1](//compare/v2.2.0...v2.2.1) (2016-01-21)
 
