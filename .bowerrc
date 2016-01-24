@@ -9,8 +9,5 @@
 		],
 		"register": "http://mordor.neoteric.eu:3500",
 		"publish": "http://mordor.neoteric.eu:3500"
-	},
-	"scripts": {
-		"postinstall": "grunt bowercopy"
 	}
 }
