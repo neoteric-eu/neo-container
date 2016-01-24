@@ -1,5 +1,13 @@
+<a name="2.2.3"></a>
+## [2.2.3](//compare/v2.2.2...v2.2.3) (2016-01-24)
+
+### Bug Fixes
+
+* Removed pre-install task in package.json e42b49c
+
+
 <a name="2.2.2"></a>
-## [2.2.1](//compare/v2.2.1...v2.2.1) (2016-01-24)
+## [2.2.1](//compare/v2.2.1...v2.2.2) (2016-01-24)
 
 
 ### Bug Fixes
