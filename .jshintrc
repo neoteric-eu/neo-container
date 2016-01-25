@@ -59,6 +59,8 @@
 		"iit": false,
 		"jasmine": false,
 		"spyOn": false,
-		"xit": false
+		"xit": false,
+		"element": true,
+		"by": true
 	}
 }
