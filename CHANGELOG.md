@@ -1,3 +1,12 @@
+<a name="2.2.4"></a>
+## [2.2.4](//compare/v2.2.3...v2.2.4) (2016-01-25)
+
+### Bug Fixes
+
+* element and by added to jshintrc 8b4db34
+
+
+
 <a name="2.2.3"></a>
 ## [2.2.3](//compare/v2.2.2...v2.2.3) (2016-01-24)
 
