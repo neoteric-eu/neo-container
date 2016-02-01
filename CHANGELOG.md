@@ -1,3 +1,13 @@
+<a name="2.2.8"></a>
+## [2.2.8](//compare/v2.2.7...v2.2.8) (2016-02-01)
+
+
+### Bug Fixes
+
+* **nexus:** Updated config to make releases work 6a1cb23
+
+
+
 <a name="2.2.7"></a>
 ## [2.2.7](//compare/v2.2.6...v2.2.7) (2016-02-01)
 
