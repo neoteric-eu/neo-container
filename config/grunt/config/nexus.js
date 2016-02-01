@@ -19,7 +19,7 @@ module.exports = function () {
 				version: '<%= meta.version %>-SNAPSHOT',
 				classifier: '<%= grunt.template.today("yyyymmdd.HHMMss") %>',
 				url: 'http://naga.neoteric.eu:8081/nexus/content/repositories/snapshots',
-				artifact: '<%= paths.release %>/<%= meta.name %>-<%= meta.version %>.zip'
+				artifact: '<%= paths.release %>/<%= meta.project %>-<%= meta.name %>-<%= meta.version %>.zip'
 			}
 		},
 		staging: {
@@ -29,7 +29,7 @@ module.exports = function () {
 				version: '<%= meta.version %>-SNAPSHOT',
 				classifier: '<%= grunt.template.today("yyyymmdd.HHMMss") %>',
 				url: 'http://naga.neoteric.eu:8081/nexus/content/repositories/snapshots',
-				artifact: '<%= paths.release %>/<%= meta.name %>-<%= meta.version %>.zip'
+				artifact: '<%= paths.release %>/<%= meta.project %>-<%= meta.name %>-<%= meta.version %>.zip'
 			}
 		},
 		production: {
@@ -38,7 +38,7 @@ module.exports = function () {
 				artifactId: '<%= meta.name %>',
 				version: '<%= meta.version %>',
 				url: 'http://naga.neoteric.eu:8081/nexus/content/repositories/releases',
-				artifact: '<%= paths.release %>/<%= meta.name %>-<%= meta.version %>.zip'
+				artifact: '<%= paths.release %>/<%= meta.project %>-<%= meta.name %>-<%= meta.version %>.zip'
 			}
 		}
 	};
