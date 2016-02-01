@@ -6,7 +6,7 @@ module.exports = function () {
 			packaging: 'zip',
 			auth: {
 				username: 'deployment',
-				password: 'deployment123'
+				password: '4%ndCh=Qen#m'
 			},
 			pomDir: '<%= paths.release %>/pom',
 			noproxy: 'localhost',
