@@ -69,44 +69,4 @@ exports.config = {
   	},
   	allScriptsTimeout: 50000,
   	getPageTimeout: 50000
-
-	/*onPrepare: function () {
-		'use strict';
-
-		// Create jenkins report
-		var jasmineReporters = require('jasmine-reporters');
-		//noinspection JSCheckFunctionSignatures,JSUnresolvedFunction
-		jasmine.getEnv().addReporter(
-			new jasmineReporters.JUnitXmlReporter({
-				consolidateAll: true,
-				filePrefix: 'e2e',
-				savePath: 'test/results/e2e'
-			})
-		);
-
-		// Add screenshots to reports
-		var ScreenShotReporter = require('protractor-screenshot-reporter');
-		var path = require('path');
-		//noinspection JSCheckFunctionSignatures
-		jasmine.getEnv().addReporter(new ScreenShotReporter({
-			baseDirectory: 'test/results/e2e',
-			pathBuilder: function pathBuilder(spec, descriptions) {
-				return path.join(descriptions.reverse().join('/'));
-			}
-		}));
-	},
-
-	// ----- Options to be passed to minijasminenode -----
-	jasmineNodeOpts: {
-		// onComplete will be called just before the driver quits.
-		onComplete: null,
-		// If true, display spec names.
-		isVerbose: false,
-		// If true, print colors to the terminal.
-		showColors: true,
-		// If true, include stack traces in failures.
-		includeStackTrace: true,
-		// Default time to wait in ms before a test fails.
-		defaultTimeoutInterval: 10000
-	}*/
 };
