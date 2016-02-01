@@ -86,7 +86,6 @@ module.exports = {
 	'test': [
 		'jshint',
 		'connect:test',
-		'shell:webdriver-update',
 		'protractor:singlerun'
 	],
 
