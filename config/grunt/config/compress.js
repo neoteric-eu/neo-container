@@ -4,7 +4,7 @@ module.exports = function () {
 	return {
 		build: {
 			options: {
-				archive: '<%= paths.release %>/<%= meta.name %>-<%= meta.version %>.zip'
+				archive: '<%= paths.release %>/<%= meta.project %>-<%= meta.name %>-<%= meta.version %>.zip'
 			},
 			files: [{
 				expand: true,
