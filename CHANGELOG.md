@@ -1,3 +1,22 @@
+<a name="2.2.7"></a>
+## [2.2.7](//compare/v2.2.6...v2.2.7) (2016-02-01)
+
+
+### Bug Fixes
+
+* **grunt compress:** Added missing project prefix to zip name. a709657
+
+### Features
+
+* **package.json:** Remove unused npm dependecies. 5acf6f4
+
+
+### BREAKING CHANGES
+
+* package.json: Now protractor have to be installed globally to make command `grunt test` work with command: `[sudo] npm install protractor -g`
+
+
+
 <a name="2.2.5"></a>
 ## [2.2.5](//compare/v2.2.4...v2.2.5) (2016-01-27)
 
