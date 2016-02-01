@@ -37,7 +37,6 @@
 		"grunt-shell": "^1.1.0",
 		"grunt-usemin": "~3.0.0",
 		"jshint-stylish": "~1.0.0",
-		"karma-requirejs": "^0.2.1",
 		"load-grunt-config": "^0.16.0",
 		"lodash": "4.x",
 		"protractor-cucumber-framework": "^0.3.2"
