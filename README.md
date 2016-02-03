@@ -80,7 +80,7 @@ grunt test
 
 Before contributing please read following documents:
 
-* [Code style guide] (https://gitlab.neoteric.eu/frontend/neo-container/wikis/guidlines)
+* [Code style guide](https://gitlab.neoteric.eu/frontend/neo-container/wikis/guidlines)
 * [Commit message format](https://gitlab.neoteric.eu/frontend/neo-container/wikis/commit-message) 
 
 
