@@ -1,3 +1,24 @@
+<a name="2.2.13"></a>
+## [2.2.13](//compare/v2.2.12...v2.2.13) (2016-02-08)
+
+
+### Bug Fixes
+
+* **bower:** changed order of resolving registries bef20f3
+
+### Features
+
+* **cookieConsent:** #39 general config to show/hide cookie consent e3fae4f
+* **graphs:** #47 - remove morris graphs a763ee4
+
+
+### BREAKING CHANGES
+
+* graphs: From now this import can not be used:
+@import "/src/assets/seed/less/smartadmin/modules/charts";
+
+
+
 <a name="2.2.12"></a>
 ## [2.2.12](//compare/v2.2.9...v2.2.12) (2016-02-03)
 
