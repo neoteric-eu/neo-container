@@ -1,11 +1,10 @@
 {
 	"cwd": "src",
 	"directory": "../bower_components",
-	"shorthand-resolver": "https://github.com/{{owner}}/{{package}}.git",
 	"registry": {
 		"search": [
-			"https://bower.herokuapp.com",
-			"http://mordor.neoteric.eu:3500"
+			"http://mordor.neoteric.eu:3500",
+			"https://bower.herokuapp.com"
 		],
 		"register": "http://mordor.neoteric.eu:3500",
 		"publish": "http://mordor.neoteric.eu:3500"
