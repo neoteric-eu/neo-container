@@ -2,12 +2,12 @@
 	"debugEnabled": true,
 	"predefinedLogins": [
 		{
-			"login": "admin@neoteric.eu",
+			"login": "demo@neoteric.eu",
 			"password": "abc123"
 		}
 	],
 	"cookiesProviderConfig": {
-		"domain": "example-api.neoteric.eu"
+		"domain": "localhost"
 	},
-	"apiUrl": "http://example-api.neoteric.eu/"
+	"apiUrl": "http://app.tosend.pl:9500/api/v1/"
 }
