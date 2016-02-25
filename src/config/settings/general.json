@@ -4,6 +4,7 @@
 	"defaultRedirectStateAfterLogin": "app.dashboard",
 	"defaultRedirectState": "auth.login",
 	"showEuLogotypes": false,
+	"html5ModeEnabled": true,
 	"autoContainerRun": true,
 	"showCookieConsent": false
 }
