@@ -24,7 +24,6 @@
 		"grunt-contrib-less": "~0.9.0",
 		"grunt-contrib-requirejs": "~0.4.4",
 		"grunt-contrib-symlink": "^0.3.0",
-		"grunt-contrib-uglify": "^0.11.0",
 		"grunt-git": "^0.3.5",
 		"grunt-git-changed-files": "1.x",
 		"grunt-gitclone-bower": "1.x",

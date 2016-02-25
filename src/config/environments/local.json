@@ -9,5 +9,5 @@
 	"cookiesProviderConfig": {
 		"domain": "localhost"
 	},
-	"apiUrl": "http://example-api.neoteric.eu/"
+	"apiUrl": "http://app.tosend.pl:9500/api/v1/"
 }

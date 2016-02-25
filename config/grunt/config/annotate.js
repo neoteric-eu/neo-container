@@ -3,6 +3,11 @@ module.exports = {
 		singleQuotes: true
 	},
 	build: {
-		files: {'<%= paths.build %>/assets/js/container.js': '<%= paths.build %>/assets/js/container.js'}
+		files: [{
+			src: ['**/*.js'],
+			cwd: '<%= paths.src %>',
+			dest: '<%= paths.tmp %>',
+			expand: true
+		}]
 	}
 };

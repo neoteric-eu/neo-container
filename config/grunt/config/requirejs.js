@@ -10,20 +10,35 @@ module.exports = function (grunt) {
 		});
 
 	return {
-		build: {
+		options: {
+			baseUrl: '.tmp/',
+			optimize: 'uglify2',
+			out: '<%= paths.build %>/assets/js/container.js',
+			preserveLicenseComments: false,
+			useStrict: true,
+			mainConfigFile: requirejsConfigs,
+			findNestedDependencies: true,
+			removeCombined: true,
+			optimizeAllPluginResources: true,
+			waitSeconds: 0,
+			include: ['container']
+		},
+
+		development: {
 			options: {
-				baseUrl: 'src/',
-				optimize: 'none',
-				out: '<%= paths.build %>/assets/js/container.js',
-				generateSourceMaps: false,
-				preserveLicenseComments: false,
-				useStrict: true,
-				mainConfigFile: requirejsConfigs,
-				findNestedDependencies: true,
-				removeCombined: true,
-				optimizeAllPluginResources: true,
-				waitSeconds: 0,
-				include: ['container']
+				generateSourceMaps: true
+			}
+		},
+
+		staging: {
+			options: {
+				generateSourceMaps: true
+			}
+		},
+
+		production: {
+			options: {
+				generateSourceMaps: false
 			}
 		}
 	};

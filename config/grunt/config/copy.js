@@ -41,7 +41,7 @@ module.exports = function (grunt) {
 					'index.html',
 					'assets/*/fonts/**',
 					'assets/*/img/**',
-					'assets/*/sounds/**'
+					'assets/*/json/**'
 				]
 			}]
 		},

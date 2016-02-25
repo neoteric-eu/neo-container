@@ -107,9 +107,8 @@ module.exports = {
 		'concat',
 		'cssmin',
 		'copy:build',
-		'requirejs',
 		'annotate',
-		'uglify:development',
+		'requirejs:development',
 		'rev',
 		'usemin',
 		'clean:postBuild'
@@ -127,9 +126,8 @@ module.exports = {
 		'concat',
 		'cssmin',
 		'copy:build',
-		'requirejs',
 		'annotate',
-		'uglify:development',
+		'requirejs:development',
 		'rev',
 		'usemin',
 		'clean:postBuild'
@@ -147,9 +145,8 @@ module.exports = {
 		'concat',
 		'cssmin',
 		'copy:build',
-		'requirejs',
 		'annotate',
-		'uglify:staging',
+		'requirejs:staging',
 		'rev',
 		'usemin',
 		'clean:postBuild'
@@ -167,9 +164,8 @@ module.exports = {
 		'concat',
 		'cssmin',
 		'copy:build',
-		'requirejs',
 		'annotate',
-		'uglify:production',
+		'requirejs:production',
 		'rev',
 		'usemin',
 		'clean:postBuild'
