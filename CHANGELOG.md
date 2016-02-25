@@ -1,3 +1,13 @@
+<a name="2.3.5"></a>
+## [2.3.5](//compare/v2.3.4...v2.3.5) (2016-02-25)
+
+
+### Bug Fixes
+
+* **Grunt:** Fixed source map generation for development and staging environment c8329c8
+
+
+
 <a name="2.3.4"></a>
 ## [2.3.4](//compare/v2.3.3...v2.3.4) (2016-02-25)
 
