@@ -1,3 +1,13 @@
+<a name="2.3.6"></a>
+## [2.3.6](//compare/v2.3.5...v2.3.6) (2016-02-29)
+
+
+### Bug Fixes
+
+* **config:** Reverted environment variable name changes. 3c851c6
+
+
+
 <a name="2.3.5"></a>
 ## [2.3.5](//compare/v2.3.4...v2.3.5) (2016-02-25)
 
