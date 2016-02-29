@@ -1,9 +1,9 @@
 {
 	"debugEnabled": "__debugEnabled__",
 	"predefinedLogins": [],
-	"apiUrl": "http://app.tosend.pl:9500/api/v1/",
+	"apiUrl": "__apiUrl__",
 	"cookiesProviderConfig": {
-		"domain": "localhost"
+		"domain": "__cookieDomain__"
 	}
 }
 
