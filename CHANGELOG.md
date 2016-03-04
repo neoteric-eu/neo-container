@@ -1,3 +1,11 @@
+<a name="2.3.7"></a>
+## [2.3.7](//compare/v2.3.6...v2.3.7) (2016-03-04)
+
+### Features
+
+* **jarvis-widget:** Removed jarvis-widgets support a1b894a5
+
+
 <a name="2.3.6"></a>
 ## [2.3.6](//compare/v2.3.5...v2.3.6) (2016-02-29)
 
