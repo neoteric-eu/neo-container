@@ -71,6 +71,10 @@ module.exports = function (grunt) {
 					return content.replace('/* modules */', '\'' + modules.join('\',\n\t\'') + '\'');
 				}
 			}
+		},
+		gitignore: {
+			src: 'config/grunt/templates/tpl.gitignore',
+			dest: '.gitignore'
 		}
 	};
 };

@@ -9,7 +9,6 @@ module.exports = {
 	// Run along with npm install
 	// Set up application repositories
 	preInstall: [
-		'git-changed-files',
 		'clean:install',
 		'gitclone-bower'
 	],
@@ -37,7 +36,8 @@ module.exports = {
 	'generate--container': [
 		'copy:container',
 		'copy:module',
-		'copy:includes'
+		'copy:includes',
+		'copy:gitignore'
 	],
 
 	/*

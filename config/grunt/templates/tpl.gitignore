@@ -5,19 +5,31 @@
 /node_modules/
 /bower_components/
 /test/
+/config/
 /.tmp/
 /src/seed/
 /src/assets/
 /src/apps/
 
 ### Extensions ###
+**/*.todo
+**/*.ask
+**/*.tmp
 **/*.mo
 **/*.pot
+**/*.default
 
 ### Files ###
+/src/.htaccess
 /src/container.js
+/src/index.html
 /src/require.js
 npm-debug.log
+.editorconfig
+.jshintignore
+.jshintrc
+Gruntfile.js
+package.json
 
 ### SublimeText ###
 # cache files for sublime text
