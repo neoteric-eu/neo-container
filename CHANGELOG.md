@@ -1,3 +1,18 @@
+<a name="2.4.0"></a>
+# [2.4.0](//compare/v2.3.7...v2.4.0) (2016-03-04)
+
+
+### Bug Fixes
+
+* **prompt:** #129 - Task prompt:reset-changes fails 027ce4b, closes #129
+
+
+### BREAKING CHANGES
+
+* prompt: Use command `npm start` to run container initialization with `grunt preInstall && grunt install && grunt postInstall`.
+
+
+
 <a name="2.3.7"></a>
 ## [2.3.7](//compare/v2.3.6...v2.3.7) (2016-03-04)
 
