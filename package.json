@@ -1,6 +1,6 @@
 {
-	"name": "neoteric",
-	"version": "1.0.0",
+	"name": "neo-container",
+	"version": "2.4.2",
 	"private": true,
 	"dependencies": {},
 	"devDependencies": {
