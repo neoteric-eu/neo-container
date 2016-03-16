@@ -1,6 +1,10 @@
-<a name="2.4.4"></a>
-## [2.4.4](//compare/v2.4.0...v2.4.4) (2016-03-15)
+<a name="2.4.5"></a>
+## [2.4.5](//compare/v2.4.0...v2.4.5) (2016-03-16)
 
+
+### Bug Fixes
+
+* **.bowerc:** Updated bower repository path 586a770
 
 
 <a name="2.4.0"></a>
