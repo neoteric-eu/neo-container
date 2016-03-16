@@ -3,10 +3,10 @@
 	"directory": "../bower_components",
 	"registry": {
 		"search": [
-			"http://mordor.neoteric.eu:3500",
+			"http://bower.neoteric.eu",
 			"https://bower.herokuapp.com"
 		],
-		"register": "http://mordor.neoteric.eu:3500",
-		"publish": "http://mordor.neoteric.eu:3500"
+		"register": "http://bower.neoteric.eu",
+		"publish": "http://bower.neoteric.eu"
 	}
 }
