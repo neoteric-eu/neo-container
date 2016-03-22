@@ -4,7 +4,7 @@
 	"project": "neo",
 	"private": true,
 	"dependencies": {
-		"neo-dashboard": "1.x",
+		"neo-components": "git@gitlab.neoteric.eu:frontend/neo-components.git#development",
 		"neo-seed": "2.4.x"
 	}
 }
