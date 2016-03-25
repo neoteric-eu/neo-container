@@ -1,3 +1,13 @@
+<a name="2.4.6"></a>
+## [2.4.6](//compare/v2.4.5...v2.4.6) (2016-03-25)
+
+
+### Features
+
+* **bower.json:** #155 - Replace neo-dashboard with neo-components ee59802
+
+
+
 <a name="2.4.5"></a>
 ## [2.4.5](//compare/v2.4.0...v2.4.5) (2016-03-16)
 
