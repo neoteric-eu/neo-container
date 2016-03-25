@@ -5,7 +5,7 @@
 		"sizes": "",
 		"uri": "assets/seed/img/container-logo.png"
 	},
-	"defaultRedirectStateAfterLogin": "app.dashboard",
+	"defaultRedirectStateAfterLogin": "app.components.about.welcome",
 	"defaultRedirectState": "auth.login",
 	"showEuLogotypes": false,
 	"html5ModeEnabled": true,
