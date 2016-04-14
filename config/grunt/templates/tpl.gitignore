@@ -22,7 +22,6 @@
 ### Files ###
 /src/.htaccess
 /src/container.js
-/src/index.html
 /src/require.js
 npm-debug.log
 .editorconfig
