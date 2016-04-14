@@ -1,3 +1,18 @@
+<a name="2.5.0"></a>
+# [2.5.0](//compare/v2.4.6...v2.5.0) (2016-04-14)
+
+
+### Bug Fixes
+
+* **settings:** missing favicons settings in config 093c4cc
+
+### Features
+
+* **favicon:** possibility to set up favicon for project 829ebfc
+* index.html taken out from got ignore list acd5823
+
+
+
 <a name="2.4.6"></a>
 ## [2.4.6](//compare/v2.4.5...v2.4.6) (2016-03-25)
 

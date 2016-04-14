@@ -1,10 +1,10 @@
 {
 	"name": "container",
-	"version": "2.4.6",
+	"version": "2.5.0",
 	"project": "neo",
 	"private": true,
 	"dependencies": {
 		"neo-components": "git@gitlab.neoteric.eu:frontend/neo-components.git#development",
-		"neo-seed": "2.4.x"
+		"neo-seed": "2.5.x"
 	}
 }
