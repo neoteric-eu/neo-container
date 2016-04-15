@@ -1,3 +1,11 @@
+<a name="2.5.1"></a>
+## [2.5.1](//compare/v2.5.0...v2.5.1) (2016-04-15)
+
+### Bug Fixes
+
+* **Users:** missing appConf dependency
+
+
 <a name="2.5.0"></a>
 # [2.5.0](//compare/v2.4.6...v2.5.0) (2016-04-14)
 
