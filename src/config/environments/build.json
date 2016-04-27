@@ -2,6 +2,7 @@
 	"debugEnabled": "__debugEnabled__",
 	"predefinedLogins": [],
 	"apiUrl": "__apiUrl__",
+	"appCode": "__appCode__",
 	"cookiesProviderConfig": {
 		"domain": "__cookieDomain__"
 	}

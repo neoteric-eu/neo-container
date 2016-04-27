@@ -9,5 +9,6 @@
 	"cookiesProviderConfig": {
 		"domain": "localhost"
 	},
-	"apiUrl": "http://example-api.neoteric.eu/"
+	"apiUrl": "http://example-api.neoteric.eu/",
+	"appCode": ""
 }
