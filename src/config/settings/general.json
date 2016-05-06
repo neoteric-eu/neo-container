@@ -5,10 +5,6 @@
 		"sizes": "",
 		"uri": "assets/seed/img/container-logo.png"
 	},
-	"seed": {
-		"apiVer": 2,
-		"apiPrefix": ""
-	},
 	"defaultRedirectStateAfterLogin": "app.components.about.welcome",
 	"defaultRedirectState": "auth.login",
 	"showEuLogotypes": false,
