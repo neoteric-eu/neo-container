@@ -1,3 +1,13 @@
+<a name="2.6.0"></a>
+# [2.6.0](//compare/v2.5.1...v2.6.0) (2016-05-06)
+
+
+### Features
+
+* **config/general:** added configuration for param serializer in SaasMgr models 90e182a
+
+
+
 <a name="2.5.1"></a>
 ## [2.5.1](//compare/v2.5.0...v2.5.1) (2016-04-15)
 
