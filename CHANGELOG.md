@@ -1,3 +1,17 @@
+<a name="2.6.2"></a>
+## [2.6.2](//compare/v2.6.0...v2.6.2) (2016-05-11)
+
+
+### Bug Fixes
+
+* **bower:** upgrade seed version in depdencies 1ce7007
+
+### Features
+
+* **config/general:** added configuration for param serializer in SaasMgr models 7c1103d
+
+
+
 <a name="2.6.1"></a>
 ## [2.6.1](//compare/v2.6.0...v2.6.1) (2016-05-11)
 
