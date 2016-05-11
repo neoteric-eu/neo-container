@@ -5,6 +5,6 @@
 	"private": true,
 	"dependencies": {
 		"neo-components": "git@gitlab.neoteric.eu:frontend/neo-components.git#development",
-		"neo-seed": "2.5.x"
+		"neo-seed": "2.6.x"
 	}
 }
