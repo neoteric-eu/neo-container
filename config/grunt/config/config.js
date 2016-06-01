@@ -29,7 +29,18 @@ module.exports = function (grunt) {
 		options: {
 			name: 'app.conf',
 			dest: '<%= paths.src %>/apps/module.conf.js',
-			wrap: 'define([\'angular\'], function() { \n\n \'use strict\'\;\n return {%= __ngModule %} \n\n});'
+			wrap: [
+				'define([\'angular\'], function() {',
+			 	'\n',
+				'\n',
+			 	'\'use strict\'\;',
+			 	'\n',
+				'\t/**',
+				'\t * @class appConf',
+				'\t * @memberOf seed',
+				'\t */',
+				'return {%= __ngModule %} \n\n});'
+			].join('')
 		},
 		local: {
 			constants: {
