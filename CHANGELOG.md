@@ -1,3 +1,15 @@
+<a name="2.6.4"></a>
+## [2.6.4](//compare/v2.6.1...v2.6.4) (2016-06-01)
+
+
+### Features
+
+* **config:** added appCode to config files, also modify app.conf output 7e12718
+* **config/general:** added configuration for param serializer in SaasMgr models 7c1103d
+* **exceptionHandler:** handle exception and log it to logstash 5be78b1
+
+
+
 <a name="2.6.2"></a>
 ## [2.6.2](//compare/v2.6.0...v2.6.2) (2016-05-11)
 
