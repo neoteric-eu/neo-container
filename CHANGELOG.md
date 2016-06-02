@@ -1,5 +1,14 @@
+<a name="2.6.5"></a>
+## [2.6.5](//compare/v2.6.4...v2.6.5) (2016-06-02)
+
+
+### Bug Fixes
+
+* **container:** Change logstash placeholder format to unify with build.json one, fix missing url 1f74b07
+
+
 <a name="2.6.4"></a>
-## [2.6.4](//compare/v2.6.1...v2.6.4) (2016-06-01)
+## [2.6.4](//compare/v2.6.2...v2.6.4) (2016-06-01)
 
 
 ### Features
@@ -11,7 +20,7 @@
 
 
 <a name="2.6.2"></a>
-## [2.6.2](//compare/v2.6.0...v2.6.2) (2016-05-11)
+## [2.6.2](//compare/v2.6.1...v2.6.2) (2016-05-11)
 
 
 ### Bug Fixes
